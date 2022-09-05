@@ -1,20 +1,61 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Projeto do Portal APIM | vtal
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Este repositório que contém o código-fonte do portal do desenvolvedor.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Pré-requisitos
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+- react >= 18.0.0
+- node >= 16.2.0
+- npm >= 7.13.0
+- styled-components >= 5.3.5
+
+## Project Status
+
+Em desenvolvimento...
+
+## Como usar
+
+1. `yarn`or`npm`
+2. Install VSCode extensions: [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+
+## Comandos
+
+1. `yarn start`: Inicia o projeto
+2. `yarn build`: Gera os arquivos compilados para deploy em dev
+3. `yarn build:prod`: Gera os arquivos compilados para deploy em produção
+4. `yarn snapshot:update`: Atualiza os snapshots
+5. `yarn storybook`: Inicia o storybook
+6. `yarn test`: Executa os testes
+7. `yarn coverage`: Executa o coverage
+8. `yarn dev:server`: Servidor local
+
+### Estrutura de pastas
+
+```text
+├── .husky                     # Hooks do git
+├── .storybook                 # Configurações do storybook
+├── documentation              # Documantion storybook
+├── public                     # Arquivos que o react usar pra gerar o deploy
+├── build                      # Arquivos gerado no deploy
+├── src                        # Pasta principal
+│    ├── @types                # Arquivos declarativos
+│    ├── assets                # Arquivos estáticos
+│    ├── components            # Componentes Atomic Design
+│    ├── contants              # dados imutáveis
+│    ├── context               # Estados globais
+│    ├── pages                 # Páginas da aplicação
+|     └── public               # Public
+|     └── private              # Private
+│    ├── routes                # Rotas da aplicação
+│    ├── styles                # Estilos globais e fontes
+|     └── theme.ts             # Arquivos com todas as configurações relacionadas ao tema
+|     └── global.ts            # Estilo global
+│    ├── util                  # Funções úteis
+├── README.md                  # README
+├── package.json               # Configurações do projeto
+└── tsconfig.json              # Configurações do TypeScript
+└── .editoconfig               # Configurações de padronização de estilo de código do editor
+└── .eslintrc.json             # Regras do Eslint para padronização do estilo de código
+└── .prettierrc.json           # Regras do Pritter pra automaticamente as correções de padrões estabelecidas no ESLint.
+```
