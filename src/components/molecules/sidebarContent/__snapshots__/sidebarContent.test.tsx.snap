@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente SidebarContent Deve renderizar o menu lateral 1`] = `
+.c0 {
+  overflow-y: auto;
+  margin-bottom: 20px;
+  background: #191918;
+}
+
+.c0::-webkit-scrollbar {
+  width: 5px;
+}
+
+.c0::-webkit-scrollbar-track {
+  background: #191918;
+}
+
+.c0::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.c0::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.c0 .pro-menu.square {
+  padding-top: inherit;
+}
+
+.c0 .pro-menu.square .pro-menu-item > .pro-inner-item {
+  padding-top: inherit;
+  padding-bottom: inherit;
+  height: 60px;
+}
+
+.c0 .pro-menu.square .pro-menu-item > .pro-inner-item > .pro-icon-wrapper {
+  background-color: initial;
+}
+
+<div
+  className="pro-sidebar-content c0"
+>
+  <nav
+    className="pro-menu shaped square inner-submenu-arrows"
+  >
+    <ul>
+      <nav
+        className="pro-menu inner-submenu-arrows"
+        firstchild={1}
+        popperarrow={0}
+      >
+        <ul>
+          <li
+            className="pro-menu-item"
+          >
+            <div
+              className="pro-inner-item"
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="pro-icon-wrapper"
+              >
+                <span
+                  className="pro-icon"
+                >
+                  <svg
+                    color="#FFF"
+                    data-testid="svgicon"
+                    fontSize="24px"
+                  >
+                    dashboard.svg
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="pro-item-content"
+              >
+                Dashboard
+                <a
+                  color="#FFF"
+                  href="/"
+                  onClick={[Function]}
+                  title="Dashboard"
+                />
+              </span>
+            </div>
+          </li>
+          <li
+            className="pro-menu-item"
+          >
+            <div
+              className="pro-inner-item"
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="pro-icon-wrapper"
+              >
+                <span
+                  className="pro-icon"
+                >
+                  <svg
+                    color="#FFF"
+                    data-testid="svgicon"
+                    fontSize="24px"
+                  >
+                    apis.svg
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="pro-item-content"
+              >
+                Apis
+                <a
+                  href="/apis"
+                  onClick={[Function]}
+                  title="Apis"
+                />
+              </span>
+            </div>
+          </li>
+          <li
+            className="pro-menu-item"
+          >
+            <div
+              className="pro-inner-item"
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="pro-icon-wrapper"
+              >
+                <span
+                  className="pro-icon"
+                >
+                  <svg
+                    color="#FFF"
+                    data-testid="svgicon"
+                    fontSize="24px"
+                  >
+                    cwp.svg
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="pro-item-content"
+              >
+                CWP
+                <a
+                  href="/cwp"
+                  onClick={[Function]}
+                  title="Cwp"
+                />
+              </span>
+            </div>
+          </li>
+          <li
+            className="pro-menu-item"
+          >
+            <div
+              className="pro-inner-item"
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="pro-icon-wrapper"
+              >
+                <span
+                  className="pro-icon"
+                >
+                  <svg
+                    color="#FFF"
+                    data-testid="svgicon"
+                    fontSize="24px"
+                  >
+                    key-otk.svg
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="pro-item-content"
+              >
+                OTK
+                <a
+                  href="/otk"
+                  onClick={[Function]}
+                  title="Otk"
+                />
+              </span>
+            </div>
+          </li>
+          <li
+            className="pro-menu-item"
+          >
+            <div
+              className="pro-inner-item"
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                className="pro-icon-wrapper"
+              >
+                <span
+                  className="pro-icon"
+                >
+                  <svg
+                    color="#FFF"
+                    data-testid="svgicon"
+                    fontSize="24px"
+                  >
+                    logs.svg
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="pro-item-content"
+              >
+                Logs
+                <a
+                  href="/logs"
+                  onClick={[Function]}
+                  title="Logs"
+                />
+              </span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </ul>
+  </nav>
+</div>
+`;
