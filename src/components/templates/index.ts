@@ -1,3 +1,4 @@
-import ContentPagePrivate from './contentPagesPrivate';
+import ContentWrapper from './contentWrapper';
+import DataViewControl from './dataViewControl';
 
-export { ContentPagePrivate };
+export { ContentWrapper, DataViewControl };

@@ -5,7 +5,7 @@ import { SidebarContent } from 'react-pro-sidebar';
 export const Main = styled(SidebarContent)`
   overflow-y: auto;
   margin-bottom: 20px;
-  background: ${(props) => props.theme.colors.baseGray.Cod};
+  background: ${(props) => props.theme.colors.Cod};
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -33,4 +33,14 @@ export const Main = styled(SidebarContent)`
       }
     }
   }
+  nav.pro-menu.inner-submenu-arrows {
+    padding-top: 0px;
+  }
+`;
+
+export const Division = styled.hr`
+  border: 0px;
+  border-top: 1px solid ${(props) => props.theme.colors.ironside};
+  padding: 0px;
+  margin: 0px;
 `;

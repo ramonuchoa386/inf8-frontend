@@ -6,10 +6,7 @@ import Sidebar from './../components/organisms/sidebar';
 
 // Pages
 import Dashboard from './../pages/private/dashboard';
-import Apis from './../pages/private/apis';
-import Cwp from './../pages/private/cwp';
-import Otk from './../pages/private/otk';
-import Logs from './../pages/private/logs';
+import ApplicationListPage from './../pages/private/applicationsListPage';
 
 // css
 import * as S from './styles';
@@ -26,10 +23,7 @@ const Private = () => {
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Dashboard />} />
-        <Route path='apis' element={<Apis />} />
-        <Route path='cwp' element={<Cwp />} />
-        <Route path='otk' element={<Otk />} />
-        <Route path='logs' element={<Logs />} />
+        <Route path='apis' element={<ApplicationListPage />} />
       </Route>
     </Routes>
   );

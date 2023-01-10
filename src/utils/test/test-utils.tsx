@@ -1,7 +1,9 @@
 import React, { FC, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
+import { MemoryRouter } from 'react-router-dom';
 import theme from '../../styles/theme';
+import GlobalContext from '../../context/';
 import 'jest-styled-components';
 import { create, TestRendererOptions } from 'react-test-renderer';
 
@@ -12,7 +14,13 @@ jest.mock('react-helmet-async', () => ({
 }));
 
 const AllTheProviders: FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <MemoryRouter>
+        <GlobalContext>{children}</GlobalContext>
+      </MemoryRouter>
+    </ThemeProvider>
+  );
 };
 
 // Função para passar automaticamente o tema para os páginas/componentes

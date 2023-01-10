@@ -1,30 +1,45 @@
 import React from 'react';
-import { render, screen } from '../../../utils/test/test-utils';
-import Divider from './';
-import { act } from 'react-dom/test-utils';
-import themeStyle from '../../../styles/theme';
+import { render } from '../../../utils/test/test-utils';
+import theme from '../../../styles/theme';
+import { Divider } from './';
 
-it('Deve renderizar uma linha com cor default e altura default', () => {
-  act(() => {
-    render(<Divider data-testid='divider' />);
-  });
-  const divider = screen.getByTestId('divider');
-  expect(divider).toHaveStyle(`border-color: ${themeStyle.colors.primary}`);
-  expect(divider).toHaveStyle(`border: 1px solid`);
-});
+describe('Divider component tests', () => {
+  test('should render the component correctly', () => {
+    const { getByTestId } = render(<Divider data-testid='divider' />);
 
-it('Deve renderizar uma linha com cor vermelha', () => {
-  act(() => {
-    render(<Divider data-testid='divider' color='red' />);
+    expect(getByTestId('divider')).toBeInTheDocument();
   });
-  const divider = screen.getByTestId('divider');
-  expect(divider).toHaveStyle('border-color: red');
-});
 
-it('Deve renderizar uma linha com altura 10px', () => {
-  act(() => {
-    render(<Divider data-testid='divider' height={10} />);
+  test('should render the Divider component with custom color', () => {
+    const { getByTestId } = render(
+      <Divider data-testid='divider' lineColor='Coral' />
+    );
+
+    expect(getByTestId('divider')).toHaveStyle(
+      `border-color: ${theme.colors.Coral}`
+    );
   });
-  const divider = screen.getByTestId('divider');
-  expect(divider).toHaveStyle('border: 10px solid');
+
+  test('should render the Divider component with shadow', () => {
+    const { getByTestId } = render(
+      <Divider data-testid='divider' withShadow />
+    );
+
+    expect(getByTestId('divider')).toHaveStyle(
+      `box-shadow: 0px 3px 15px ${theme.colors.primary}`
+    );
+  });
+
+  test('should render the Divider component with shadow and custom color', () => {
+    const { getByTestId } = render(
+      <Divider data-testid='divider' withShadow lineColor='positive' />
+    );
+
+    expect(getByTestId('divider')).toHaveStyle(
+      `border-color: ${theme.colors.positive}`
+    );
+    expect(getByTestId('divider')).toHaveStyle(
+      `box-shadow: 0px 3px 15px ${theme.colors.positive}`
+    );
+  });
 });

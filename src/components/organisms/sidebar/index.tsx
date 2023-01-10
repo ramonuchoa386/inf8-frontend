@@ -1,19 +1,8 @@
 import React, { useContext } from 'react';
 import { ProSidebar } from 'react-pro-sidebar';
-
-// syles
-import * as S from './styles';
-import theme from '../../../styles/theme';
-
-// Images
-import { VtalSmall, Logo } from './../../../assets/logos/';
-
-// context
+import { VtalSmall, Logo } from '../../../assets/logos';
 import SidebarContext from '../../../context/sidebar/context';
-
-// Components
-import { SidebarHeader, SidebarContent } from '../../molecules';
-import Icon from '../../atoms/icon';
+import * as S from './styles';
 
 const Sidebar = () => {
   const { state, collapse } = useContext(SidebarContext);
@@ -21,18 +10,21 @@ const Sidebar = () => {
   return (
     <S.Main data-testid='sidebar-testid'>
       <ProSidebar onToggle={collapse} collapsed={state.collapsed}>
-        <SidebarHeader
-          logo={state.collapsed ? VtalSmall : Logo}
-          altImg='APIM'
-        />
+        <S.Header>
+          <S.HeaderLogoLink to='/'>
+            {state.collapsed ? <VtalSmall /> : <Logo />}
+          </S.HeaderLogoLink>
+        </S.Header>
+        <S.HeaderDivider />
 
-        <SidebarContent />
+        <S.SidebarContentArea />
 
         <S.SideFooter>
           <div onClick={collapse}>
-            <Icon
-              color={theme.colors.primary}
-              name={
+            <S.SidebarCollapseIcon
+              color='primary'
+              size='18px'
+              iconName={
                 state.collapsed ? 'ArrowCollapsedright' : 'ArrowCollapsedLeft'
               }
             />

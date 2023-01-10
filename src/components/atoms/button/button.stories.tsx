@@ -1,79 +1,66 @@
 import * as React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import theme from '../../../styles/theme';
 import Button from '.';
-import { MemoryRouter } from 'react-router-dom';
+import { BoxIconsLib } from '../';
 
 export default {
   title: 'components/atoms/Button',
   component: Button,
   description: `Botão simples`,
   argTypes: {
-    text: {
-      control: 'text',
-      description: 'Texto',
-      defaultValue: 'botão',
+    buttonTheme: {
+      name: 'Tema do botão',
+      description: 'Cor do botão',
+      options: Object.keys(theme.colors).sort(),
+      control: 'select',
+      defaultValue: 'Cod',
       table: {
         type: { summary: 'text' },
-        defaultValue: { summary: 'Clique aqui' },
+        defaultValue: { summary: 'Cod' },
       },
     },
-    styledType: {
-      options: ['default', 'dark', 'primary', 'white'],
-      control: { type: 'radio' },
-      description: 'Tipo do botão',
-      defaultValue: 'default',
+    borderLess: {
+      name: 'Sem borda',
+      control: 'boolean',
+      description: 'Atributo booleano que define a presença da borda no botão.',
+      defaultValue: false,
       table: {
-        type: { summary: 'text' },
-        defaultValue: { summary: 'default' },
-      },
-    },
-    styledSize: {
-      options: ['default', 'large', 'medium'],
-      control: { type: 'radio' },
-      description: 'Tipo do botão',
-      defaultValue: 'default',
-      table: {
-        type: { summary: 'text' },
-        defaultValue: { summary: 'default' },
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false },
       },
     },
   },
 } as ComponentMeta<typeof Button>;
 
-// 👇 We create a “template” of how args map to rendering
 const Template: ComponentStory<typeof Button> = (args) => (
-  <MemoryRouter>
-    <div
-      style={{
-        backgroundColor: args.styledType === 'white' ? '#000000' : 'initial',
-        paddingBottom: '100%',
-      }}
-    >
-      <Button {...args} />
-    </div>
-  </MemoryRouter>
+  <Button {...args}>API Hub</Button>
+);
+
+const WithIconTemplate: ComponentStory<typeof Button> = (args) => (
+  <Button {...args}>
+    API Hub <BoxIconsLib />
+  </Button>
 );
 
 export const Default = Template.bind({});
-Default.args = {
-  styledType: 'default',
+
+export const Colored = Template.bind({});
+Colored.parameters = {
+  backgrounds: { default: 'dark' },
+};
+Colored.args = {
+  buttonTheme: 'primary',
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
-  styledType: 'primary',
+export const Borderless = Template.bind({});
+Borderless.args = {
+  borderLess: true,
 };
 
-export const Dark = Template.bind({});
-Dark.args = {
-  styledType: 'dark',
-};
-export const White = Template.bind({});
-White.args = {
-  styledType: 'white',
-};
-
-export const OnClick = Template.bind({});
-OnClick.args = {
+export const CustomClickFunction = Template.bind({});
+CustomClickFunction.args = {
   onClick: () => alert('Clicked the button!'),
 };
+
+export const WithIcon = WithIconTemplate.bind({});

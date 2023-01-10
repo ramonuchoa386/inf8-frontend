@@ -3,7 +3,6 @@ import { Meta } from '@storybook/react/types-6-0';
 import { ComponentStory } from '@storybook/react';
 import { ProSidebar } from 'react-pro-sidebar';
 import SidebarContent from './';
-import { MemoryRouter } from 'react-router-dom';
 
 export default {
   title: 'components/molecules/sidebarContent',
@@ -12,11 +11,9 @@ export default {
 } as Meta<typeof SidebarContent>;
 
 const Template: ComponentStory<typeof SidebarContent> = () => (
-  <MemoryRouter>
-    <ProSidebar>
-      <SidebarContent />
-    </ProSidebar>
-  </MemoryRouter>
+  <ProSidebar>
+    <SidebarContent />
+  </ProSidebar>
 );
 
 export const Default = Template.bind({});

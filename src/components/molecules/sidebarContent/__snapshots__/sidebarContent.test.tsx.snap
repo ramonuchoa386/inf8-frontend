@@ -37,6 +37,17 @@ exports[`Componente SidebarContent Deve renderizar o menu lateral 1`] = `
   background-color: initial;
 }
 
+.c0 nav.pro-menu.inner-submenu-arrows {
+  padding-top: 0px;
+}
+
+.c1 {
+  border: 0px;
+  border-top: 1px solid #73736E;
+  padding: 0px;
+  margin: 0px;
+}
+
 <div
   className="pro-sidebar-content c0"
 >
@@ -65,18 +76,29 @@ exports[`Componente SidebarContent Deve renderizar o menu lateral 1`] = `
                   className="pro-icon"
                 >
                   <svg
-                    color="#FFF"
-                    data-testid="svgicon"
-                    fontSize="24px"
+                    fill="currentColor"
+                    height={17}
+                    stroke="currentColor"
+                    strokeWidth="0"
+                    style={
+                      Object {
+                        "color": undefined,
+                      }
+                    }
+                    viewBox="0 0 24 24"
+                    width={17}
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    dashboard.svg
+                    <path
+                      d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"
+                    />
                   </svg>
                 </span>
               </span>
               <span
                 className="pro-item-content"
               >
-                Dashboard
+                Home
                 <a
                   color="#FFF"
                   href="/"
@@ -86,6 +108,9 @@ exports[`Componente SidebarContent Deve renderizar o menu lateral 1`] = `
               </span>
             </div>
           </li>
+          <hr
+            className="c1"
+          />
           <li
             className="pro-menu-item"
           >
@@ -101,18 +126,29 @@ exports[`Componente SidebarContent Deve renderizar o menu lateral 1`] = `
                   className="pro-icon"
                 >
                   <svg
-                    color="#FFF"
-                    data-testid="svgicon"
-                    fontSize="24px"
+                    fill="currentColor"
+                    height={17}
+                    stroke="currentColor"
+                    strokeWidth="0"
+                    style={
+                      Object {
+                        "color": undefined,
+                      }
+                    }
+                    viewBox="0 0 24 24"
+                    width={17}
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    apis.svg
+                    <path
+                      d="M20 13.01h-7V10h1c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v4c0 1.103.897 2 2 2h1v3.01H4V18H3v4h4v-4H6v-2.99h5V18h-1v4h4v-4h-1v-2.99h5V18h-1v4h4v-4h-1v-4.99zM10 8V4h4l.002 4H10z"
+                    />
                   </svg>
                 </span>
               </span>
               <span
                 className="pro-item-content"
               >
-                Apis
+                APIs
                 <a
                   href="/apis"
                   onClick={[Function]}
@@ -121,111 +157,9 @@ exports[`Componente SidebarContent Deve renderizar o menu lateral 1`] = `
               </span>
             </div>
           </li>
-          <li
-            className="pro-menu-item"
-          >
-            <div
-              className="pro-inner-item"
-              role="button"
-              tabIndex={0}
-            >
-              <span
-                className="pro-icon-wrapper"
-              >
-                <span
-                  className="pro-icon"
-                >
-                  <svg
-                    color="#FFF"
-                    data-testid="svgicon"
-                    fontSize="24px"
-                  >
-                    cwp.svg
-                  </svg>
-                </span>
-              </span>
-              <span
-                className="pro-item-content"
-              >
-                CWP
-                <a
-                  href="/cwp"
-                  onClick={[Function]}
-                  title="Cwp"
-                />
-              </span>
-            </div>
-          </li>
-          <li
-            className="pro-menu-item"
-          >
-            <div
-              className="pro-inner-item"
-              role="button"
-              tabIndex={0}
-            >
-              <span
-                className="pro-icon-wrapper"
-              >
-                <span
-                  className="pro-icon"
-                >
-                  <svg
-                    color="#FFF"
-                    data-testid="svgicon"
-                    fontSize="24px"
-                  >
-                    key-otk.svg
-                  </svg>
-                </span>
-              </span>
-              <span
-                className="pro-item-content"
-              >
-                OTK
-                <a
-                  href="/otk"
-                  onClick={[Function]}
-                  title="Otk"
-                />
-              </span>
-            </div>
-          </li>
-          <li
-            className="pro-menu-item"
-          >
-            <div
-              className="pro-inner-item"
-              role="button"
-              tabIndex={0}
-            >
-              <span
-                className="pro-icon-wrapper"
-              >
-                <span
-                  className="pro-icon"
-                >
-                  <svg
-                    color="#FFF"
-                    data-testid="svgicon"
-                    fontSize="24px"
-                  >
-                    logs.svg
-                  </svg>
-                </span>
-              </span>
-              <span
-                className="pro-item-content"
-              >
-                Logs
-                <a
-                  href="/logs"
-                  onClick={[Function]}
-                  title="Logs"
-                />
-              </span>
-            </div>
-          </li>
+          <hr
+            className="c1"
+          />
         </ul>
       </nav>
     </ul>

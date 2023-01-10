@@ -1,199 +1,59 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { BrowserRouter } from 'react-router-dom';
-import { screen } from '@testing-library/react';
-import { render } from '../../../utils/test/test-utils';
+import {
+  render,
+  rendererCreate,
+  cleanup,
+} from '../../../utils/test/test-utils';
+import Button from './';
 import theme from '../../../styles/theme';
-import Button from '.';
 
-describe('ButtonRouter component', () => {
-  test('Deve renderizar um botão default', async () => {
-    render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Button text='Test' />
-        </BrowserRouter>
-      </ThemeProvider>
+describe('FieldLabel component test', () => {
+  afterAll(cleanup);
+
+  test('should render Button component correctly', () => {
+    const { getByTestId } = render(
+      <Button data-testid='btn-test'>Click me</Button>
     );
 
-    const button = screen.getByText('Test');
+    expect(getByTestId('btn-test')).toBeInTheDocument();
+  });
 
-    expect(button).toHaveTextContent('Test');
+  test('should render Button component default styles correctly', () => {
+    const component = rendererCreate(<Button>Click me</Button>).toJSON();
 
-    expect(button).toHaveStyle(`
-      font-size: 14px;
-      width: fit-content;
-      height: fit-content;
-      color: ${theme.colors.baseSecondary.Coral};
-      border: 1px solid ${theme.colors.baseSecondary.Coral};
-    `);
+    expect(component).toHaveStyleRule('background-color', 'transparent');
+    expect(component).toHaveStyleRule('color', theme.colors.Cod);
+  });
 
-    expect(button).toHaveStyleRule('color', theme.colors.white, {
-      modifier: ':hover',
-    });
+  test('should render Button without border', () => {
+    const component = rendererCreate(
+      <Button borderLess>Click me</Button>
+    ).toJSON();
 
-    expect(button).toHaveStyleRule(
-      'background-color',
-      theme.colors.baseSecondary.Coral,
-      { modifier: ':hover' }
+    expect(component).not.toHaveStyleRule(
+      'border',
+      `1px solid ${theme.colors.Cod}`
     );
   });
 
-  //   Primary style test
-  test('Deve renderizar um botão primary', async () => {
-    render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Button text='Test' styledType='primary' />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-    const button = screen.getByText('Test');
+  describe('should match the choosen buttonTheme correctly', () => {
+    test('should match Negative theme', () => {
+      const component = rendererCreate(
+        <Button buttonTheme='negative'>Click me</Button>
+      ).toJSON();
 
-    expect(button).toHaveTextContent('Test');
-
-    expect(button).toHaveStyle(`
-      font-size: 14px;
-      width: fit-content;
-      height: fit-content;
-      color: ${theme.colors.primary};
-      border: 1px solid ${theme.colors.primary};
-    `);
-
-    expect(button).toHaveStyleRule('color', theme.colors.baseGray.Fuscous, {
-      modifier: ':hover',
+      expect(component).not.toHaveStyleRule('color', theme.colors.Cod);
     });
 
-    expect(button).toHaveStyleRule('background-color', theme.colors.primary, {
-      modifier: ':hover',
+    test('should match Green theme', () => {
+      const { getByTestId } = render(
+        <Button data-testid='btn-test' buttonTheme='Green'>
+          Click me
+        </Button>
+      );
+
+      expect(getByTestId('btn-test')).not.toHaveStyle(
+        `border: 1px solid ${theme.colors.Cod}`
+      );
     });
-  });
-
-  //   Dark style test
-  test('Deve renderizar um botão dark', async () => {
-    render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Button text='Test' styledType='dark' />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-    const button = screen.getByText('Test');
-
-    expect(button).toHaveTextContent('Test');
-
-    expect(button).toHaveStyle(`
-      font-size: 14px;
-      width: fit-content;
-      height: fit-content;
-      color: ${theme.colors.baseGray.Cod};
-      border: 1px solid ${theme.colors.baseGray.Cod};
-    `);
-
-    expect(button).toHaveStyleRule('color', theme.colors.white, {
-      modifier: ':hover',
-    });
-
-    expect(button).toHaveStyleRule(
-      'background-color',
-      theme.colors.baseGray.Cod,
-      { modifier: ':hover' }
-    );
-  });
-
-  //   WHITE style test
-  test('Deve renderizar um botão white', async () => {
-    render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Button text='Test' styledType='white' />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-    const button = screen.getByText('Test');
-
-    expect(button).toHaveTextContent('Test');
-
-    expect(button).toHaveStyle(`
-      font-size: 14px;
-      width: fit-content;
-      height: fit-content;
-      color: ${theme.colors.white};
-      border: 1px solid ${theme.colors.white};
-    `);
-
-    expect(button).toHaveStyleRule('color', theme.colors.baseGray.Cod, {
-      modifier: ':hover',
-    });
-
-    expect(button).toHaveStyleRule('background-color', theme.colors.white, {
-      modifier: ':hover',
-    });
-  });
-
-  // large text test
-  test('Deve renderizar um botão default', async () => {
-    render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Button text='Test' styledSize='large' />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-
-    const button = screen.getByText('Test');
-
-    expect(button).toHaveTextContent('Test');
-
-    expect(button).toHaveStyle(`
-      font-size: 14px;
-      width: 260px;
-      height: 40px;
-      color: ${theme.colors.baseSecondary.Coral};
-      border: 1px solid ${theme.colors.baseSecondary.Coral};
-    `);
-
-    expect(button).toHaveStyleRule('color', theme.colors.white, {
-      modifier: ':hover',
-    });
-
-    expect(button).toHaveStyleRule(
-      'background-color',
-      theme.colors.baseSecondary.Coral,
-      { modifier: ':hover' }
-    );
-  });
-
-  // medium text test
-  test('Deve renderizar um botão default', async () => {
-    render(
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Button text='Test' styledSize='medium' />
-        </BrowserRouter>
-      </ThemeProvider>
-    );
-
-    const button = screen.getByText('Test');
-
-    expect(button).toHaveTextContent('Test');
-
-    expect(button).toHaveStyle(`
-      font-size: 14px;
-      width: 180px;
-      height: 40px;
-      color: ${theme.colors.baseSecondary.Coral};
-      border: 1px solid ${theme.colors.baseSecondary.Coral};
-    `);
-
-    expect(button).toHaveStyleRule('color', theme.colors.white, {
-      modifier: ':hover',
-    });
-
-    expect(button).toHaveStyleRule(
-      'background-color',
-      theme.colors.baseSecondary.Coral,
-      { modifier: ':hover' }
-    );
   });
 });

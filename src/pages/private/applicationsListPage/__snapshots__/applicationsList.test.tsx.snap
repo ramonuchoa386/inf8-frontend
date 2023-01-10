@@ -1,0 +1,1042 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Applications list Snapshot 1`] = `
+.c4 {
+  border: none;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c4:hover svg {
+  color: #FFF;
+}
+
+.c4:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c4:disabled:hover {
+  background-color: transparent;
+}
+
+.c13 {
+  border: none;
+  cursor: pointer;
+  color: #FF805E;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c13:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #FF805E;
+}
+
+.c13:hover svg {
+  color: #FFF;
+}
+
+.c13:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c13:disabled:hover {
+  background-color: transparent;
+}
+
+.c20 {
+  border: 1px solid #191918;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c20:hover svg {
+  color: #FFF;
+}
+
+.c20:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c20:disabled:hover {
+  background-color: transparent;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c18 {
+  width: 100%;
+  padding: 12px 8px;
+  color: #464643;
+  border-radius: 4px;
+  border: 1px solid #191918;
+}
+
+.c18::-webkit-input-placeholder {
+  color: #A0A098;
+}
+
+.c18::-moz-placeholder {
+  color: #A0A098;
+}
+
+.c18:-ms-input-placeholder {
+  color: #A0A098;
+}
+
+.c18::placeholder {
+  color: #A0A098;
+}
+
+.c18:invalid {
+  border-color: #FF4242;
+}
+
+.c18:focus {
+  outline: none;
+  box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
+}
+
+.c5 {
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
+  padding: 16px;
+}
+
+.c3 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Inter;
+  font-weight: 900;
+  color: #464643;
+}
+
+.c10 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: Inter;
+  font-weight: 400;
+  color: #464643;
+}
+
+.c11 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: Inter;
+  font-weight: 900;
+  color: #464643;
+}
+
+.c8 {
+  padding: 4px;
+  border-radius: calc(100 * 4px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border: 1px solid #191918;
+}
+
+.c1 {
+  width: 100%;
+  background-color: #CFCFC4;
+  padding: 16px 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.c6 {
+  padding: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 2;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #FFF;
+  border: 1px solid #B996FF;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  width: 100%;
+}
+
+.c7:first-of-type {
+  border-bottom: 1px solid #CFCFC4;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c12 {
+  font-size: 12px;
+}
+
+.c30 {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.c32:nth-of-type(even) {
+  background-color: #CFCFC4;
+}
+
+.c31 {
+  color: #FFF;
+  background-color: #464643;
+  text-transform: uppercase;
+}
+
+.c33 {
+  text-align: left;
+  padding: 8px;
+}
+
+.c34 {
+  padding: 8px;
+}
+
+.c29 {
+  color: #73736E;
+  border-radius: 4px;
+  border-color: #73736E;
+  border-width: 1px;
+  border-style: solid;
+  width: 160px;
+  height: 43px;
+  padding: 8px 12px 8px 4px;
+}
+
+.c29::-webkit-input-placeholder,
+.c29::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c29::-moz-placeholder,
+.c29::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c29:-ms-input-placeholder,
+.c29::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c29::placeholder,
+.c29::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c29:-ms-input-placeholder {
+  color: #73736E;
+}
+
+.c38 {
+  color: #73736E;
+}
+
+.c38:hover {
+  color: #191918;
+  background-color: initial;
+}
+
+.c39 {
+  color: #191918;
+  font-weight: bold;
+}
+
+.c39:hover {
+  color: #191918;
+  background-color: initial;
+}
+
+.c35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-top: 16px;
+  gap: 4px;
+}
+
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c36 {
+  margin: 0px;
+}
+
+.c36 select {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c16.ExtendedFilter {
+  max-height: 0px;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  overflow: hidden;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  position: relative;
+}
+
+.c22 {
+  padding: 8px;
+}
+
+.c23 {
+  padding: 8px;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c24 {
+  max-height: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  -webkit-transition-duration: 750ms;
+  transition-duration: 750ms;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  overflow: hidden;
+}
+
+.c21 {
+  padding: 8px;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.c27 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.c28 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.c25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.c0 {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.c14 {
+  padding: 48px 20px 64px;
+}
+
+.c15 {
+  margin-bottom: 15px;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    padding-left: 48px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width:768px) {
+  .c14 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (min-width:1366px) {
+  .c14 {
+    padding-left: 75px;
+    padding-right: 75px;
+    overflow: scroll;
+    height: 100%;
+  }
+
+  .c14::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .c14::-webkit-scrollbar-track {
+    background: 'transparent';
+  }
+
+  .c14::-webkit-scrollbar-thumb {
+    border-radius: calc(100 * 4px);
+    background: #464643;
+  }
+
+  .c14::-webkit-scrollbar-thumb:hover {
+    background: #191918;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div />
+  <header
+    className="c1"
+  >
+    <section
+      className="c2"
+    >
+      <svg
+        className=""
+        color="#191918"
+        fill="currentColor"
+        height="12px"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": "#191918",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="12px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z"
+        />
+        <path
+          d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z"
+        />
+      </svg>
+      <p
+        className="c3"
+        size="small"
+      >
+        Portal do Administrador
+      </p>
+      <button
+        className="c4 "
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+          />
+        </svg>
+      </button>
+    </section>
+    <div
+      className="c5 c6"
+    >
+      <div
+        className="c7"
+      >
+        <div
+          className="c8 "
+        >
+          <svg
+            className=""
+            color="#191918"
+            fill="currentColor"
+            height="12px"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": "#191918",
+              }
+            }
+            viewBox="0 0 24 24"
+            width="12px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"
+            />
+          </svg>
+        </div>
+        <div
+          className="c9"
+        >
+          <p
+            className="c10"
+          >
+            Olá
+          </p>
+          <p
+            className="c11 c12"
+          >
+            perfil:
+          </p>
+        </div>
+      </div>
+      <div
+        className="c7"
+        style={
+          Object {
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <button
+          className="c13 "
+          onClick={[Function]}
+        >
+          Sair
+        </button>
+      </div>
+    </div>
+  </header>
+  <div
+    className="c14"
+  >
+    <h2>
+      Applications
+    </h2>
+    <section
+      className=""
+    >
+      <div
+        className="c15"
+      >
+        <div
+          className="c16"
+        >
+          <div
+            className="c17"
+          >
+            <input
+              className="c18 "
+              onChange={[Function]}
+              onKeyUp={[Function]}
+              placeholder="Pesquisar"
+            />
+          </div>
+          <div
+            className="c19"
+          >
+            <button
+              className="c20 "
+              onClick={[Function]}
+            >
+              Pesquisar
+            </button>
+            <button
+              className="c20 c21"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 3H5a1 1 0 0 0-1 1v2.59c0 .523.213 1.037.583 1.407L10 13.414V21a1.001 1.001 0 0 0 1.447.895l4-2c.339-.17.553-.516.553-.895v-5.586l5.417-5.417c.37-.37.583-.884.583-1.407V4a1 1 0 0 0-1-1zm-6.707 9.293A.996.996 0 0 0 14 13v5.382l-2 1V13a.996.996 0 0 0-.293-.707L6 6.59V5h14.001l.002 1.583-5.71 5.71z"
+                />
+              </svg>
+            </button>
+            <button
+              className="c20 c22"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.999 17c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-12c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h12zm-12-12h12l.002 10H5.999V5zm-2 14h16v2h-16z"
+                />
+              </svg>
+            </button>
+            <button
+              className="c20 c23"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          className="c24"
+        >
+          <div
+            className="c25"
+          >
+            <div
+              className="c26"
+            >
+              <div
+                className="c27"
+              >
+                <div
+                  className="c26"
+                >
+                  <div
+                    className="c28"
+                  >
+                    Estado
+                  </div>
+                </div>
+                <div
+                  className="c26"
+                >
+                  <select
+                    className="c29"
+                    defaultValue="Selecionar"
+                    onChange={[Function]}
+                  >
+                    <option
+                      className=""
+                      value=""
+                    >
+                      Selecionar
+                    </option>
+                    <option
+                      className=""
+                      value="ENABLED"
+                    >
+                      Disponível
+                    </option>
+                    <option
+                      className=""
+                      value="DISABLED"
+                    >
+                      Indisponível
+                    </option>
+                    <option
+                      className=""
+                      value="APPLICATION_PENDING_APPROVAL"
+                    >
+                      Pendente aprovação
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button
+                className="c20 "
+                onClick={[Function]}
+              >
+                Limpar Filtros
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table
+        className="c30 "
+      >
+        <colgroup
+          className=""
+        />
+        <thead
+          className="c31"
+        >
+          <tr
+            className="c32"
+          >
+            <th
+              className="c33"
+            >
+              Nome
+            </th>
+            <th
+              className="c33"
+            >
+              Descrição
+            </th>
+            <th
+              className="c33"
+            >
+              Status
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          className=""
+        >
+          <tr
+            className="c32"
+          >
+            <td
+              className="c34"
+            >
+              Sem resultados
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        className="c35 "
+      >
+        <div
+          className="c36"
+        >
+          <select
+            className="c29"
+            defaultValue={12}
+            onChange={[Function]}
+          >
+            <option
+              className=""
+              value={12}
+            >
+              12
+            </option>
+            <option
+              className=""
+              value={24}
+            >
+              24
+            </option>
+            <option
+              className=""
+              value={36}
+            >
+              36
+            </option>
+          </select>
+           items por pág.
+        </div>
+        <span
+          className="c37"
+        >
+          <button
+            className="c4 c38"
+            disabled={true}
+            onClick={[Function]}
+          >
+            &lt;&lt;
+          </button>
+          <button
+            className="c4 c38"
+            disabled={true}
+            onClick={[Function]}
+          >
+            &lt;
+          </button>
+          <button
+            className="c4 c39"
+            onClick={[Function]}
+          >
+            1
+          </button>
+          <button
+            className="c4 c38"
+            onClick={[Function]}
+          >
+            2
+          </button>
+          <button
+            className="c4 c38"
+            onClick={[Function]}
+          >
+            3
+          </button>
+          <button
+            className="c4 c38"
+            disabled={false}
+            onClick={[Function]}
+          >
+            &gt;
+          </button>
+          <button
+            className="c4 c38"
+            disabled={false}
+            onClick={[Function]}
+          >
+            &gt;&gt;
+          </button>
+        </span>
+      </div>
+    </section>
+  </div>
+</div>
+`;

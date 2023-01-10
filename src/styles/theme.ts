@@ -27,31 +27,39 @@ const customEffects = {
   boxShadow: '0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%)',
 };
 
+const colorPalette = {
+  primary: '#F1FF00',
+  white: '#FFF',
+  coral: '#FF805E',
+  lilac: '#B996FF',
+  green: '#33FFB4',
+  pitchBlack: '#191918',
+  black: '#464643',
+  darkGray: '#73736E',
+  gray: '#A0A098',
+  lightGray: '#CFCFC4',
+  warning: '#FFA722',
+  negative: '#FF4242',
+  positive: '#04CF00',
+};
+
 const theme = {
   name: 'DEFAULT',
   colors: {
-    primary: '#F1FF00',
-    white: '#FFF',
-    baseSecondary: {
-      Coral: '#FF805E',
-      Mauve: '#B996FF',
-      Green: '#33FFB4',
-    },
-    baseGray: {
-      Cod: '#191918',
-      Fuscous: '#464643',
-      ironside: '#73736E',
-      delta: '#A0A098',
-      celeste: '#CFCFC4',
-    },
-    baseFeedback: {
-      warning: '#FFA722',
-      negative: '#FF4242',
-      positive: '#04CF00',
-    },
+    Coral: '#FF805E',
+    Mauve: '#B996FF',
+    Green: '#33FFB4',
+    Cod: '#191918',
+    Fuscous: '#464643',
+    ironside: '#73736E',
+    delta: '#A0A098',
+    celeste: '#CFCFC4',
+    ...colorPalette,
   },
   effects: customEffects,
   ...defaultSetting,
 };
+
+export type ColorPalette = keyof typeof theme.colors;
 
 export default theme;

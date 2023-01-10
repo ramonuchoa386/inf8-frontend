@@ -1,23 +1,40 @@
 import React from 'react';
+import * as BoxIcons from 'react-icons/bi';
+import theme, { ColorPalette } from '../../../styles/theme';
+import { BoxIconsType } from '../../../utils/types';
 import SVGIcons, { TypeIcons } from './../../../assets/icons/';
 
-export interface IconProps {
-  onClick?: () => void;
-  name: TypeIcons | undefined;
+export interface IIconProps {
+  iconName?: BoxIconsType | TypeIcons;
   size?: string;
-  color?: string;
+  color?: ColorPalette;
 }
 
-const Icon = ({ onClick, name, size = '24px', color = '#000' }: IconProps) => {
-  if (!name || !SVGIcons[name]) return null;
+const Icon: React.FunctionComponent<IIconProps> = (props) => {
+  const {
+    iconName = 'BiAbacus',
+    size = '12px',
+    color = 'Cod',
+    ...rest
+  } = props;
 
-  const I = SVGIcons[name];
+  let I;
 
-  const formatProps = {
-    fontSize: size,
-    color,
-  };
-  return <I data-testid='svgicon' onClick={onClick} {...formatProps} />;
+  if (iconName in BoxIcons) {
+    I = BoxIcons[iconName as BoxIconsType];
+  } else {
+    I = SVGIcons[iconName as TypeIcons];
+  }
+
+  return (
+    <I
+      color={theme.colors[color]}
+      size={size}
+      width={size}
+      height={size}
+      {...rest}
+    />
+  );
 };
 
 export default Icon;

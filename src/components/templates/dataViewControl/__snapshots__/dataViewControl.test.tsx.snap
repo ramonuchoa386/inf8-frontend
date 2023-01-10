@@ -1,0 +1,1996 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataViewControl component tests should match snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .c11 {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.c13:nth-of-type(even) {
+  background-color: #CFCFC4;
+}
+
+.c12 {
+  color: #FFF;
+  background-color: #464643;
+  text-transform: uppercase;
+}
+
+.c14 {
+  text-align: left;
+  padding: 8px;
+}
+
+.c15 {
+  padding: 8px;
+}
+
+.c5 {
+  border: 1px solid #191918;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c5:hover svg {
+  color: #FFF;
+}
+
+.c5:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c5:disabled:hover {
+  background-color: transparent;
+}
+
+.c20 {
+  border: none;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c20:hover svg {
+  color: #FFF;
+}
+
+.c20:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c20:disabled:hover {
+  background-color: transparent;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  width: 100%;
+  padding: 12px 8px;
+  color: #464643;
+  border-radius: 4px;
+  border: 1px solid #191918;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #A0A098;
+}
+
+.c3::-moz-placeholder {
+  color: #A0A098;
+}
+
+.c3:-ms-input-placeholder {
+  color: #A0A098;
+}
+
+.c3::placeholder {
+  color: #A0A098;
+}
+
+.c3:invalid {
+  border-color: #FF4242;
+}
+
+.c3:focus {
+  outline: none;
+  box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
+}
+
+.c18 {
+  color: #73736E;
+  border-radius: 4px;
+  border-color: #73736E;
+  border-width: 1px;
+  border-style: solid;
+  width: 160px;
+  height: 43px;
+  padding: 8px 12px 8px 4px;
+}
+
+.c18::-webkit-input-placeholder,
+.c18::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c18::-moz-placeholder,
+.c18::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c18:-ms-input-placeholder,
+.c18::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c18::placeholder,
+.c18::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c18:-ms-input-placeholder {
+  color: #73736E;
+}
+
+.c21 {
+  color: #73736E;
+}
+
+.c21:hover {
+  color: #191918;
+  background-color: initial;
+}
+
+.c22 {
+  color: #191918;
+  font-weight: bold;
+}
+
+.c22:hover {
+  color: #191918;
+  background-color: initial;
+}
+
+.c23 {
+  color: #A0A098;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-top: 16px;
+  gap: 4px;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c17 {
+  margin: 0px;
+}
+
+.c17 select {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c1.ExtendedFilter {
+  max-height: 0px;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  overflow: hidden;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  position: relative;
+}
+
+.c6 {
+  padding: 8px;
+}
+
+.c7 {
+  padding: 8px;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c8 {
+  max-height: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  -webkit-transition-duration: 750ms;
+  transition-duration: 750ms;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  overflow: hidden;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.c0 {
+  margin-bottom: 15px;
+}
+
+<body>
+    <div>
+      <section
+        class=""
+      >
+        <div
+          class="c0"
+        >
+          <div
+            class="c1"
+          >
+            <div
+              class="c2"
+            >
+              <input
+                class="c3 "
+                placeholder="Pesquisar"
+              />
+            </div>
+            <div
+              class="c4"
+            >
+              <button
+                class="c5 "
+              >
+                Pesquisar
+              </button>
+              <button
+                class="c5 c6"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.999 17c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-12c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h12zm-12-12h12l.002 10H5.999V5zm-2 14h16v2h-16z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="c5 c7"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="c8"
+          >
+            <div
+              class="c9"
+            >
+              <div
+                class="c10"
+              />
+              <div>
+                <button
+                  class="c5 "
+                >
+                  Limpar Filtros
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <table
+          class="c11 "
+        >
+          <colgroup
+            class=""
+          />
+          <thead
+            class="c12"
+          >
+            <tr
+              class="c13"
+            >
+              <th
+                class="c14"
+              >
+                NOME
+              </th>
+              <th
+                class="c14"
+              >
+                DESCRIÇÃO
+              </th>
+              <th
+                class="c14"
+              >
+                TAG
+              </th>
+              <th
+                class="c14"
+              >
+                DATA DE CRIAÇÂO
+              </th>
+              <th
+                class="c14"
+              >
+                VERSÃO
+              </th>
+              <th
+                class="c14"
+              >
+                TIPO
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class=""
+          >
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+            <tr
+              class="c13"
+            >
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+              <td
+                class="c15"
+              >
+                Lorem Ipsum
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div
+          class="c16 "
+        >
+          <div
+            class="c17"
+          >
+            <select
+              class="c18"
+            >
+              <option
+                class=""
+                selected=""
+                value="12"
+              >
+                12
+              </option>
+              <option
+                class=""
+                value="24"
+              >
+                24
+              </option>
+              <option
+                class=""
+                value="36"
+              >
+                36
+              </option>
+            </select>
+             items por pág.
+          </div>
+          <span
+            class="c19"
+          >
+            <button
+              class="c20 c21"
+              disabled=""
+            >
+              &lt;&lt;
+            </button>
+            <button
+              class="c20 c21"
+              disabled=""
+            >
+              &lt;
+            </button>
+            <button
+              class="c20 c22"
+            >
+              1
+            </button>
+            <button
+              class="c20 c21"
+            >
+              2
+            </button>
+            <button
+              class="c20 c21"
+            >
+              3
+            </button>
+            <div
+              class="c23"
+            >
+              ...
+            </div>
+            <button
+              class="c20 c21"
+            >
+              4
+            </button>
+            <button
+              class="c20 c21"
+            >
+              &gt;
+            </button>
+            <button
+              class="c20 c21"
+            >
+              &gt;&gt;
+            </button>
+          </span>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": .c11 {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.c13:nth-of-type(even) {
+  background-color: #CFCFC4;
+}
+
+.c12 {
+  color: #FFF;
+  background-color: #464643;
+  text-transform: uppercase;
+}
+
+.c14 {
+  text-align: left;
+  padding: 8px;
+}
+
+.c15 {
+  padding: 8px;
+}
+
+.c5 {
+  border: 1px solid #191918;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c5:hover svg {
+  color: #FFF;
+}
+
+.c5:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c5:disabled:hover {
+  background-color: transparent;
+}
+
+.c20 {
+  border: none;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c20:hover svg {
+  color: #FFF;
+}
+
+.c20:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c20:disabled:hover {
+  background-color: transparent;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  width: 100%;
+  padding: 12px 8px;
+  color: #464643;
+  border-radius: 4px;
+  border: 1px solid #191918;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #A0A098;
+}
+
+.c3::-moz-placeholder {
+  color: #A0A098;
+}
+
+.c3:-ms-input-placeholder {
+  color: #A0A098;
+}
+
+.c3::placeholder {
+  color: #A0A098;
+}
+
+.c3:invalid {
+  border-color: #FF4242;
+}
+
+.c3:focus {
+  outline: none;
+  box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
+}
+
+.c18 {
+  color: #73736E;
+  border-radius: 4px;
+  border-color: #73736E;
+  border-width: 1px;
+  border-style: solid;
+  width: 160px;
+  height: 43px;
+  padding: 8px 12px 8px 4px;
+}
+
+.c18::-webkit-input-placeholder,
+.c18::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c18::-moz-placeholder,
+.c18::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c18:-ms-input-placeholder,
+.c18::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c18::placeholder,
+.c18::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c18:-ms-input-placeholder {
+  color: #73736E;
+}
+
+.c21 {
+  color: #73736E;
+}
+
+.c21:hover {
+  color: #191918;
+  background-color: initial;
+}
+
+.c22 {
+  color: #191918;
+  font-weight: bold;
+}
+
+.c22:hover {
+  color: #191918;
+  background-color: initial;
+}
+
+.c23 {
+  color: #A0A098;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-top: 16px;
+  gap: 4px;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c17 {
+  margin: 0px;
+}
+
+.c17 select {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c1.ExtendedFilter {
+  max-height: 0px;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  overflow: hidden;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  position: relative;
+}
+
+.c6 {
+  padding: 8px;
+}
+
+.c7 {
+  padding: 8px;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c8 {
+  max-height: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  -webkit-transition-duration: 750ms;
+  transition-duration: 750ms;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  overflow: hidden;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.c0 {
+  margin-bottom: 15px;
+}
+
+<div>
+    <section
+      class=""
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <input
+              class="c3 "
+              placeholder="Pesquisar"
+            />
+          </div>
+          <div
+            class="c4"
+          >
+            <button
+              class="c5 "
+            >
+              Pesquisar
+            </button>
+            <button
+              class="c5 c6"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.999 17c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2h-12c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h12zm-12-12h12l.002 10H5.999V5zm-2 14h16v2h-16z"
+                />
+              </svg>
+            </button>
+            <button
+              class="c5 c7"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h2v2H4zm0 5h2v2H4zm0 5h2v2H4zm16-8V6H8.023v2H18.8zM8 11h12v2H8zm0 5h12v2H8z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="c8"
+        >
+          <div
+            class="c9"
+          >
+            <div
+              class="c10"
+            />
+            <div>
+              <button
+                class="c5 "
+              >
+                Limpar Filtros
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table
+        class="c11 "
+      >
+        <colgroup
+          class=""
+        />
+        <thead
+          class="c12"
+        >
+          <tr
+            class="c13"
+          >
+            <th
+              class="c14"
+            >
+              NOME
+            </th>
+            <th
+              class="c14"
+            >
+              DESCRIÇÃO
+            </th>
+            <th
+              class="c14"
+            >
+              TAG
+            </th>
+            <th
+              class="c14"
+            >
+              DATA DE CRIAÇÂO
+            </th>
+            <th
+              class="c14"
+            >
+              VERSÃO
+            </th>
+            <th
+              class="c14"
+            >
+              TIPO
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class=""
+        >
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+          <tr
+            class="c13"
+          >
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+            <td
+              class="c15"
+            >
+              Lorem Ipsum
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class="c16 "
+      >
+        <div
+          class="c17"
+        >
+          <select
+            class="c18"
+          >
+            <option
+              class=""
+              selected=""
+              value="12"
+            >
+              12
+            </option>
+            <option
+              class=""
+              value="24"
+            >
+              24
+            </option>
+            <option
+              class=""
+              value="36"
+            >
+              36
+            </option>
+          </select>
+           items por pág.
+        </div>
+        <span
+          class="c19"
+        >
+          <button
+            class="c20 c21"
+            disabled=""
+          >
+            &lt;&lt;
+          </button>
+          <button
+            class="c20 c21"
+            disabled=""
+          >
+            &lt;
+          </button>
+          <button
+            class="c20 c22"
+          >
+            1
+          </button>
+          <button
+            class="c20 c21"
+          >
+            2
+          </button>
+          <button
+            class="c20 c21"
+          >
+            3
+          </button>
+          <div
+            class="c23"
+          >
+            ...
+          </div>
+          <button
+            class="c20 c21"
+          >
+            4
+          </button>
+          <button
+            class="c20 c21"
+          >
+            &gt;
+          </button>
+          <button
+            class="c20 c21"
+          >
+            &gt;&gt;
+          </button>
+        </span>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

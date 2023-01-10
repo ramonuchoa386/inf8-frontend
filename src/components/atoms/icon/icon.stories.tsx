@@ -1,52 +1,59 @@
 import * as React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Icon from '.';
-import SVGIcons from './../../../assets/icons';
+import * as BoxIcons from 'react-icons/bi';
+import Icon from './';
+import SVGIcons from '../../../assets/icons';
+import theme from '../../../styles/theme';
+
+export const iconLibOptions = {
+  ...Object.keys(BoxIcons),
+  ...Object.keys(SVGIcons),
+};
 
 export default {
-  title: 'components/atoms/Icon',
+  title: 'components/atoms/Icons',
   component: Icon,
   description: `Icon`,
   argTypes: {
-    name: {
+    iconName: {
+      name: 'Ícone',
       control: 'select',
-      options: Object.keys(SVGIcons).sort(),
+      options: Object.values(iconLibOptions),
+      mapping: iconLibOptions,
       description: 'Nome do ícone',
-      type: { name: 'string', required: true },
+      type: { name: 'string', required: false },
+      defaultValue: 'BiAbacus',
       table: {
-        type: { summary: 'text' },
-        defaultValue: { summary: 'fulfillment' },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'BiAbacus' },
       },
     },
     size: {
-      control: 'number',
+      name: 'Tamanho',
+      control: 'text',
       description: 'Tamanho do ícone',
+      type: { name: 'string', required: false },
+      defaultValue: '12px',
       table: {
-        type: { summary: 'number' },
-        defaultValue: { summary: 24 },
+        type: { summary: 'string' },
+        defaultValue: { summary: '12px' },
       },
     },
     color: {
-      control: 'color',
+      name: 'Cor',
+      control: 'select',
+      options: Object.keys(theme.colors).sort(),
       description: 'Cor do ícone',
+      type: { name: 'string', required: false },
+      defaultValue: 'Cod',
       table: {
-        type: { summary: 'text' },
-        defaultValue: { summary: '#000' },
+        type: { summary: 'string' },
+        defaultValue: { summary: 'Cod' },
       },
     },
   },
 } as ComponentMeta<typeof Icon>;
-// 👇 We create a “template” of how args map to rendering
+
 const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
-// 👇 Each story then reuses that template
 export const Default = Template.bind({});
-Default.args = {
-  name: 'KeyOtk',
-};
-
-export const OnClick = Template.bind({});
-OnClick.args = {
-  name: 'KeyOtk',
-  onClick: () => alert('Clicked the Icon!'),
-};

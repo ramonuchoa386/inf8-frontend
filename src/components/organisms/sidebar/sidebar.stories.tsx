@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Story } from '@storybook/react/types-6-0';
-import { MemoryRouter } from 'react-router-dom';
 import Sidebar from '.';
 
 export default {
@@ -13,11 +12,7 @@ export default {
   },
 };
 
-const Template: Story = (args) => (
-  <MemoryRouter>
-    <Sidebar {...args} />
-  </MemoryRouter>
-);
+const Template: Story = (args) => <Sidebar {...args} />;
 
 // 👇 Each story then reuses that template
 export const Default = Template.bind({});

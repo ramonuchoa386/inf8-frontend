@@ -1,21 +1,58 @@
-import React, { useContext } from 'react';
+import React, {
+  useContext,
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+} from 'react';
+import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import AuthContext from '../../../context/auth';
-import { HeaderInfoUser } from '../../molecules';
-
-// Styles
 import * as S from './styles';
 
-// Components
+const Header: React.FunctionComponent = (props) => {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const { singOut } = useContext(AuthContext);
+  const [toggleBox, setToggleBox] = useState(false);
+  const [headerOffset, setHeaderOffset] = useState<string>('');
 
-const Header = ({ onlyMobile = false }: S.HeaderProps) => {
-  const { state } = useContext(AuthContext);
+  const getHeaderOffset = useCallback(
+    (el: Element) => setHeaderOffset(() => el.getBoundingClientRect().x + 'px'),
+    [setHeaderOffset]
+  );
+
+  useEffect(() => {
+    headerRef.current && getHeaderOffset(headerRef.current);
+  }, [headerRef, getHeaderOffset]);
 
   return (
-    <S.Main data-testid='HeaderID' onlyMobile={onlyMobile}>
-      <S.Box>
-        <span>Está Logado? {JSON.stringify(state.logged)}</span>
-        <HeaderInfoUser />
-      </S.Box>
+    <S.Main ref={headerRef} {...props}>
+      <S.AvatarWrapper>
+        <S.HeaderIcon iconName='BiUserCircle' />
+        <S.AvatarText weight='bold' size='small'>
+          Portal do Administrador
+        </S.AvatarText>
+        <S.ToggleBtn
+          borderLess
+          onClick={() => setToggleBox((current) => !current)}
+        >
+          {!toggleBox ? <BiChevronDown /> : <BiChevronUp />}
+        </S.ToggleBtn>
+      </S.AvatarWrapper>
+      <S.BoxWrapper offsetAmount={headerOffset} toggle={toggleBox}>
+        <S.BoxRow>
+          <S.Avatar />
+          <S.BoxColumn>
+            <S.UserName>Olá</S.UserName>
+            <S.UserProfile weight='bold'>perfil:</S.UserProfile>
+          </S.BoxColumn>
+        </S.BoxRow>
+
+        <S.BoxRow style={{ justifyContent: 'space-between' }}>
+          <S.LogOutBtn buttonTheme='Coral' onClick={singOut} borderLess>
+            Sair
+          </S.LogOutBtn>
+        </S.BoxRow>
+      </S.BoxWrapper>
     </S.Main>
   );
 };
