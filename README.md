@@ -1,7 +1,6 @@
+# Boilerplate para aplicações Frontend | V.tal
 
-# Projeto do Portal APIM | vtal
-
-Este repositório que contém o código-fonte do portal do desenvolvedor.
+Este repositório que contém o código-fonte inicial para aplicações frontend.
 
 ## Pré-requisitos
 
@@ -16,19 +15,19 @@ Em desenvolvimento...
 
 ## Como usar
 
-1. `yarn`or`npm`
+1. `npm`
 2. Install VSCode extensions: [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 ## Comandos
 
-1. `yarn start`: Inicia o projeto
-2. `yarn build`: Gera os arquivos compilados para deploy em dev
-3. `yarn build:prod`: Gera os arquivos compilados para deploy em produção
-4. `yarn snapshot:update`: Atualiza os snapshots
-5. `yarn storybook`: Inicia o storybook
-6. `yarn test`: Executa os testes
-7. `yarn coverage`: Executa o coverage
-8. `yarn dev:server`: Servidor local
+1. `npm run start`: Inicia o projeto
+2. `npm run build`: Gera os arquivos compilados para deploy em dev
+3. `npm run build:prod`: Gera os arquivos compilados para deploy em produção
+4. `npm run snapshot:update`: Atualiza os snapshots
+5. `npm run storybook`: Inicia o storybook
+6. `npm run test`: Executa os testes
+7. `npm run coverage`: Executa o coverage
+8. `npm run dev:server`: Servidor local
 
 ### Estrutura de pastas
 

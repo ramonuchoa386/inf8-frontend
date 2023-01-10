@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-react-18-v2",
+  "name": "vtal-frontend-react-boilerplate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -69,12 +69,14 @@
     ]
   },
   "devDependencies": {
+    "@mdx-js/react": "^2.2.1",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",
     "@storybook/builder-webpack5": "^6.4.22",
     "@storybook/manager-webpack5": "^6.4.22",
+    "@storybook/mdx2-csf": "^0.0.3",
     "@storybook/node-logger": "^6.4.22",
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.22",
