@@ -1,6 +1,6 @@
-# Boilerplate para aplicações Frontend | V.tal
+# INF8 Frontend | V.tal
 
-Este repositório que contém o código-fonte inicial para aplicações frontend.
+Este repositório que contém o código-fonte da aplicação INF8 Frontend.
 
 ## Pré-requisitos
 
