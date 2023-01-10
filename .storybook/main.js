@@ -15,4 +15,7 @@ module.exports = {
   core: {
     builder: '@storybook/builder-webpack5',
   },
+  features: {
+    previewMdx2: true,
+  },
 };

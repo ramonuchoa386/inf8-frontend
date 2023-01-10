@@ -1,6 +1,6 @@
 import { addons } from '@storybook/addons';
-import APIM from './theme';
+import theme from './theme';
 
 addons.setConfig({
-  theme: APIM,
+  theme: theme,
 });

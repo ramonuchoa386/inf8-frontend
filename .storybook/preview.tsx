@@ -81,8 +81,8 @@ const pipe =
 
 function storySort(a: any[], b: any[]) {
   const prefixFn = pipe(
-    prefix('introduction-', '0'),
-    prefix('getting-', 'a'),
+    prefix('introdução-', '0'),
+    prefix('primeiros-', 'a'),
     prefix('docs-', '1'),
     prefix('components-', '2')
   );
