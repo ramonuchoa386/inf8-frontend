@@ -25,7 +25,7 @@ const Paginacao: React.FunctionComponent<iPagnicao> = (props) => {
     <S.Container {...rest}>
       <S.ItemsPorPaginaWrapper>
         <S.Drop
-          items={!optionQtdItems ? [0] : optionQtdItems}
+          items={!optionQtdItems ? [12, 24, 36] : optionQtdItems}
           setItem={(e) => setQtdItems(typeof e === 'string' ? parseInt(e) : e)}
           selected={selectedOptPage}
         />
