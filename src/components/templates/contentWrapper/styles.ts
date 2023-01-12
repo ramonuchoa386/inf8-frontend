@@ -1,10 +1,30 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Main = styled.div`
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-`;
+export const Main = styled.div<{ overlay?: boolean }>((props) => {
+  const { overlay = false } = props;
+
+  return css`
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    ${overlay &&
+    `
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: ${props.theme.colors.Cod}4d;
+      }
+    `}
+  `;
+});
 
 export const Content = styled.div`
   padding: 48px 20px 64px;
