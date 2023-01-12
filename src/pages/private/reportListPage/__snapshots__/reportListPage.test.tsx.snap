@@ -953,7 +953,8 @@ exports[`Applications list Snapshot 1`] = `
       >
         <a
           className="c16"
-          download=""
+          download="modelo_relatorio.csv"
+          href="/modelo/cp-unix_time_stamp.csv"
         >
           Download do modelo 
           <svg
