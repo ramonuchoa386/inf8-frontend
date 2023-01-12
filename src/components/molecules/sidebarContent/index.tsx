@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu, MenuItem } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom';
-import { BiHome, BiSitemap } from 'react-icons/bi';
+import { BiHome, BiCloudUpload } from 'react-icons/bi';
 import * as S from './styles';
 import theme from '../../../styles/theme';
 
@@ -15,9 +15,9 @@ const SidebarContent = ({ iconSize = 17 }: { iconSize?: number }) => {
             <Link to='/' title='Dashboard' color={theme.colors.white} />
           </MenuItem>
           <S.Division />
-          <MenuItem icon={<BiSitemap size={iconSize} />}>
-            APIs
-            <Link to='/apis' title='Apis' />
+          <MenuItem icon={<BiCloudUpload size={iconSize} />}>
+            Relatório de envio
+            <Link to='/relatorio-de-envio' title='Relatório de envio' />
           </MenuItem>
           <S.Division />
         </Menu>
