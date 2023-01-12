@@ -4,6 +4,12 @@ const config = {
     process.env.NODE_ENV === 'development'
       ? 'https://apim.dev.ca.com/api/apim'
       : 'https://developers.hml.vtal.intra/api/developers',
+  API_BASEURL:
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3000/api'
+      : 'https://developers.hml.vtal.intra/api/developers',
+  FILEUPLOAD_ENDPOINT: '/file-upload',
+  MAX_FILE_SIZE: 5000000,
   // PAPI_BASEURL: process.env.REACT_APP_PAPI_HOST || 'https://apim.dev.ca.com/api/apim',
   PAPI_API_LIST: '/api-management/1.0/apis',
   PAPI_API_MANAGEMENT: '/api-management/1.0/apis/',
