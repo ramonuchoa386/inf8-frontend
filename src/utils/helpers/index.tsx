@@ -1,7 +1,5 @@
 import React from 'react';
 export * from './apiSecretRenew';
-export * from './setUserProfile';
-export * from './setUserPermissions';
 
 const GetDateUTCMilisseconds = (mili: number) => {
   const date = new Date(0);
