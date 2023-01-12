@@ -1,11 +1,11 @@
 import React from 'react';
 import { rendererCreate } from '../../../utils/test/test-utils';
 
-import ApplicationsListPage from '.';
+import ReportListPage from '.';
 
 describe('Applications list', () => {
   test('Snapshot', () => {
-    const page = rendererCreate(<ApplicationsListPage />).toJSON();
+    const page = rendererCreate(<ReportListPage />).toJSON();
     expect(page).toMatchSnapshot();
   });
 });

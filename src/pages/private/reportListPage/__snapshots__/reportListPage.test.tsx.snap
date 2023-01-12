@@ -1,0 +1,1300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Applications list Snapshot 1`] = `
+.c5 {
+  border: none;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c5:hover svg {
+  color: #FFF;
+}
+
+.c5:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c5:disabled:hover {
+  background-color: transparent;
+}
+
+.c14 {
+  border: none;
+  cursor: pointer;
+  color: #FF805E;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c14:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #FF805E;
+}
+
+.c14:hover svg {
+  color: #FFF;
+}
+
+.c14:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c14:disabled:hover {
+  background-color: transparent;
+}
+
+.c16 {
+  border: 1px solid #B996FF;
+  cursor: pointer;
+  color: #B996FF;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c16:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #B996FF;
+}
+
+.c16:hover svg {
+  color: #FFF;
+}
+
+.c16:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c16:disabled:hover {
+  background-color: transparent;
+}
+
+.c17 {
+  border: 1px solid #FF805E;
+  cursor: pointer;
+  color: #FF805E;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c17:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #FF805E;
+}
+
+.c17:hover svg {
+  color: #FFF;
+}
+
+.c17:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c17:disabled:hover {
+  background-color: transparent;
+}
+
+.c33 {
+  border: none;
+  cursor: pointer;
+  color: #FF4242;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c33:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #FF4242;
+}
+
+.c33:hover svg {
+  color: #FFF;
+}
+
+.c33:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c33:disabled:hover {
+  background-color: transparent;
+}
+
+.c36 {
+  border: 1px solid #191918;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c36:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c36:hover svg {
+  color: #FFF;
+}
+
+.c36:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c36:disabled:hover {
+  background-color: transparent;
+}
+
+.c37 {
+  border: 1px solid #04CF00;
+  cursor: pointer;
+  color: #04CF00;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c37:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #04CF00;
+}
+
+.c37:hover svg {
+  color: #FFF;
+}
+
+.c37:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c37:disabled:hover {
+  background-color: transparent;
+}
+
+.c39 {
+  border: 1px solid #FFF;
+  cursor: pointer;
+  color: #FFF;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c39:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #191918;
+  background-color: #FFF;
+}
+
+.c39:hover svg {
+  color: #191918;
+}
+
+.c39:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c39:disabled:hover {
+  background-color: transparent;
+}
+
+.c6 {
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
+  padding: 16px;
+}
+
+.c4 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Inter;
+  font-weight: 900;
+  color: #464643;
+}
+
+.c11 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: Inter;
+  font-weight: 400;
+  color: #464643;
+}
+
+.c12 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: Inter;
+  font-weight: 900;
+  color: #464643;
+}
+
+.c31 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Inter;
+  font-weight: 900;
+  color: #464643;
+}
+
+.c32 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Inter;
+  font-weight: 400;
+  color: #464643;
+}
+
+.c38 {
+  position: absolute;
+  top: 10vh;
+  right: -100%;
+  border-radius: 4px 0px 0px 4px;
+  background-color: #04CF00;
+  padding: 16px 64px 16px 16px;
+  color: white;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  z-index: 1;
+}
+
+.c40 {
+  padding: 4px;
+}
+
+.c9 {
+  padding: 4px;
+  border-radius: calc(100 * 4px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border: 1px solid #191918;
+}
+
+.c2 {
+  width: 100%;
+  background-color: #CFCFC4;
+  padding: 16px 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.c7 {
+  padding: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 2;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #FFF;
+  border: 1px solid #B996FF;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  width: 100%;
+}
+
+.c8:first-of-type {
+  border-bottom: 1px solid #CFCFC4;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c13 {
+  font-size: 12px;
+}
+
+.c18 {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.c20:nth-of-type(even) {
+  background-color: #CFCFC4;
+}
+
+.c19 {
+  color: #FFF;
+  background-color: #464643;
+  text-transform: uppercase;
+}
+
+.c21 {
+  text-align: left;
+  padding: 8px;
+}
+
+.c22 {
+  padding: 8px;
+}
+
+.c25 {
+  color: #73736E;
+  border-radius: 4px;
+  border-color: #73736E;
+  border-width: 1px;
+  border-style: solid;
+  width: 160px;
+  height: 43px;
+  padding: 8px 12px 8px 4px;
+}
+
+.c25::-webkit-input-placeholder,
+.c25::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c25::-moz-placeholder,
+.c25::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c25:-ms-input-placeholder,
+.c25::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c25::placeholder,
+.c25::-webkit-input-placeholder {
+  color: #73736E;
+}
+
+.c25:-ms-input-placeholder {
+  color: #73736E;
+}
+
+.c27 {
+  color: #73736E;
+}
+
+.c27:hover {
+  color: #191918;
+  background-color: initial;
+}
+
+.c28 {
+  color: #191918;
+  font-weight: bold;
+}
+
+.c28:hover {
+  color: #191918;
+  background-color: initial;
+}
+
+.c29 {
+  color: #A0A098;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-top: 16px;
+  gap: 4px;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c24 {
+  margin: 0px;
+}
+
+.c24 select {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.c1 {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.c15 {
+  padding: 48px 20px 64px;
+}
+
+.c30 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background-color: #FFF;
+  z-index: 100;
+  padding: 24px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
+  min-width: 600px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.c35 {
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.c34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.c0 {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width:768px) {
+  .c2 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    padding-left: 48px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width:768px) {
+  .c15 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (min-width:1366px) {
+  .c15 {
+    padding-left: 75px;
+    padding-right: 75px;
+    overflow: scroll;
+    height: 100%;
+  }
+
+  .c15::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .c15::-webkit-scrollbar-track {
+    background: 'transparent';
+  }
+
+  .c15::-webkit-scrollbar-thumb {
+    border-radius: calc(100 * 4px);
+    background: #464643;
+  }
+
+  .c15::-webkit-scrollbar-thumb:hover {
+    background: #191918;
+  }
+}
+
+<section
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div />
+    <header
+      className="c2"
+    >
+      <section
+        className="c3"
+      >
+        <svg
+          className=""
+          color="#191918"
+          fill="currentColor"
+          height="12px"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": "#191918",
+            }
+          }
+          viewBox="0 0 24 24"
+          width="12px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z"
+          />
+          <path
+            d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z"
+          />
+        </svg>
+        <p
+          className="c4"
+          size="small"
+        >
+          Portal do Administrador
+        </p>
+        <button
+          className="c5 "
+          onClick={[Function]}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+            />
+          </svg>
+        </button>
+      </section>
+      <div
+        className="c6 c7"
+      >
+        <div
+          className="c8"
+        >
+          <div
+            className="c9 "
+          >
+            <svg
+              className=""
+              color="#191918"
+              fill="currentColor"
+              height="12px"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": "#191918",
+                }
+              }
+              viewBox="0 0 24 24"
+              width="12px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"
+              />
+            </svg>
+          </div>
+          <div
+            className="c10"
+          >
+            <p
+              className="c11"
+            >
+              Olá
+            </p>
+            <p
+              className="c12 c13"
+            >
+              perfil:
+            </p>
+          </div>
+        </div>
+        <div
+          className="c8"
+          style={
+            Object {
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <button
+            className="c14 "
+            onClick={[Function]}
+          >
+            Sair
+          </button>
+        </div>
+      </div>
+    </header>
+    <div
+      className="c15"
+    >
+      <h2>
+        Relatório de envios
+      </h2>
+      <section
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "space-between",
+            "margin": "16px 0px",
+          }
+        }
+      >
+        <a
+          className="c16"
+          download=""
+        >
+          Download do modelo 
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m12 16 4-5h-3V4h-2v7H8z"
+            />
+            <path
+              d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"
+            />
+          </svg>
+        </a>
+        <button
+          className="c17"
+          onClick={[Function]}
+        >
+          Enviar relatório 
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 15h2V9h3l-4-5-4 5h3z"
+            />
+            <path
+              d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"
+            />
+          </svg>
+        </button>
+      </section>
+      <table
+        className="c18"
+      >
+        <colgroup
+          className=""
+        />
+        <thead
+          className="c19"
+        >
+          <tr
+            className="c20"
+          >
+            <th
+              className="c21"
+            >
+              Arquivo enviado
+            </th>
+            <th
+              className="c21"
+            >
+              Arquivo renomeado
+            </th>
+            <th
+              className="c21"
+            >
+              Data do envio
+            </th>
+            <th
+              className="c21"
+            >
+              Tamanho (bytes)
+            </th>
+            <th
+              className="c21"
+            >
+              Qnt de ONTs
+            </th>
+            <th
+              className="c21"
+            >
+              Responsável pelo envio
+            </th>
+            <th
+              className="c21"
+            >
+              Status do envio
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          className=""
+        >
+          <tr
+            className="c20"
+          >
+            <td
+              className="c22"
+            >
+              Carregando
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        className="c23"
+      >
+        <div
+          className="c24"
+        >
+          <select
+            className="c25"
+            defaultValue={12}
+            onChange={[Function]}
+          >
+            <option
+              className=""
+              value={12}
+            >
+              12
+            </option>
+            <option
+              className=""
+              value={24}
+            >
+              24
+            </option>
+            <option
+              className=""
+              value={36}
+            >
+              36
+            </option>
+          </select>
+           items por pág.
+        </div>
+        <span
+          className="c26"
+        >
+          <button
+            className="c5 c27"
+            disabled={true}
+            onClick={[Function]}
+          >
+            &lt;&lt;
+          </button>
+          <button
+            className="c5 c27"
+            disabled={true}
+            onClick={[Function]}
+          >
+            &lt;
+          </button>
+          <button
+            className="c5 c28"
+            onClick={[Function]}
+          >
+            1
+          </button>
+          <button
+            className="c5 c27"
+            onClick={[Function]}
+          >
+            2
+          </button>
+          <button
+            className="c5 c27"
+            onClick={[Function]}
+          >
+            3
+          </button>
+          <div
+            className="c29"
+          >
+            ...
+          </div>
+          <button
+            className="c5 c27"
+            onClick={[Function]}
+          >
+            10
+          </button>
+          <button
+            className="c5 c27"
+            disabled={false}
+            onClick={[Function]}
+          >
+            &gt;
+          </button>
+          <button
+            className="c5 c27"
+            disabled={false}
+            onClick={[Function]}
+          >
+            &gt;&gt;
+          </button>
+        </span>
+      </div>
+      <div
+        className="c30"
+      >
+        <section
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "display": "flex",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <span>
+            <p
+              className="c31"
+              size="large"
+            >
+              Enviar relatório
+            </p>
+            <p
+              className="c32"
+              size="small"
+            >
+              O arquivo deve estar no formato CSV e ter no máximo 5mb.
+            </p>
+          </span>
+          <button
+            className="c33"
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height={24}
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+              />
+            </svg>
+          </button>
+        </section>
+        <form
+          className="c34"
+          onSubmit={[Function]}
+        >
+          <fieldset
+            className="c35"
+          >
+            <label
+              className="c36"
+              htmlFor="file"
+            >
+              Escolher arquivo
+            </label>
+            <input
+              accept=".csv"
+              hidden={true}
+              id="file"
+              name="file"
+              onChange={[Function]}
+              required={true}
+              type="file"
+            />
+            <p
+              className="c32"
+              size="small"
+            >
+              Nenhum arquivo selecionado
+            </p>
+          </fieldset>
+          <button
+            className="c37"
+            disabled={true}
+            type="submit"
+          >
+            Enviar
+          </button>
+        </form>
+      </div>
+      <div
+        className="c38"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z"
+          />
+        </svg>
+        Bem-vindo ao Portal APIM da V.tal
+        <button
+          className="c39 c40"
+          onClick={[Function]}
+        >
+          <svg
+            fill="currentColor"
+            height="12px"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="12px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+`;
