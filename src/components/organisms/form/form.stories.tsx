@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ChangePassComponent } from '../../../pages/private/profile/index';
 import Form from '.';
 
 export default {
@@ -78,11 +77,7 @@ Default.args = {
 export const ExemploTrocaDeSenha = Template.bind({});
 
 ExemploTrocaDeSenha.args = {
-  fields: [
-    {
-      component: <ChangePassComponent mock />,
-    },
-  ],
+  fields: [],
   preventDefault: true,
   disabledDefaultSubmitButton: true,
 };
