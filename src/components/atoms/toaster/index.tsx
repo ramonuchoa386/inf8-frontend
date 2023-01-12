@@ -24,7 +24,7 @@ const Toaster: React.FunctionComponent<IToasterProps> = (props) => {
       toast={toasterState.toast}
       {...rest}
     >
-      {withIcon && toasterState.icon}
+      {withIcon && <S.IconWrapper>{toasterState.icon}</S.IconWrapper>}
       {toasterState.message}
       {withBtn && (
         <S.ToasterBtn onClick={() => hideToaster()} buttonTheme='white'>
