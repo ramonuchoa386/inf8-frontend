@@ -155,7 +155,7 @@ exports[`Componente SidebarContent Deve renderizar o menu lateral 1`] = `
                 <a
                   href="/relatorio-de-envio"
                   onClick={[Function]}
-                  title="Apis"
+                  title="Relatório de envio"
                 />
               </span>
             </div>

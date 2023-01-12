@@ -337,7 +337,7 @@ exports[`Applications list Snapshot 1`] = `
   background-color: transparent;
 }
 
-.c39 {
+.c40 {
   border: 1px solid #FFF;
   cursor: pointer;
   color: #FFF;
@@ -364,24 +364,24 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c39:hover {
+.c40:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #191918;
   background-color: #FFF;
 }
 
-.c39:hover svg {
+.c40:hover svg {
   color: #191918;
 }
 
-.c39:disabled {
+.c40:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c39:disabled:hover {
+.c40:disabled:hover {
   background-color: transparent;
 }
 
@@ -450,12 +450,15 @@ exports[`Applications list Snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 16px;
-  z-index: 1;
 }
 
-.c40 {
+.c39 {
+  margin-right: 16px;
+}
+
+.c41 {
   padding: 4px;
+  margin-left: 16px;
 }
 
 .c9 {
@@ -1251,27 +1254,31 @@ exports[`Applications list Snapshot 1`] = `
       <div
         className="c38"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="c39"
         >
-          <path
-            d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z"
-          />
-        </svg>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 8h-5.612l1.123-3.367c.202-.608.1-1.282-.275-1.802S14.253 2 13.612 2H12c-.297 0-.578.132-.769.36L6.531 8H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h13.307a2.01 2.01 0 0 0 1.873-1.298l2.757-7.351A1 1 0 0 0 22 12v-2c0-1.103-.897-2-2-2zM4 10h2v9H4v-9zm16 1.819L17.307 19H8V9.362L12.468 4h1.146l-1.562 4.683A.998.998 0 0 0 13 10h7v1.819z"
+            />
+          </svg>
+        </span>
         Bem-vindo ao Portal APIM da V.tal
         <button
-          className="c39 c40"
+          className="c40 c41"
           onClick={[Function]}
         >
           <svg
