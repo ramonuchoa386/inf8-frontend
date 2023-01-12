@@ -2,7 +2,6 @@ import * as React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import theme from '../../../styles/theme';
 import Button from '.';
-import { BoxIconsLib } from '../';
 
 export default {
   title: 'components/atoms/Button',
@@ -38,9 +37,7 @@ const Template: ComponentStory<typeof Button> = (args) => (
 );
 
 const WithIconTemplate: ComponentStory<typeof Button> = (args) => (
-  <Button {...args}>
-    API Hub <BoxIconsLib />
-  </Button>
+  <Button {...args}>API Hub</Button>
 );
 
 export const Default = Template.bind({});
