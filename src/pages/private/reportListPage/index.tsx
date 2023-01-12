@@ -19,6 +19,10 @@ import ModalContext from '../../../context/modal';
 import config from '../../../utils/config';
 import * as S from './style';
 import ToasterContext from '../../../context/toaster';
+import AuthContext from '../../../context/auth';
+import validateUserPermissions, {
+  Permissions,
+} from '../../../utils/permissions';
 
 const FormModal: React.FunctionComponent = () => {
   const { API_BASEURL, FILEUPLOAD_ENDPOINT } = config;
@@ -168,6 +172,7 @@ const FormModal: React.FunctionComponent = () => {
 };
 
 const ReportListPage = () => {
+  const { state } = useContext(AuthContext);
   const { toggleModalState } = useContext(ModalContext);
   const [paginaAtual] = React.useState(0);
   const [listLength, setListLength] = React.useState<number>(12);
@@ -186,13 +191,11 @@ const ReportListPage = () => {
   });
 
   useEffect(() => {
-    setTimeout(() => {
-      setTableData((currentData) => ({
-        headers: currentData.headers,
-        rows: TableMock,
-      }));
-      setDataLoaded((currentState) => !currentState);
-    }, 2000);
+    setTableData((currentData) => ({
+      headers: currentData.headers,
+      rows: TableMock,
+    }));
+    setDataLoaded((currentState) => !currentState);
   }, []);
 
   return (
@@ -216,9 +219,11 @@ const ReportListPage = () => {
             Download do modelo <BiDownload />
           </DownloadBtn>
 
-          <Button buttonTheme='Coral' onClick={() => toggleModalState()}>
-            Enviar relatório <BiUpload />
-          </Button>
+          {validateUserPermissions(state.profile, Permissions['UPLOAD']) && (
+            <Button buttonTheme='Coral' onClick={() => toggleModalState()}>
+              Enviar relatório <BiUpload />
+            </Button>
+          )}
         </section>
 
         <Table data={tableData} loadingData={loading} />
