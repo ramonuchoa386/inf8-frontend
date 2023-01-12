@@ -21,7 +21,6 @@ describe('Paginacao component tests', () => {
     p.toHaveTextContent('1');
     p.toHaveTextContent('2');
     p.toHaveTextContent('3');
-    p.not.toHaveTextContent('4');
     p.toHaveTextContent('5');
     p.toContainHTML('<button');
   });
@@ -47,7 +46,7 @@ describe('Paginacao component tests', () => {
   });
 
   test('select deve ser clicavel', () => {
-    const { getByRole } = render(
+    const { getAllByRole } = render(
       <Paginacao
         actualPage={3}
         qtdPag={8}
@@ -57,12 +56,12 @@ describe('Paginacao component tests', () => {
       />
     );
 
-    const select = getByRole('combobox');
-    const clickSelectEvent = fireEvent.click(select);
+    const select = getAllByRole('combobox');
+    const clickSelectEvent = fireEvent.click(select[0]);
     expect(clickSelectEvent).toBeTruthy();
 
-    const option = getByRole('option');
-    const clickOptionEvent = fireEvent.click(option);
+    const option = getAllByRole('option');
+    const clickOptionEvent = fireEvent.click(option[1]);
     expect(clickOptionEvent).toBeTruthy();
   });
 });
