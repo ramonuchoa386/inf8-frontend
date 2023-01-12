@@ -207,7 +207,12 @@ const ReportListPage = () => {
             margin: '16px 0px',
           }}
         >
-          <DownloadBtn buttonTheme='Mauve' as='a' download=''>
+          <DownloadBtn
+            buttonTheme='Mauve'
+            as='a'
+            href='/modelo/cp-unix_time_stamp.csv'
+            download='modelo_relatorio.csv'
+          >
             Download do modelo <BiDownload />
           </DownloadBtn>
 
