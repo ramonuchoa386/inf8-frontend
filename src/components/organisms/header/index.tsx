@@ -11,7 +11,7 @@ import * as S from './styles';
 
 const Header: React.FunctionComponent = (props) => {
   const headerRef = useRef<HTMLDivElement>(null);
-  const { singOut } = useContext(AuthContext);
+  const { state, singOut } = useContext(AuthContext);
   const [toggleBox, setToggleBox] = useState(false);
   const [headerOffset, setHeaderOffset] = useState<string>('');
 
@@ -42,8 +42,8 @@ const Header: React.FunctionComponent = (props) => {
         <S.BoxRow>
           <S.Avatar />
           <S.BoxColumn>
-            <S.UserName>Olá</S.UserName>
-            <S.UserProfile weight='bold'>perfil:</S.UserProfile>
+            <S.UserName>Olá, {state.userName}</S.UserName>
+            <S.UserProfile weight='bold'>perfil: {state.profile}</S.UserProfile>
           </S.BoxColumn>
         </S.BoxRow>
 
