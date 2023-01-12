@@ -14,13 +14,10 @@ export const Toaster = styled.div<IToasterContext>`
   overflow: hidden;
   display: flex;
   align-items: center;
-`;
-
-export const IconWrapper = styled.span`
-  margin-right: 16px;
+  gap: 16px;
+  z-index: 1;
 `;
 
 export const ToasterBtn = styled(Button)`
   padding: 4px;
-  margin-left: 16px;
 `;
