@@ -145,55 +145,7 @@ exports[`Applications list Snapshot 1`] = `
   background-color: transparent;
 }
 
-.c17 {
-  border: 1px solid #FF805E;
-  cursor: pointer;
-  color: #FF805E;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: calc(100 * 4px);
-  font-size: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c17:hover {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  color: #FFF;
-  background-color: #FF805E;
-}
-
-.c17:hover svg {
-  color: #FFF;
-}
-
-.c17:disabled {
-  cursor: not-allowed;
-  color: #CFCFC4;
-  border-color: #CFCFC4;
-}
-
-.c17:disabled:hover {
-  background-color: transparent;
-}
-
-.c33 {
+.c32 {
   border: none;
   cursor: pointer;
   color: #FF4242;
@@ -220,31 +172,79 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c33:hover {
+.c32:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
   background-color: #FF4242;
 }
 
-.c33:hover svg {
+.c32:hover svg {
   color: #FFF;
 }
 
-.c33:disabled {
+.c32:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c33:disabled:hover {
+.c32:disabled:hover {
+  background-color: transparent;
+}
+
+.c35 {
+  border: 1px solid #191918;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c35:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c35:hover svg {
+  color: #FFF;
+}
+
+.c35:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c35:disabled:hover {
   background-color: transparent;
 }
 
 .c36 {
-  border: 1px solid #191918;
+  border: 1px solid #04CF00;
   cursor: pointer;
-  color: #191918;
+  color: #04CF00;
   background-color: transparent;
   text-transform: uppercase;
   font-weight: bold;
@@ -272,7 +272,7 @@ exports[`Applications list Snapshot 1`] = `
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
-  background-color: #191918;
+  background-color: #04CF00;
 }
 
 .c36:hover svg {
@@ -289,55 +289,7 @@ exports[`Applications list Snapshot 1`] = `
   background-color: transparent;
 }
 
-.c37 {
-  border: 1px solid #04CF00;
-  cursor: pointer;
-  color: #04CF00;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: calc(100 * 4px);
-  font-size: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c37:hover {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  color: #FFF;
-  background-color: #04CF00;
-}
-
-.c37:hover svg {
-  color: #FFF;
-}
-
-.c37:disabled {
-  cursor: not-allowed;
-  color: #CFCFC4;
-  border-color: #CFCFC4;
-}
-
-.c37:disabled:hover {
-  background-color: transparent;
-}
-
-.c40 {
+.c39 {
   border: 1px solid #FFF;
   cursor: pointer;
   color: #FFF;
@@ -364,24 +316,24 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c40:hover {
+.c39:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #191918;
   background-color: #FFF;
 }
 
-.c40:hover svg {
+.c39:hover svg {
   color: #191918;
 }
 
-.c40:disabled {
+.c39:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c40:disabled:hover {
+.c39:disabled:hover {
   background-color: transparent;
 }
 
@@ -415,7 +367,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c31 {
+.c30 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Inter;
@@ -423,7 +375,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c32 {
+.c31 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Inter;
@@ -431,7 +383,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c38 {
+.c37 {
   position: absolute;
   top: 10vh;
   right: -100%;
@@ -452,11 +404,11 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c39 {
+.c38 {
   margin-right: 16px;
 }
 
-.c41 {
+.c40 {
   padding: 4px;
   margin-left: 16px;
 }
@@ -576,32 +528,32 @@ exports[`Applications list Snapshot 1`] = `
   font-size: 12px;
 }
 
-.c18 {
+.c17 {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.75rem;
 }
 
-.c20:nth-of-type(even) {
+.c19:nth-of-type(even) {
   background-color: #CFCFC4;
 }
 
-.c19 {
+.c18 {
   color: #FFF;
   background-color: #464643;
   text-transform: uppercase;
 }
 
-.c21 {
+.c20 {
   text-align: left;
   padding: 8px;
 }
 
-.c22 {
+.c21 {
   padding: 8px;
 }
 
-.c25 {
+.c24 {
   color: #73736E;
   border-radius: 4px;
   border-color: #73736E;
@@ -612,32 +564,42 @@ exports[`Applications list Snapshot 1`] = `
   padding: 8px 12px 8px 4px;
 }
 
-.c25::-webkit-input-placeholder,
-.c25::-webkit-input-placeholder {
+.c24::-webkit-input-placeholder,
+.c24::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c25::-moz-placeholder,
-.c25::-webkit-input-placeholder {
+.c24::-moz-placeholder,
+.c24::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c25:-ms-input-placeholder,
-.c25::-webkit-input-placeholder {
+.c24:-ms-input-placeholder,
+.c24::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c25::placeholder,
-.c25::-webkit-input-placeholder {
+.c24::placeholder,
+.c24::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c25:-ms-input-placeholder {
+.c24:-ms-input-placeholder {
   color: #73736E;
+}
+
+.c26 {
+  color: #73736E;
+}
+
+.c26:hover {
+  color: #191918;
+  background-color: initial;
 }
 
 .c27 {
-  color: #73736E;
+  color: #191918;
+  font-weight: bold;
 }
 
 .c27:hover {
@@ -646,20 +608,10 @@ exports[`Applications list Snapshot 1`] = `
 }
 
 .c28 {
-  color: #191918;
-  font-weight: bold;
-}
-
-.c28:hover {
-  color: #191918;
-  background-color: initial;
-}
-
-.c29 {
   color: #A0A098;
 }
 
-.c23 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -679,18 +631,18 @@ exports[`Applications list Snapshot 1`] = `
   gap: 4px;
 }
 
-.c26 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c24 {
+.c23 {
   margin: 0px;
 }
 
-.c24 select {
+.c23 select {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -706,7 +658,7 @@ exports[`Applications list Snapshot 1`] = `
   padding: 48px 20px 64px;
 }
 
-.c30 {
+.c29 {
   display: none;
   position: fixed;
   top: 50%;
@@ -725,7 +677,7 @@ exports[`Applications list Snapshot 1`] = `
   transition: all 0.5s ease;
 }
 
-.c35 {
+.c34 {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -738,7 +690,7 @@ exports[`Applications list Snapshot 1`] = `
   gap: 8px;
 }
 
-.c34 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -910,12 +862,13 @@ exports[`Applications list Snapshot 1`] = `
             <p
               className="c11"
             >
-              Olá
+              Olá, 
             </p>
             <p
               className="c12 c13"
             >
-              perfil:
+              perfil: 
+              NONE
             </p>
           </div>
         </div>
@@ -979,78 +932,51 @@ exports[`Applications list Snapshot 1`] = `
             />
           </svg>
         </a>
-        <button
-          className="c17"
-          onClick={[Function]}
-        >
-          Enviar relatório 
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11 15h2V9h3l-4-5-4 5h3z"
-            />
-            <path
-              d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"
-            />
-          </svg>
-        </button>
       </section>
       <table
-        className="c18"
+        className="c17"
       >
         <colgroup
           className=""
         />
         <thead
-          className="c19"
+          className="c18"
         >
           <tr
-            className="c20"
+            className="c19"
           >
             <th
-              className="c21"
+              className="c20"
             >
               Arquivo enviado
             </th>
             <th
-              className="c21"
+              className="c20"
             >
               Arquivo renomeado
             </th>
             <th
-              className="c21"
+              className="c20"
             >
               Data do envio
             </th>
             <th
-              className="c21"
+              className="c20"
             >
               Tamanho (bytes)
             </th>
             <th
-              className="c21"
+              className="c20"
             >
               Qnt de ONTs
             </th>
             <th
-              className="c21"
+              className="c20"
             >
               Responsável pelo envio
             </th>
             <th
-              className="c21"
+              className="c20"
             >
               Status do envio
             </th>
@@ -1060,10 +986,10 @@ exports[`Applications list Snapshot 1`] = `
           className=""
         >
           <tr
-            className="c20"
+            className="c19"
           >
             <td
-              className="c22"
+              className="c21"
             >
               Carregando
             </td>
@@ -1071,13 +997,13 @@ exports[`Applications list Snapshot 1`] = `
         </tbody>
       </table>
       <div
-        className="c23"
+        className="c22"
       >
         <div
-          className="c24"
+          className="c23"
         >
           <select
-            className="c25"
+            className="c24"
             defaultValue={12}
             onChange={[Function]}
           >
@@ -1103,60 +1029,60 @@ exports[`Applications list Snapshot 1`] = `
            items por pág.
         </div>
         <span
-          className="c26"
+          className="c25"
         >
           <button
-            className="c5 c27"
+            className="c5 c26"
             disabled={true}
             onClick={[Function]}
           >
             &lt;&lt;
           </button>
           <button
-            className="c5 c27"
+            className="c5 c26"
             disabled={true}
             onClick={[Function]}
           >
             &lt;
           </button>
           <button
-            className="c5 c28"
+            className="c5 c27"
             onClick={[Function]}
           >
             1
           </button>
           <button
-            className="c5 c27"
+            className="c5 c26"
             onClick={[Function]}
           >
             2
           </button>
           <button
-            className="c5 c27"
+            className="c5 c26"
             onClick={[Function]}
           >
             3
           </button>
           <div
-            className="c29"
+            className="c28"
           >
             ...
           </div>
           <button
-            className="c5 c27"
+            className="c5 c26"
             onClick={[Function]}
           >
             10
           </button>
           <button
-            className="c5 c27"
+            className="c5 c26"
             disabled={false}
             onClick={[Function]}
           >
             &gt;
           </button>
           <button
-            className="c5 c27"
+            className="c5 c26"
             disabled={false}
             onClick={[Function]}
           >
@@ -1165,7 +1091,7 @@ exports[`Applications list Snapshot 1`] = `
         </span>
       </div>
       <div
-        className="c30"
+        className="c29"
       >
         <section
           style={
@@ -1178,20 +1104,20 @@ exports[`Applications list Snapshot 1`] = `
         >
           <span>
             <p
-              className="c31"
+              className="c30"
               size="large"
             >
               Enviar relatório
             </p>
             <p
-              className="c32"
+              className="c31"
               size="small"
             >
               O arquivo deve estar no formato CSV e ter no máximo 5mb.
             </p>
           </span>
           <button
-            className="c33"
+            className="c32"
             onClick={[Function]}
           >
             <svg
@@ -1215,14 +1141,14 @@ exports[`Applications list Snapshot 1`] = `
           </button>
         </section>
         <form
-          className="c34"
+          className="c33"
           onSubmit={[Function]}
         >
           <fieldset
-            className="c35"
+            className="c34"
           >
             <label
-              className="c36"
+              className="c35"
               htmlFor="file"
             >
               Escolher arquivo
@@ -1237,14 +1163,14 @@ exports[`Applications list Snapshot 1`] = `
               type="file"
             />
             <p
-              className="c32"
+              className="c31"
               size="small"
             >
               Nenhum arquivo selecionado
             </p>
           </fieldset>
           <button
-            className="c37"
+            className="c36"
             disabled={true}
             type="submit"
           >
@@ -1253,10 +1179,10 @@ exports[`Applications list Snapshot 1`] = `
         </form>
       </div>
       <div
-        className="c38"
+        className="c37"
       >
         <span
-          className="c39"
+          className="c38"
         >
           <svg
             fill="currentColor"
@@ -1279,7 +1205,7 @@ exports[`Applications list Snapshot 1`] = `
         </span>
         Bem-vindo ao Portal APIM da V.tal
         <button
-          className="c40 c41"
+          className="c39 c40"
           onClick={[Function]}
         >
           <svg

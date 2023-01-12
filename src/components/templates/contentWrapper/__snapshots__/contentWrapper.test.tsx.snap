@@ -398,12 +398,13 @@ exports[`Componente ContentWrapper Snapshot 1`] = `
           <p
             className="c10"
           >
-            Olá
+            Olá, 
           </p>
           <p
             className="c11 c12"
           >
-            perfil:
+            perfil: 
+            NONE
           </p>
         </div>
       </div>
