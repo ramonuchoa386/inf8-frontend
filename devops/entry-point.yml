@@ -1,0 +1,14 @@
+trigger: none
+
+variables:
+  - group: credentials_grp
+
+resources:
+  repositories:
+    - repository: templates
+      name: PORTAL-DEV/portal-pipelines
+      type: git
+      ref: master
+
+jobs:
+  - template: templates/apihub-portal-pipeline.yml@templates
