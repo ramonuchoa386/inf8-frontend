@@ -899,7 +899,8 @@ exports[`Applications list Snapshot 1`] = `
         style={
           Object {
             "display": "flex",
-            "justifyContent": "space-between",
+            "gap": 16,
+            "justifyContent": "flex-end",
             "margin": "16px 0px",
           }
         }
