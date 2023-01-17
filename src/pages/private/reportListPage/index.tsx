@@ -195,7 +195,7 @@ const ReportListPage = () => {
       headers: currentData.headers,
       rows: TableMock,
     }));
-    setDataLoaded((currentState) => !currentState);
+    setDataLoaded(false);
   }, []);
 
   return (
@@ -206,7 +206,8 @@ const ReportListPage = () => {
         <section
           style={{
             display: 'flex',
-            justifyContent: 'space-between',
+            justifyContent: 'flex-end',
+            gap: 16,
             margin: '16px 0px',
           }}
         >
