@@ -97,7 +97,7 @@ exports[`Applications list Snapshot 1`] = `
   background-color: transparent;
 }
 
-.c16 {
+.c20 {
   border: 1px solid #B996FF;
   cursor: pointer;
   color: #B996FF;
@@ -124,28 +124,28 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c16:hover {
+.c20:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
   background-color: #B996FF;
 }
 
-.c16:hover svg {
+.c20:hover svg {
   color: #FFF;
 }
 
-.c16:disabled {
+.c20:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c16:disabled:hover {
+.c20:disabled:hover {
   background-color: transparent;
 }
 
-.c32 {
+.c35 {
   border: none;
   cursor: pointer;
   color: #FF4242;
@@ -172,28 +172,28 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c32:hover {
+.c35:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
   background-color: #FF4242;
 }
 
-.c32:hover svg {
+.c35:hover svg {
   color: #FFF;
 }
 
-.c32:disabled {
+.c35:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c32:disabled:hover {
+.c35:disabled:hover {
   background-color: transparent;
 }
 
-.c35 {
+.c38 {
   border: 1px solid #191918;
   cursor: pointer;
   color: #191918;
@@ -220,28 +220,28 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c35:hover {
+.c38:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
   background-color: #191918;
 }
 
-.c35:hover svg {
+.c38:hover svg {
   color: #FFF;
 }
 
-.c35:disabled {
+.c38:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c35:disabled:hover {
+.c38:disabled:hover {
   background-color: transparent;
 }
 
-.c36 {
+.c39 {
   border: 1px solid #04CF00;
   cursor: pointer;
   color: #04CF00;
@@ -268,28 +268,28 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c36:hover {
+.c39:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
   background-color: #04CF00;
 }
 
-.c36:hover svg {
+.c39:hover svg {
   color: #FFF;
 }
 
-.c36:disabled {
+.c39:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c36:disabled:hover {
+.c39:disabled:hover {
   background-color: transparent;
 }
 
-.c39 {
+.c42 {
   border: 1px solid #FFF;
   cursor: pointer;
   color: #FFF;
@@ -316,25 +316,88 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c39:hover {
+.c42:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #191918;
   background-color: #FFF;
 }
 
-.c39:hover svg {
+.c42:hover svg {
   color: #191918;
 }
 
-.c39:disabled {
+.c42:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c39:disabled:hover {
+.c42:disabled:hover {
   background-color: transparent;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+
+.c18 {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0px 8px 0px;
+}
+
+.c17 {
+  width: 100%;
+  padding: 12px 8px;
+  color: #464643;
+  border-radius: 4px;
+  border: 1px solid #191918;
+}
+
+.c17::-webkit-input-placeholder {
+  color: #A0A098;
+}
+
+.c17::-moz-placeholder {
+  color: #A0A098;
+}
+
+.c17:-ms-input-placeholder {
+  color: #A0A098;
+}
+
+.c17::placeholder {
+  color: #A0A098;
+}
+
+.c17:invalid {
+  border-color: #FF4242;
+}
+
+.c17:focus {
+  outline: none;
+  box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
 }
 
 .c6 {
@@ -367,7 +430,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c30 {
+.c33 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Inter;
@@ -375,7 +438,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c31 {
+.c34 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Inter;
@@ -383,7 +446,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c37 {
+.c40 {
   position: absolute;
   top: 10vh;
   right: -100%;
@@ -404,11 +467,11 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c38 {
+.c41 {
   margin-right: 16px;
 }
 
-.c40 {
+.c43 {
   padding: 4px;
   margin-left: 16px;
 }
@@ -528,32 +591,32 @@ exports[`Applications list Snapshot 1`] = `
   font-size: 12px;
 }
 
-.c17 {
+.c21 {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.75rem;
 }
 
-.c19:nth-of-type(even) {
+.c23:nth-of-type(even) {
   background-color: #CFCFC4;
 }
 
-.c18 {
+.c22 {
   color: #FFF;
   background-color: #464643;
   text-transform: uppercase;
 }
 
-.c20 {
+.c24 {
   text-align: left;
   padding: 8px;
 }
 
-.c21 {
+.c25 {
   padding: 8px;
 }
 
-.c24 {
+.c28 {
   color: #73736E;
   border-radius: 4px;
   border-color: #73736E;
@@ -564,54 +627,50 @@ exports[`Applications list Snapshot 1`] = `
   padding: 8px 12px 8px 4px;
 }
 
-.c24::-webkit-input-placeholder,
-.c24::-webkit-input-placeholder {
+.c28::-webkit-input-placeholder,
+.c28::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c24::-moz-placeholder,
-.c24::-webkit-input-placeholder {
+.c28::-moz-placeholder,
+.c28::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c24:-ms-input-placeholder,
-.c24::-webkit-input-placeholder {
+.c28:-ms-input-placeholder,
+.c28::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c24::placeholder,
-.c24::-webkit-input-placeholder {
+.c28::placeholder,
+.c28::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c24:-ms-input-placeholder {
+.c28:-ms-input-placeholder {
   color: #73736E;
 }
 
-.c26 {
+.c30 {
   color: #73736E;
 }
 
-.c26:hover {
+.c30:hover {
   color: #191918;
   background-color: initial;
 }
 
-.c27 {
+.c31 {
   color: #191918;
   font-weight: bold;
 }
 
-.c27:hover {
+.c31:hover {
   color: #191918;
   background-color: initial;
 }
 
-.c28 {
-  color: #A0A098;
-}
-
-.c22 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -631,18 +690,15 @@ exports[`Applications list Snapshot 1`] = `
   gap: 4px;
 }
 
-.c25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.c29 {
+  display: none;
 }
 
-.c23 {
+.c27 {
   margin: 0px;
 }
 
-.c23 select {
+.c27 select {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -658,7 +714,7 @@ exports[`Applications list Snapshot 1`] = `
   padding: 48px 20px 64px;
 }
 
-.c29 {
+.c32 {
   display: none;
   position: fixed;
   top: 50%;
@@ -677,7 +733,7 @@ exports[`Applications list Snapshot 1`] = `
   transition: all 0.5s ease;
 }
 
-.c34 {
+.c37 {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -690,7 +746,7 @@ exports[`Applications list Snapshot 1`] = `
   gap: 8px;
 }
 
-.c33 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -711,6 +767,13 @@ exports[`Applications list Snapshot 1`] = `
   height: 100vh;
   overflow: hidden;
   position: relative;
+}
+
+.c19 {
+  color: #464643;
+  border-radius: 4px;
+  border: 1px solid #191918;
+  padding: 8px 12px 8px 4px;
 }
 
 @media (min-width:768px) {
@@ -898,6 +961,7 @@ exports[`Applications list Snapshot 1`] = `
       <section
         style={
           Object {
+            "alignItems": "center",
             "display": "flex",
             "gap": 16,
             "justifyContent": "flex-end",
@@ -905,8 +969,82 @@ exports[`Applications list Snapshot 1`] = `
           }
         }
       >
+        <section
+          style={
+            Object {
+              "display": "flex",
+              "gap": 16,
+              "marginLeft": "0px",
+              "marginRight": "auto",
+            }
+          }
+        >
+          <div
+            className="c16"
+          >
+            <input
+              className="c17"
+              id="search"
+              name="search"
+              onChange={[Function]}
+              placeholder="Pesquisar"
+            />
+            <div
+              className="c18"
+            >
+              <svg
+                className=""
+                color="#191918"
+                fill="currentColor"
+                height="16px"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": "#191918",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="16px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+                />
+              </svg>
+            </div>
+          </div>
+          <select
+            className="c19"
+            defaultValue=""
+            id="fileStatusSelect"
+            name="fileStatusSelect"
+            onChange={[Function]}
+          >
+            <option
+              value=""
+            >
+              Selecione um status
+            </option>
+            <option
+              value="enviado"
+            >
+              Enviado
+            </option>
+            <option
+              value="erro"
+            >
+              Erro no envio
+            </option>
+            <option
+              value="invalido"
+            >
+              Arquivo inválido
+            </option>
+          </select>
+        </section>
         <a
-          className="c16"
+          className="c20"
           download="modelo_relatorio.csv"
           href="/modelo/cp-unix_time_stamp.csv"
         >
@@ -935,49 +1073,49 @@ exports[`Applications list Snapshot 1`] = `
         </a>
       </section>
       <table
-        className="c17"
+        className="c21"
       >
         <colgroup
           className=""
         />
         <thead
-          className="c18"
+          className="c22"
         >
           <tr
-            className="c19"
+            className="c23"
           >
             <th
-              className="c20"
+              className="c24"
             >
               Arquivo enviado
             </th>
             <th
-              className="c20"
+              className="c24"
             >
               Arquivo renomeado
             </th>
             <th
-              className="c20"
+              className="c24"
             >
               Data do envio
             </th>
             <th
-              className="c20"
+              className="c24"
             >
               Tamanho (bytes)
             </th>
             <th
-              className="c20"
+              className="c24"
             >
               Qnt de ONTs
             </th>
             <th
-              className="c20"
+              className="c24"
             >
               Responsável pelo envio
             </th>
             <th
-              className="c20"
+              className="c24"
             >
               Status do envio
             </th>
@@ -987,24 +1125,24 @@ exports[`Applications list Snapshot 1`] = `
           className=""
         >
           <tr
-            className="c19"
+            className="c23"
           >
             <td
-              className="c21"
+              className="c25"
             >
-              Carregando
+              Sem resultados
             </td>
           </tr>
         </tbody>
       </table>
       <div
-        className="c22"
+        className="c26"
       >
         <div
-          className="c23"
+          className="c27"
         >
           <select
-            className="c24"
+            className="c28"
             defaultValue={12}
             onChange={[Function]}
           >
@@ -1030,60 +1168,37 @@ exports[`Applications list Snapshot 1`] = `
            items por pág.
         </div>
         <span
-          className="c25"
+          className="c29"
         >
           <button
-            className="c5 c26"
+            className="c5 c30"
             disabled={true}
             onClick={[Function]}
           >
             &lt;&lt;
           </button>
           <button
-            className="c5 c26"
+            className="c5 c30"
             disabled={true}
             onClick={[Function]}
           >
             &lt;
           </button>
           <button
-            className="c5 c27"
+            className="c5 c31"
             onClick={[Function]}
           >
             1
           </button>
           <button
-            className="c5 c26"
-            onClick={[Function]}
-          >
-            2
-          </button>
-          <button
-            className="c5 c26"
-            onClick={[Function]}
-          >
-            3
-          </button>
-          <div
-            className="c28"
-          >
-            ...
-          </div>
-          <button
-            className="c5 c26"
-            onClick={[Function]}
-          >
-            10
-          </button>
-          <button
-            className="c5 c26"
-            disabled={false}
+            className="c5 c30"
+            disabled={true}
             onClick={[Function]}
           >
             &gt;
           </button>
           <button
-            className="c5 c26"
+            className="c5 c30"
             disabled={false}
             onClick={[Function]}
           >
@@ -1092,7 +1207,7 @@ exports[`Applications list Snapshot 1`] = `
         </span>
       </div>
       <div
-        className="c29"
+        className="c32"
       >
         <section
           style={
@@ -1105,20 +1220,20 @@ exports[`Applications list Snapshot 1`] = `
         >
           <span>
             <p
-              className="c30"
+              className="c33"
               size="large"
             >
               Enviar relatório
             </p>
             <p
-              className="c31"
+              className="c34"
               size="small"
             >
               O arquivo deve estar no formato CSV e ter no máximo 5mb.
             </p>
           </span>
           <button
-            className="c32"
+            className="c35"
             onClick={[Function]}
           >
             <svg
@@ -1142,14 +1257,14 @@ exports[`Applications list Snapshot 1`] = `
           </button>
         </section>
         <form
-          className="c33"
+          className="c36"
           onSubmit={[Function]}
         >
           <fieldset
-            className="c34"
+            className="c37"
           >
             <label
-              className="c35"
+              className="c38"
               htmlFor="file"
             >
               Escolher arquivo
@@ -1164,14 +1279,14 @@ exports[`Applications list Snapshot 1`] = `
               type="file"
             />
             <p
-              className="c31"
+              className="c34"
               size="small"
             >
               Nenhum arquivo selecionado
             </p>
           </fieldset>
           <button
-            className="c36"
+            className="c39"
             disabled={true}
             type="submit"
           >
@@ -1180,10 +1295,10 @@ exports[`Applications list Snapshot 1`] = `
         </form>
       </div>
       <div
-        className="c37"
+        className="c40"
       >
         <span
-          className="c38"
+          className="c41"
         >
           <svg
             fill="currentColor"
@@ -1206,7 +1321,7 @@ exports[`Applications list Snapshot 1`] = `
         </span>
         Bem-vindo ao Portal APIM da V.tal
         <button
-          className="c39 c40"
+          className="c42 c43"
           onClick={[Function]}
         >
           <svg
