@@ -25,3 +25,30 @@ export enum EndpointApplicationRefer {
   DISABLED = 'Disabled',
   APPLICATION_PENDING_APPROVAL = 'Pendente Aprovação',
 }
+
+export enum QueryFileStatus {
+  ENVIADO = 'enviado',
+  ERRO = 'erro',
+  INVALIDO = 'invalido',
+}
+
+export enum TextFileStatus {
+  ENVIADO = 'Enviado',
+  ERRO = 'Erro no envio',
+  INVALIDO = 'Arquivo inválido',
+}
+
+export const fileStatus = [
+  {
+    text: TextFileStatus.ENVIADO,
+    value: QueryFileStatus.ENVIADO,
+  },
+  {
+    text: TextFileStatus.ERRO,
+    value: QueryFileStatus.ERRO,
+  },
+  {
+    text: TextFileStatus.INVALIDO,
+    value: QueryFileStatus.INVALIDO,
+  },
+];
