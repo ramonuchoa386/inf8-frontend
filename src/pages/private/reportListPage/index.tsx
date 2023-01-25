@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { ContentWrapper } from '../../../components/templates';
 import { ITableData } from '../../../components/molecules/table/table.interface';
 import { Table, Paginacao } from '../../../components/molecules';
-import { Button, Paragraph, Toaster } from '../../../components/atoms';
+import { Button, Paragraph, Toaster, Input } from '../../../components/atoms';
 import { styledButton as DownloadBtn } from '../../../components/atoms/button/style';
 import { styledButton as UploadFile } from '../../../components/atoms/button/style';
 import {
@@ -14,7 +14,6 @@ import {
   BiDumbbell,
   BiBell,
 } from 'react-icons/bi';
-import { TableMock } from './reportListPage.mocks';
 import ModalContext from '../../../context/modal';
 import config from '../../../utils/config';
 import * as S from './style';
@@ -23,6 +22,8 @@ import AuthContext from '../../../context/auth';
 import validateUserPermissions, {
   Permissions,
 } from '../../../utils/permissions';
+import useFetchLogs, { IApiResponse } from '../../../hooks/useFetchLogs';
+import { QueryFileStatus, fileStatus } from '../../../utils/enums';
 
 const FormModal: React.FunctionComponent = () => {
   const { API_BASEURL, FILEUPLOAD_ENDPOINT } = config;
@@ -174,9 +175,12 @@ const FormModal: React.FunctionComponent = () => {
 const ReportListPage = () => {
   const { state } = useContext(AuthContext);
   const { toggleModalState } = useContext(ModalContext);
-  const [paginaAtual] = React.useState(0);
-  const [listLength, setListLength] = React.useState<number>(12);
-  const [loading, setDataLoaded] = useState<boolean>(true);
+  const { showToaster } = useContext(ToasterContext);
+  const [page, setPage] = useState<number>(0);
+  const [totalPages, setTotalPages] = useState<number>(0);
+  const [listLength, setListLength] = useState<number>(12);
+  const [searchTerm, setSearchTerm] = useState<string>();
+  const [selectedStatus, setSelectedStatus] = useState<QueryFileStatus>();
   const [tableData, setTableData] = useState<ITableData>({
     headers: [
       { id: 1, value: 'Arquivo enviado' },
@@ -189,14 +193,63 @@ const ReportListPage = () => {
     ],
     rows: [],
   });
+  const { data, error, loading }: IApiResponse = useFetchLogs(
+    listLength,
+    page,
+    selectedStatus,
+    searchTerm
+  );
 
   useEffect(() => {
-    setTableData((currentData) => ({
-      headers: currentData.headers,
-      rows: TableMock,
-    }));
-    setDataLoaded(false);
-  }, []);
+    if (!loading) {
+      if (error) {
+        showToaster({
+          message: error,
+          severity: 'negative',
+          icon: <BiBlock />,
+        });
+      } else if (data) {
+        const { results, totalPages } = data;
+        if (results.length > 0) {
+          setTableData((currentData) => ({
+            headers: currentData.headers,
+            rows: Array.from(results, (item, index) => ({
+              id: index + 1,
+              cell: [
+                {
+                  value: item.arquivo_enviado,
+                },
+                {
+                  value: item.arquivo_renomeado,
+                },
+                {
+                  value: item.data_envio,
+                },
+                {
+                  value: item.tamanho,
+                },
+                {
+                  value: item.qnt_onts,
+                },
+                {
+                  value: item.responsavel_envio,
+                },
+                {
+                  value: item.status_envio,
+                },
+              ],
+            })),
+          }));
+
+          setTotalPages(totalPages);
+        }
+      }
+    }
+  }, [loading, data, error, showToaster, listLength]);
+
+  useEffect(() => {
+    setPage(0);
+  }, [listLength, selectedStatus, searchTerm]);
 
   return (
     <S.PageContainer>
@@ -207,10 +260,55 @@ const ReportListPage = () => {
           style={{
             display: 'flex',
             justifyContent: 'flex-end',
+            alignItems: 'center',
             gap: 16,
             margin: '16px 0px',
           }}
         >
+          <section
+            style={{
+              marginRight: 'auto',
+              marginLeft: '0px',
+              display: 'flex',
+              gap: 16,
+            }}
+          >
+            <Input
+              id='search'
+              name='search'
+              iconName='BiSearch'
+              placeholder='Pesquisar'
+              onChange={(e) => {
+                if (e.target.value === '') {
+                  setSearchTerm(undefined);
+                } else {
+                  setSearchTerm(() => e.target.value);
+                }
+              }}
+            />
+
+            <S.Combobox
+              id='fileStatusSelect'
+              name='fileStatusSelect'
+              value={selectedStatus}
+              onChange={(e) => {
+                if (e.target.value === '') {
+                  setSelectedStatus(undefined);
+                } else {
+                  setSelectedStatus(e.target.value as QueryFileStatus);
+                }
+              }}
+              defaultValue=''
+            >
+              <option value=''>Selecione um status</option>
+              {fileStatus.map((status) => (
+                <option key={status.value} value={status.value}>
+                  {status.text}
+                </option>
+              ))}
+            </S.Combobox>
+          </section>
+
           <DownloadBtn
             buttonTheme='Mauve'
             as='a'
@@ -230,9 +328,9 @@ const ReportListPage = () => {
         <Table data={tableData} loadingData={loading} />
 
         <Paginacao
-          qtdPag={10}
-          actualPage={paginaAtual}
-          setPage={(p: number) => console.log(p)}
+          qtdPag={totalPages}
+          actualPage={page}
+          setPage={(p: number) => setPage(p)}
           setQtdItems={(p: number) => setListLength(() => p)}
           selectedOptPage={listLength}
         />
