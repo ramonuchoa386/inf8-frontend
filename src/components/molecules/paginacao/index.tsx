@@ -77,7 +77,7 @@ const Paginacao: React.FunctionComponent<iPagnicao> = (props) => {
         {actualPage + 3 < qtdPag && (
           <>
             <S.Etc>...</S.Etc>
-            <S.Paginacao borderLess onClick={() => setPage(qtdPag)}>
+            <S.Paginacao borderLess onClick={() => setPage(qtdPag - 1)}>
               {qtdPag}
             </S.Paginacao>
           </>
