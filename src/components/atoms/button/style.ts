@@ -4,10 +4,11 @@ import { ColorPalette } from '../../../styles/theme';
 export interface IStyledButton {
   buttonTheme?: ColorPalette;
   borderLess?: boolean;
+  rounded?: boolean;
 }
 
 export const styledButton = styled.button<IStyledButton>((props) => {
-  const { buttonTheme = 'Cod', borderLess = false, children } = props;
+  const { buttonTheme = 'Cod', borderLess = false, rounded } = props;
 
   return css`
     border: ${borderLess
@@ -19,7 +20,7 @@ export const styledButton = styled.button<IStyledButton>((props) => {
     background-color: transparent;
     text-transform: uppercase;
     font-weight: bold;
-    padding: ${borderLess || typeof children === 'object' ? '8px' : '8px 16px'};
+    padding: ${borderLess || rounded ? '8px' : '8px 16px'};
     border-radius: calc(100 * ${props.theme.effects.borderRadius});
     font-size: 10px;
     transition: all 0.3s ease;

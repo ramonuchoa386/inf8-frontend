@@ -360,6 +360,7 @@ const ReportListPage = () => {
           >
             <ToggleFilters
               onClick={() => setShowFilter((currentState) => !currentState)}
+              rounded
             >
               <BiFilterAlt />
             </ToggleFilters>
