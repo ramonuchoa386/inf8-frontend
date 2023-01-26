@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import AuthContext from '../../context/auth';
 import config from '../../utils/config';
-import { QueryFileStatus } from '../../utils/enums';
+import { Profiles, QueryFileStatus } from '../../utils/enums';
 
 export interface IApiResponse {
   data?: IResponseData;
@@ -16,6 +17,7 @@ interface IResponseItem {
   qnt_onts: number;
   responsavel_envio: string;
   status_envio: string;
+  companyid?: string;
 }
 
 interface IResponseData {
@@ -32,9 +34,11 @@ const useFetchLogs = (
   pageSize: number,
   page: number,
   fileStatus?: QueryFileStatus,
-  searchTerm?: string
+  searchTerm?: string,
+  tenant?: string
 ): IApiResponse => {
   const { API_BASEURL, LOGS_ENDPOINT } = config;
+  const { state } = useContext(AuthContext);
   const [data, setData] = useState<IResponseData>();
   const [error, setError] = useState<string>();
   const [loading, setLoading] = useState<boolean>(false);
@@ -55,6 +59,13 @@ const useFetchLogs = (
       query.append('search', searchTerm);
     }
 
+    if (
+      tenant !== undefined &&
+      (state.profile === Profiles.OP_VTAL || state.profile === Profiles.VW_VTAL)
+    ) {
+      query.append('companyid', tenant);
+    }
+
     fetch(API_BASEURL + LOGS_ENDPOINT + `?${query.toString()}`)
       .then((res) => {
         return res.json();
@@ -70,7 +81,16 @@ const useFetchLogs = (
       .catch((error: string) => {
         setError(error);
       });
-  }, [pageSize, page, API_BASEURL, LOGS_ENDPOINT, fileStatus, searchTerm]);
+  }, [
+    pageSize,
+    page,
+    API_BASEURL,
+    LOGS_ENDPOINT,
+    fileStatus,
+    searchTerm,
+    tenant,
+    state.profile,
+  ]);
 
   return { data, error, loading };
 };
