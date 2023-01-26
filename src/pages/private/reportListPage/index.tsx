@@ -5,6 +5,7 @@ import { Table, Paginacao } from '../../../components/molecules';
 import { Button, Paragraph, Toaster, Input } from '../../../components/atoms';
 import { styledButton as DownloadBtn } from '../../../components/atoms/button/style';
 import { styledButton as UploadFile } from '../../../components/atoms/button/style';
+import { styledButton as ToggleFilters } from '../../../components/atoms/button/style';
 import {
   BiDownload,
   BiUpload,
@@ -13,6 +14,7 @@ import {
   BiLike,
   BiDumbbell,
   BiBell,
+  BiFilterAlt,
 } from 'react-icons/bi';
 import ModalContext from '../../../context/modal';
 import config from '../../../utils/config';
@@ -23,7 +25,10 @@ import validateUserPermissions, {
   Permissions,
 } from '../../../utils/permissions';
 import useFetchLogs, { IApiResponse } from '../../../hooks/useFetchLogs';
-import { QueryFileStatus, fileStatus } from '../../../utils/enums';
+import useFetchTenants, {
+  IFetchTenantsHook,
+} from '../../../hooks/useFetchTenants';
+import { QueryFileStatus, fileStatus, Profiles } from '../../../utils/enums';
 
 const FormModal: React.FunctionComponent = () => {
   const { API_BASEURL, FILEUPLOAD_ENDPOINT } = config;
@@ -73,6 +78,7 @@ const FormModal: React.FunctionComponent = () => {
 
     const headers = new Headers();
     headers.append('organization', 'SAMPLEISP');
+    headers.append('file-name', file.name);
 
     const data = new FormData();
     data.append('file', file, file.name);
@@ -179,6 +185,7 @@ const ReportListPage = () => {
   const [page, setPage] = useState<number>(0);
   const [totalPages, setTotalPages] = useState<number>(0);
   const [listLength, setListLength] = useState<number>(12);
+  const [showFilter, setShowFilter] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string>();
   const [selectedStatus, setSelectedStatus] = useState<QueryFileStatus>();
   const [tableData, setTableData] = useState<ITableData>({
@@ -199,6 +206,8 @@ const ReportListPage = () => {
     selectedStatus,
     searchTerm
   );
+
+  const tenantData: IFetchTenantsHook = useFetchTenants();
 
   useEffect(() => {
     if (!loading) {
@@ -259,16 +268,13 @@ const ReportListPage = () => {
         <section
           style={{
             display: 'flex',
-            justifyContent: 'flex-end',
+            justifyContent: 'space-between',
             alignItems: 'center',
-            gap: 16,
             margin: '16px 0px',
           }}
         >
           <section
             style={{
-              marginRight: 'auto',
-              marginLeft: '0px',
               display: 'flex',
               gap: 16,
             }}
@@ -286,7 +292,58 @@ const ReportListPage = () => {
                 }
               }}
             />
+          </section>
 
+          <section
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 12,
+            }}
+          >
+            <ToggleFilters
+              onClick={() => setShowFilter((currentState) => !currentState)}
+            >
+              <BiFilterAlt />
+            </ToggleFilters>
+            <DownloadBtn
+              buttonTheme='Mauve'
+              as='a'
+              href='/modelo/cp-unix_time_stamp.csv'
+              download='modelo_relatorio.csv'
+            >
+              Download do modelo <BiDownload />
+            </DownloadBtn>
+            {validateUserPermissions(state.profile, Permissions['UPLOAD']) && (
+              <Button buttonTheme='Coral' onClick={() => toggleModalState()}>
+                Enviar relatório <BiUpload />
+              </Button>
+            )}
+          </section>
+        </section>
+        <section
+          style={{
+            display: showFilter ? 'flex' : 'none',
+            gap: 16,
+            marginBottom: '16px',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 4,
+            }}
+          >
+            <label
+              htmlFor='fileStatusSelect'
+              style={{
+                fontSize: '12px',
+                fontWeight: 'bold',
+              }}
+            >
+              Status
+            </label>
             <S.Combobox
               id='fileStatusSelect'
               name='fileStatusSelect'
@@ -307,22 +364,51 @@ const ReportListPage = () => {
                 </option>
               ))}
             </S.Combobox>
-          </section>
+          </div>
 
-          <DownloadBtn
-            buttonTheme='Mauve'
-            as='a'
-            href='/modelo/cp-unix_time_stamp.csv'
-            download='modelo_relatorio.csv'
+          <div
+            style={{
+              display:
+                state.profile === Profiles.OP_VTAL ||
+                state.profile === Profiles.VW_VTAL
+                  ? 'flex'
+                  : 'none',
+              flexDirection: 'column',
+              gap: 4,
+            }}
           >
-            Download do modelo <BiDownload />
-          </DownloadBtn>
-
-          {validateUserPermissions(state.profile, Permissions['UPLOAD']) && (
-            <Button buttonTheme='Coral' onClick={() => toggleModalState()}>
-              Enviar relatório <BiUpload />
-            </Button>
-          )}
+            <label
+              htmlFor='tenantSelect'
+              style={{
+                fontSize: '12px',
+                fontWeight: 'bold',
+              }}
+            >
+              Tenant
+            </label>
+            <S.Combobox
+              id='tenantSelect'
+              name='tenantSelect'
+              value={selectedStatus}
+              onChange={(e) => {
+                if (e.target.value === '') {
+                  setSelectedStatus(undefined);
+                } else {
+                  setSelectedStatus(e.target.value as QueryFileStatus);
+                }
+              }}
+              defaultValue=''
+              disabled={tenantData.loading}
+            >
+              <option value=''>Selecione a tenant</option>
+              {tenantData.data !== undefined &&
+                tenantData.data.map((tenant) => (
+                  <option key={tenant.toLowerCase()} value={tenant}>
+                    {tenant}
+                  </option>
+                ))}
+            </S.Combobox>
+          </div>
         </section>
 
         <Table data={tableData} loadingData={loading} />
