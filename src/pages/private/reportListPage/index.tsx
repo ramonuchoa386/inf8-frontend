@@ -1,6 +1,9 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, useMemo } from 'react';
 import { ContentWrapper } from '../../../components/templates';
-import { ITableData } from '../../../components/molecules/table/table.interface';
+import {
+  ITableData,
+  ITableHeader,
+} from '../../../components/molecules/table/table.interface';
 import { Table, Paginacao } from '../../../components/molecules';
 import { Button, Paragraph, Toaster, Input } from '../../../components/atoms';
 import { styledButton as DownloadBtn } from '../../../components/atoms/button/style';
@@ -182,14 +185,9 @@ const ReportListPage = () => {
   const { state } = useContext(AuthContext);
   const { toggleModalState } = useContext(ModalContext);
   const { showToaster } = useContext(ToasterContext);
-  const [page, setPage] = useState<number>(0);
-  const [totalPages, setTotalPages] = useState<number>(0);
-  const [listLength, setListLength] = useState<number>(12);
-  const [showFilter, setShowFilter] = useState<boolean>(false);
-  const [searchTerm, setSearchTerm] = useState<string>();
-  const [selectedStatus, setSelectedStatus] = useState<QueryFileStatus>();
-  const [tableData, setTableData] = useState<ITableData>({
-    headers: [
+
+  const tableHeaders = useMemo<ITableHeader[]>(() => {
+    const headers = [
       { id: 1, value: 'Arquivo enviado' },
       { id: 2, value: 'Arquivo renomeado' },
       { id: 3, value: 'Data do envio' },
@@ -197,16 +195,37 @@ const ReportListPage = () => {
       { id: 5, value: 'Qnt de ONTs' },
       { id: 6, value: 'Responsável pelo envio' },
       { id: 7, value: 'Status do envio' },
-    ],
+    ];
+
+    if (
+      state.profile === Profiles.OP_VTAL ||
+      state.profile === Profiles.VW_VTAL
+    ) {
+      headers.push({ id: 8, value: 'Tenant' });
+    }
+
+    return headers;
+  }, [state.profile]);
+
+  const [page, setPage] = useState<number>(0);
+  const [totalPages, setTotalPages] = useState<number>(0);
+  const [listLength, setListLength] = useState<number>(12);
+  const [showFilter, setShowFilter] = useState<boolean>(false);
+  const [searchTerm, setSearchTerm] = useState<string>();
+  const [tenantFilter, setTenantFilter] = useState<string>();
+  const [selectedStatus, setSelectedStatus] = useState<QueryFileStatus>();
+  const [tableData, setTableData] = useState<ITableData>({
+    headers: tableHeaders,
     rows: [],
   });
+
   const { data, error, loading }: IApiResponse = useFetchLogs(
     listLength,
     page,
     selectedStatus,
-    searchTerm
+    searchTerm,
+    tenantFilter
   );
-
   const tenantData: IFetchTenantsHook = useFetchTenants();
 
   useEffect(() => {
@@ -219,46 +238,84 @@ const ReportListPage = () => {
         });
       } else if (data) {
         const { results, totalPages } = data;
+
         if (results.length > 0) {
           setTableData((currentData) => ({
             headers: currentData.headers,
-            rows: Array.from(results, (item, index) => ({
-              id: index + 1,
-              cell: [
-                {
-                  value: item.arquivo_enviado,
-                },
-                {
-                  value: item.arquivo_renomeado,
-                },
-                {
-                  value: item.data_envio,
-                },
-                {
-                  value: item.tamanho,
-                },
-                {
-                  value: item.qnt_onts,
-                },
-                {
-                  value: item.responsavel_envio,
-                },
-                {
-                  value: item.status_envio,
-                },
-              ],
-            })),
+            rows: Array.from(results, (item, index) => {
+              if (
+                state.profile === Profiles.OP_VTAL ||
+                state.profile === Profiles.VW_VTAL
+              ) {
+                return {
+                  id: index + 1,
+                  cell: [
+                    {
+                      value: item.arquivo_enviado,
+                    },
+                    {
+                      value: item.arquivo_renomeado,
+                    },
+                    {
+                      value: item.data_envio,
+                    },
+                    {
+                      value: item.tamanho,
+                    },
+                    {
+                      value: item.qnt_onts,
+                    },
+                    {
+                      value: item.responsavel_envio,
+                    },
+                    {
+                      value: item.status_envio,
+                    },
+                    {
+                      value: item.companyid,
+                    },
+                  ],
+                };
+              } else {
+                return {
+                  id: index + 1,
+                  cell: [
+                    {
+                      value: item.arquivo_enviado,
+                    },
+                    {
+                      value: item.arquivo_renomeado,
+                    },
+                    {
+                      value: item.data_envio,
+                    },
+                    {
+                      value: item.tamanho,
+                    },
+                    {
+                      value: item.qnt_onts,
+                    },
+                    {
+                      value: item.responsavel_envio,
+                    },
+                    {
+                      value: item.status_envio,
+                    },
+                  ],
+                };
+              }
+            }),
           }));
 
           setTotalPages(totalPages);
         }
       }
     }
-  }, [loading, data, error, showToaster, listLength]);
+  }, [loading, data, error, showToaster, listLength, state.profile]);
 
   useEffect(() => {
     setPage(0);
-  }, [listLength, selectedStatus, searchTerm]);
+  }, [listLength, selectedStatus, searchTerm, tenantFilter]);
 
   return (
     <S.PageContainer>
@@ -389,12 +446,12 @@ const ReportListPage = () => {
             <S.Combobox
               id='tenantSelect'
               name='tenantSelect'
-              value={selectedStatus}
+              value={tenantFilter}
               onChange={(e) => {
                 if (e.target.value === '') {
-                  setSelectedStatus(undefined);
+                  setTenantFilter(undefined);
                 } else {
-                  setSelectedStatus(e.target.value as QueryFileStatus);
+                  setTenantFilter(e.target.value);
                 }
               }}
               defaultValue=''
