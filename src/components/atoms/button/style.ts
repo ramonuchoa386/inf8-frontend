@@ -7,7 +7,7 @@ export interface IStyledButton {
 }
 
 export const styledButton = styled.button<IStyledButton>((props) => {
-  const { buttonTheme = 'Cod', borderLess = false } = props;
+  const { buttonTheme = 'Cod', borderLess = false, children } = props;
 
   return css`
     border: ${borderLess
@@ -19,7 +19,7 @@ export const styledButton = styled.button<IStyledButton>((props) => {
     background-color: transparent;
     text-transform: uppercase;
     font-weight: bold;
-    padding: ${borderLess ? '8px' : '8px 16px'};
+    padding: ${borderLess || typeof children === 'object' ? '8px' : '8px 16px'};
     border-radius: calc(100 * ${props.theme.effects.borderRadius});
     font-size: 10px;
     transition: all 0.3s ease;
