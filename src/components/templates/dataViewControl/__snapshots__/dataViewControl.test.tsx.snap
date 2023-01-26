@@ -3,28 +3,28 @@
 exports[`DataViewControl component tests should match snapshot 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": .c12 {
+  "baseElement": .c11 {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.75rem;
 }
 
-.c14:nth-of-type(even) {
+.c13:nth-of-type(even) {
   background-color: #CFCFC4;
 }
 
-.c13 {
+.c12 {
   color: #FFF;
   background-color: #464643;
   text-transform: uppercase;
 }
 
-.c15 {
+.c14 {
   text-align: left;
   padding: 8px;
 }
 
-.c16 {
+.c15 {
   padding: 8px;
 }
 
@@ -76,55 +76,7 @@ Object {
   background-color: transparent;
 }
 
-.c6 {
-  border: 1px solid #191918;
-  cursor: pointer;
-  color: #191918;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px;
-  border-radius: calc(100 * 4px);
-  font-size: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c6:hover {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  color: #FFF;
-  background-color: #191918;
-}
-
-.c6:hover svg {
-  color: #FFF;
-}
-
-.c6:disabled {
-  cursor: not-allowed;
-  color: #CFCFC4;
-  border-color: #CFCFC4;
-}
-
-.c6:disabled:hover {
-  background-color: transparent;
-}
-
-.c21 {
+.c20 {
   border: none;
   cursor: pointer;
   color: #191918;
@@ -151,24 +103,24 @@ Object {
   align-items: center;
 }
 
-.c21:hover {
+.c20:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
   background-color: #191918;
 }
 
-.c21:hover svg {
+.c20:hover svg {
   color: #FFF;
 }
 
-.c21:disabled {
+.c20:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c21:disabled:hover {
+.c20:disabled:hover {
   background-color: transparent;
 }
 
@@ -215,7 +167,7 @@ Object {
   box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
 }
 
-.c19 {
+.c18 {
   color: #73736E;
   border-radius: 4px;
   border-color: #73736E;
@@ -226,32 +178,42 @@ Object {
   padding: 8px 12px 8px 4px;
 }
 
-.c19::-webkit-input-placeholder,
-.c19::-webkit-input-placeholder {
+.c18::-webkit-input-placeholder,
+.c18::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c19::-moz-placeholder,
-.c19::-webkit-input-placeholder {
+.c18::-moz-placeholder,
+.c18::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c19:-ms-input-placeholder,
-.c19::-webkit-input-placeholder {
+.c18:-ms-input-placeholder,
+.c18::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c19::placeholder,
-.c19::-webkit-input-placeholder {
+.c18::placeholder,
+.c18::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c19:-ms-input-placeholder {
+.c18:-ms-input-placeholder {
   color: #73736E;
+}
+
+.c21 {
+  color: #73736E;
+}
+
+.c21:hover {
+  color: #191918;
+  background-color: initial;
 }
 
 .c22 {
-  color: #73736E;
+  color: #191918;
+  font-weight: bold;
 }
 
 .c22:hover {
@@ -260,20 +222,10 @@ Object {
 }
 
 .c23 {
-  color: #191918;
-  font-weight: bold;
-}
-
-.c23:hover {
-  color: #191918;
-  background-color: initial;
-}
-
-.c24 {
   color: #A0A098;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -293,18 +245,18 @@ Object {
   gap: 4px;
 }
 
-.c20 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c18 {
+.c17 {
   margin: 0px;
 }
 
-.c18 select {
+.c17 select {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -343,17 +295,17 @@ Object {
   position: relative;
 }
 
-.c7 {
+.c6 {
   padding: 8px;
 }
 
-.c8 {
+.c7 {
   padding: 8px;
   color: #FFF;
   background-color: #191918;
 }
 
-.c9 {
+.c8 {
   max-height: 0px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -367,7 +319,7 @@ Object {
   overflow: hidden;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -375,7 +327,7 @@ Object {
   gap: 5px;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -424,7 +376,7 @@ Object {
                 Pesquisar
               </button>
               <button
-                class="c6 c7"
+                class="c5 c6"
               >
                 <svg
                   fill="currentColor"
@@ -441,7 +393,7 @@ Object {
                 </svg>
               </button>
               <button
-                class="c6 c8"
+                class="c5 c7"
               >
                 <svg
                   fill="currentColor"
@@ -460,13 +412,13 @@ Object {
             </div>
           </div>
           <div
-            class="c9"
+            class="c8"
           >
             <div
-              class="c10"
+              class="c9"
             >
               <div
-                class="c11"
+                class="c10"
               />
               <div>
                 <button
@@ -479,44 +431,44 @@ Object {
           </div>
         </div>
         <table
-          class="c12 "
+          class="c11 "
         >
           <colgroup
             class=""
           />
           <thead
-            class="c13"
+            class="c12"
           >
             <tr
-              class="c14"
+              class="c13"
             >
               <th
-                class="c15"
+                class="c14"
               >
                 NOME
               </th>
               <th
-                class="c15"
+                class="c14"
               >
                 DESCRIÇÃO
               </th>
               <th
-                class="c15"
+                class="c14"
               >
                 TAG
               </th>
               <th
-                class="c15"
+                class="c14"
               >
                 DATA DE CRIAÇÂO
               </th>
               <th
-                class="c15"
+                class="c14"
               >
                 VERSÃO
               </th>
               <th
-                class="c15"
+                class="c14"
               >
                 TIPO
               </th>
@@ -526,409 +478,409 @@ Object {
             class=""
           >
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
             </tr>
             <tr
-              class="c14"
+              class="c13"
             >
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
               <td
-                class="c16"
+                class="c15"
               >
                 Lorem Ipsum
               </td>
@@ -936,13 +888,13 @@ Object {
           </tbody>
         </table>
         <div
-          class="c17 "
+          class="c16 "
         >
           <div
-            class="c18"
+            class="c17"
           >
             <select
-              class="c19"
+              class="c18"
             >
               <option
                 class=""
@@ -967,52 +919,52 @@ Object {
              items por pág.
           </div>
           <span
-            class="c20"
+            class="c19"
           >
             <button
-              class="c21 c22"
+              class="c20 c21"
               disabled=""
             >
               &lt;&lt;
             </button>
             <button
-              class="c21 c22"
+              class="c20 c21"
               disabled=""
             >
               &lt;
             </button>
             <button
-              class="c21 c23"
+              class="c20 c22"
             >
               1
             </button>
             <button
-              class="c21 c22"
+              class="c20 c21"
             >
               2
             </button>
             <button
-              class="c21 c22"
+              class="c20 c21"
             >
               3
             </button>
             <div
-              class="c24"
+              class="c23"
             >
               ...
             </div>
             <button
-              class="c21 c22"
+              class="c20 c21"
             >
               4
             </button>
             <button
-              class="c21 c22"
+              class="c20 c21"
             >
               &gt;
             </button>
             <button
-              class="c21 c22"
+              class="c20 c21"
             >
               &gt;&gt;
             </button>
@@ -1021,28 +973,28 @@ Object {
       </section>
     </div>
   </body>,
-  "container": .c12 {
+  "container": .c11 {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.75rem;
 }
 
-.c14:nth-of-type(even) {
+.c13:nth-of-type(even) {
   background-color: #CFCFC4;
 }
 
-.c13 {
+.c12 {
   color: #FFF;
   background-color: #464643;
   text-transform: uppercase;
 }
 
-.c15 {
+.c14 {
   text-align: left;
   padding: 8px;
 }
 
-.c16 {
+.c15 {
   padding: 8px;
 }
 
@@ -1094,55 +1046,7 @@ Object {
   background-color: transparent;
 }
 
-.c6 {
-  border: 1px solid #191918;
-  cursor: pointer;
-  color: #191918;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px;
-  border-radius: calc(100 * 4px);
-  font-size: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c6:hover {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  color: #FFF;
-  background-color: #191918;
-}
-
-.c6:hover svg {
-  color: #FFF;
-}
-
-.c6:disabled {
-  cursor: not-allowed;
-  color: #CFCFC4;
-  border-color: #CFCFC4;
-}
-
-.c6:disabled:hover {
-  background-color: transparent;
-}
-
-.c21 {
+.c20 {
   border: none;
   cursor: pointer;
   color: #191918;
@@ -1169,24 +1073,24 @@ Object {
   align-items: center;
 }
 
-.c21:hover {
+.c20:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
   background-color: #191918;
 }
 
-.c21:hover svg {
+.c20:hover svg {
   color: #FFF;
 }
 
-.c21:disabled {
+.c20:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c21:disabled:hover {
+.c20:disabled:hover {
   background-color: transparent;
 }
 
@@ -1233,7 +1137,7 @@ Object {
   box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
 }
 
-.c19 {
+.c18 {
   color: #73736E;
   border-radius: 4px;
   border-color: #73736E;
@@ -1244,32 +1148,42 @@ Object {
   padding: 8px 12px 8px 4px;
 }
 
-.c19::-webkit-input-placeholder,
-.c19::-webkit-input-placeholder {
+.c18::-webkit-input-placeholder,
+.c18::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c19::-moz-placeholder,
-.c19::-webkit-input-placeholder {
+.c18::-moz-placeholder,
+.c18::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c19:-ms-input-placeholder,
-.c19::-webkit-input-placeholder {
+.c18:-ms-input-placeholder,
+.c18::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c19::placeholder,
-.c19::-webkit-input-placeholder {
+.c18::placeholder,
+.c18::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c19:-ms-input-placeholder {
+.c18:-ms-input-placeholder {
   color: #73736E;
+}
+
+.c21 {
+  color: #73736E;
+}
+
+.c21:hover {
+  color: #191918;
+  background-color: initial;
 }
 
 .c22 {
-  color: #73736E;
+  color: #191918;
+  font-weight: bold;
 }
 
 .c22:hover {
@@ -1278,20 +1192,10 @@ Object {
 }
 
 .c23 {
-  color: #191918;
-  font-weight: bold;
-}
-
-.c23:hover {
-  color: #191918;
-  background-color: initial;
-}
-
-.c24 {
   color: #A0A098;
 }
 
-.c17 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1311,18 +1215,18 @@ Object {
   gap: 4px;
 }
 
-.c20 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c18 {
+.c17 {
   margin: 0px;
 }
 
-.c18 select {
+.c17 select {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -1361,17 +1265,17 @@ Object {
   position: relative;
 }
 
-.c7 {
+.c6 {
   padding: 8px;
 }
 
-.c8 {
+.c7 {
   padding: 8px;
   color: #FFF;
   background-color: #191918;
 }
 
-.c9 {
+.c8 {
   max-height: 0px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1385,7 +1289,7 @@ Object {
   overflow: hidden;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1393,7 +1297,7 @@ Object {
   gap: 5px;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1441,7 +1345,7 @@ Object {
               Pesquisar
             </button>
             <button
-              class="c6 c7"
+              class="c5 c6"
             >
               <svg
                 fill="currentColor"
@@ -1458,7 +1362,7 @@ Object {
               </svg>
             </button>
             <button
-              class="c6 c8"
+              class="c5 c7"
             >
               <svg
                 fill="currentColor"
@@ -1477,13 +1381,13 @@ Object {
           </div>
         </div>
         <div
-          class="c9"
+          class="c8"
         >
           <div
-            class="c10"
+            class="c9"
           >
             <div
-              class="c11"
+              class="c10"
             />
             <div>
               <button
@@ -1496,44 +1400,44 @@ Object {
         </div>
       </div>
       <table
-        class="c12 "
+        class="c11 "
       >
         <colgroup
           class=""
         />
         <thead
-          class="c13"
+          class="c12"
         >
           <tr
-            class="c14"
+            class="c13"
           >
             <th
-              class="c15"
+              class="c14"
             >
               NOME
             </th>
             <th
-              class="c15"
+              class="c14"
             >
               DESCRIÇÃO
             </th>
             <th
-              class="c15"
+              class="c14"
             >
               TAG
             </th>
             <th
-              class="c15"
+              class="c14"
             >
               DATA DE CRIAÇÂO
             </th>
             <th
-              class="c15"
+              class="c14"
             >
               VERSÃO
             </th>
             <th
-              class="c15"
+              class="c14"
             >
               TIPO
             </th>
@@ -1543,409 +1447,409 @@ Object {
           class=""
         >
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
           </tr>
           <tr
-            class="c14"
+            class="c13"
           >
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
             <td
-              class="c16"
+              class="c15"
             >
               Lorem Ipsum
             </td>
@@ -1953,13 +1857,13 @@ Object {
         </tbody>
       </table>
       <div
-        class="c17 "
+        class="c16 "
       >
         <div
-          class="c18"
+          class="c17"
         >
           <select
-            class="c19"
+            class="c18"
           >
             <option
               class=""
@@ -1984,52 +1888,52 @@ Object {
            items por pág.
         </div>
         <span
-          class="c20"
+          class="c19"
         >
           <button
-            class="c21 c22"
+            class="c20 c21"
             disabled=""
           >
             &lt;&lt;
           </button>
           <button
-            class="c21 c22"
+            class="c20 c21"
             disabled=""
           >
             &lt;
           </button>
           <button
-            class="c21 c23"
+            class="c20 c22"
           >
             1
           </button>
           <button
-            class="c21 c22"
+            class="c20 c21"
           >
             2
           </button>
           <button
-            class="c21 c22"
+            class="c20 c21"
           >
             3
           </button>
           <div
-            class="c24"
+            class="c23"
           >
             ...
           </div>
           <button
-            class="c21 c22"
+            class="c20 c21"
           >
             4
           </button>
           <button
-            class="c21 c22"
+            class="c20 c21"
           >
             &gt;
           </button>
           <button
-            class="c21 c22"
+            class="c20 c21"
           >
             &gt;&gt;
           </button>
