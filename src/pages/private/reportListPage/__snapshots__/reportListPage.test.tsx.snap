@@ -97,6 +97,54 @@ exports[`Applications list Snapshot 1`] = `
   background-color: transparent;
 }
 
+.c19 {
+  border: 1px solid #191918;
+  cursor: pointer;
+  color: #191918;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #191918;
+}
+
+.c19:hover svg {
+  color: #FFF;
+}
+
+.c19:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c19:disabled:hover {
+  background-color: transparent;
+}
+
 .c20 {
   border: 1px solid #B996FF;
   cursor: pointer;
@@ -104,7 +152,7 @@ exports[`Applications list Snapshot 1`] = `
   background-color: transparent;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 8px;
   border-radius: calc(100 * 4px);
   font-size: 10px;
   -webkit-transition: all 0.3s ease;
@@ -145,7 +193,7 @@ exports[`Applications list Snapshot 1`] = `
   background-color: transparent;
 }
 
-.c35 {
+.c36 {
   border: none;
   cursor: pointer;
   color: #FF4242;
@@ -172,79 +220,31 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c35:hover {
+.c36:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
   background-color: #FF4242;
 }
 
-.c35:hover svg {
+.c36:hover svg {
   color: #FFF;
 }
 
-.c35:disabled {
+.c36:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c35:disabled:hover {
-  background-color: transparent;
-}
-
-.c38 {
-  border: 1px solid #191918;
-  cursor: pointer;
-  color: #191918;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: calc(100 * 4px);
-  font-size: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c38:hover {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  color: #FFF;
-  background-color: #191918;
-}
-
-.c38:hover svg {
-  color: #FFF;
-}
-
-.c38:disabled {
-  cursor: not-allowed;
-  color: #CFCFC4;
-  border-color: #CFCFC4;
-}
-
-.c38:disabled:hover {
+.c36:disabled:hover {
   background-color: transparent;
 }
 
 .c39 {
-  border: 1px solid #04CF00;
+  border: 1px solid #191918;
   cursor: pointer;
-  color: #04CF00;
+  color: #191918;
   background-color: transparent;
   text-transform: uppercase;
   font-weight: bold;
@@ -272,7 +272,7 @@ exports[`Applications list Snapshot 1`] = `
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #FFF;
-  background-color: #04CF00;
+  background-color: #191918;
 }
 
 .c39:hover svg {
@@ -289,10 +289,10 @@ exports[`Applications list Snapshot 1`] = `
   background-color: transparent;
 }
 
-.c42 {
-  border: 1px solid #FFF;
+.c40 {
+  border: 1px solid #04CF00;
   cursor: pointer;
-  color: #FFF;
+  color: #04CF00;
   background-color: transparent;
   text-transform: uppercase;
   font-weight: bold;
@@ -316,24 +316,72 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c42:hover {
+.c40:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  color: #FFF;
+  background-color: #04CF00;
+}
+
+.c40:hover svg {
+  color: #FFF;
+}
+
+.c40:disabled {
+  cursor: not-allowed;
+  color: #CFCFC4;
+  border-color: #CFCFC4;
+}
+
+.c40:disabled:hover {
+  background-color: transparent;
+}
+
+.c43 {
+  border: 1px solid #FFF;
+  cursor: pointer;
+  color: #FFF;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: calc(100 * 4px);
+  font-size: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c43:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #191918;
   background-color: #FFF;
 }
 
-.c42:hover svg {
+.c43:hover svg {
   color: #191918;
 }
 
-.c42:disabled {
+.c43:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c42:disabled:hover {
+.c43:disabled:hover {
   background-color: transparent;
 }
 
@@ -430,7 +478,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c33 {
+.c34 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Inter;
@@ -438,7 +486,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c34 {
+.c35 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Inter;
@@ -446,7 +494,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c40 {
+.c41 {
   position: absolute;
   top: 10vh;
   right: -100%;
@@ -467,11 +515,11 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c41 {
+.c42 {
   margin-right: 16px;
 }
 
-.c43 {
+.c44 {
   padding: 4px;
   margin-left: 16px;
 }
@@ -591,32 +639,32 @@ exports[`Applications list Snapshot 1`] = `
   font-size: 12px;
 }
 
-.c21 {
+.c22 {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.75rem;
 }
 
-.c23:nth-of-type(even) {
+.c24:nth-of-type(even) {
   background-color: #CFCFC4;
 }
 
-.c22 {
+.c23 {
   color: #FFF;
   background-color: #464643;
   text-transform: uppercase;
 }
 
-.c24 {
+.c25 {
   text-align: left;
   padding: 8px;
 }
 
-.c25 {
+.c26 {
   padding: 8px;
 }
 
-.c28 {
+.c29 {
   color: #73736E;
   border-radius: 4px;
   border-color: #73736E;
@@ -627,42 +675,32 @@ exports[`Applications list Snapshot 1`] = `
   padding: 8px 12px 8px 4px;
 }
 
-.c28::-webkit-input-placeholder,
-.c28::-webkit-input-placeholder {
+.c29::-webkit-input-placeholder,
+.c29::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c28::-moz-placeholder,
-.c28::-webkit-input-placeholder {
+.c29::-moz-placeholder,
+.c29::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c28:-ms-input-placeholder,
-.c28::-webkit-input-placeholder {
+.c29:-ms-input-placeholder,
+.c29::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c28::placeholder,
-.c28::-webkit-input-placeholder {
+.c29::placeholder,
+.c29::-webkit-input-placeholder {
   color: #73736E;
 }
 
-.c28:-ms-input-placeholder {
+.c29:-ms-input-placeholder {
   color: #73736E;
-}
-
-.c30 {
-  color: #73736E;
-}
-
-.c30:hover {
-  color: #191918;
-  background-color: initial;
 }
 
 .c31 {
-  color: #191918;
-  font-weight: bold;
+  color: #73736E;
 }
 
 .c31:hover {
@@ -670,7 +708,17 @@ exports[`Applications list Snapshot 1`] = `
   background-color: initial;
 }
 
-.c26 {
+.c32 {
+  color: #191918;
+  font-weight: bold;
+}
+
+.c32:hover {
+  color: #191918;
+  background-color: initial;
+}
+
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -690,15 +738,15 @@ exports[`Applications list Snapshot 1`] = `
   gap: 4px;
 }
 
-.c29 {
+.c30 {
   display: none;
 }
 
-.c27 {
+.c28 {
   margin: 0px;
 }
 
-.c27 select {
+.c28 select {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -714,7 +762,7 @@ exports[`Applications list Snapshot 1`] = `
   padding: 48px 20px 64px;
 }
 
-.c32 {
+.c33 {
   display: none;
   position: fixed;
   top: 50%;
@@ -733,7 +781,7 @@ exports[`Applications list Snapshot 1`] = `
   transition: all 0.5s ease;
 }
 
-.c37 {
+.c38 {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -746,7 +794,7 @@ exports[`Applications list Snapshot 1`] = `
   gap: 8px;
 }
 
-.c36 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -769,7 +817,7 @@ exports[`Applications list Snapshot 1`] = `
   position: relative;
 }
 
-.c19 {
+.c21 {
   color: #464643;
   border-radius: 4px;
   border: 1px solid #191918;
@@ -963,8 +1011,7 @@ exports[`Applications list Snapshot 1`] = `
           Object {
             "alignItems": "center",
             "display": "flex",
-            "gap": 16,
-            "justifyContent": "flex-end",
+            "justifyContent": "space-between",
             "margin": "16px 0px",
           }
         }
@@ -974,8 +1021,6 @@ exports[`Applications list Snapshot 1`] = `
             Object {
               "display": "flex",
               "gap": 16,
-              "marginLeft": "0px",
-              "marginRight": "auto",
             }
           }
         >
@@ -1014,8 +1059,100 @@ exports[`Applications list Snapshot 1`] = `
               </svg>
             </div>
           </div>
-          <select
+        </section>
+        <section
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "gap": 12,
+            }
+          }
+        >
+          <button
             className="c19"
+            onClick={[Function]}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 3H5a1 1 0 0 0-1 1v2.59c0 .523.213 1.037.583 1.407L10 13.414V21a1.001 1.001 0 0 0 1.447.895l4-2c.339-.17.553-.516.553-.895v-5.586l5.417-5.417c.37-.37.583-.884.583-1.407V4a1 1 0 0 0-1-1zm-6.707 9.293A.996.996 0 0 0 14 13v5.382l-2 1V13a.996.996 0 0 0-.293-.707L6 6.59V5h14.001l.002 1.583-5.71 5.71z"
+              />
+            </svg>
+          </button>
+          <a
+            className="c20"
+            download="modelo_relatorio.csv"
+            href="/modelo/cp-unix_time_stamp.csv"
+          >
+            Download do modelo 
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m12 16 4-5h-3V4h-2v7H8z"
+              />
+              <path
+                d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"
+              />
+            </svg>
+          </a>
+        </section>
+      </section>
+      <section
+        style={
+          Object {
+            "display": "none",
+            "gap": 16,
+            "marginBottom": "16px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+              "gap": 4,
+            }
+          }
+        >
+          <label
+            htmlFor="fileStatusSelect"
+            style={
+              Object {
+                "fontSize": "12px",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Status
+          </label>
+          <select
+            className="c21"
             defaultValue=""
             id="fileStatusSelect"
             name="fileStatusSelect"
@@ -1042,80 +1179,87 @@ exports[`Applications list Snapshot 1`] = `
               Arquivo inválido
             </option>
           </select>
-        </section>
-        <a
-          className="c20"
-          download="modelo_relatorio.csv"
-          href="/modelo/cp-unix_time_stamp.csv"
+        </div>
+        <div
+          style={
+            Object {
+              "display": "none",
+              "flexDirection": "column",
+              "gap": 4,
+            }
+          }
         >
-          Download do modelo 
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
+          <label
+            htmlFor="tenantSelect"
             style={
               Object {
-                "color": undefined,
+                "fontSize": "12px",
+                "fontWeight": "bold",
               }
             }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="m12 16 4-5h-3V4h-2v7H8z"
-            />
-            <path
-              d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"
-            />
-          </svg>
-        </a>
+            Tenant
+          </label>
+          <select
+            className="c21"
+            defaultValue=""
+            disabled={false}
+            id="tenantSelect"
+            name="tenantSelect"
+            onChange={[Function]}
+          >
+            <option
+              value=""
+            >
+              Selecione a tenant
+            </option>
+          </select>
+        </div>
       </section>
       <table
-        className="c21"
+        className="c22"
       >
         <colgroup
           className=""
         />
         <thead
-          className="c22"
+          className="c23"
         >
           <tr
-            className="c23"
+            className="c24"
           >
             <th
-              className="c24"
+              className="c25"
             >
               Arquivo enviado
             </th>
             <th
-              className="c24"
+              className="c25"
             >
               Arquivo renomeado
             </th>
             <th
-              className="c24"
+              className="c25"
             >
               Data do envio
             </th>
             <th
-              className="c24"
+              className="c25"
             >
               Tamanho (bytes)
             </th>
             <th
-              className="c24"
+              className="c25"
             >
               Qnt de ONTs
             </th>
             <th
-              className="c24"
+              className="c25"
             >
               Responsável pelo envio
             </th>
             <th
-              className="c24"
+              className="c25"
             >
               Status do envio
             </th>
@@ -1125,10 +1269,10 @@ exports[`Applications list Snapshot 1`] = `
           className=""
         >
           <tr
-            className="c23"
+            className="c24"
           >
             <td
-              className="c25"
+              className="c26"
             >
               Sem resultados
             </td>
@@ -1136,13 +1280,13 @@ exports[`Applications list Snapshot 1`] = `
         </tbody>
       </table>
       <div
-        className="c26"
+        className="c27"
       >
         <div
-          className="c27"
+          className="c28"
         >
           <select
-            className="c28"
+            className="c29"
             defaultValue={12}
             onChange={[Function]}
           >
@@ -1168,37 +1312,37 @@ exports[`Applications list Snapshot 1`] = `
            items por pág.
         </div>
         <span
-          className="c29"
+          className="c30"
         >
           <button
-            className="c5 c30"
+            className="c5 c31"
             disabled={true}
             onClick={[Function]}
           >
             &lt;&lt;
           </button>
           <button
-            className="c5 c30"
+            className="c5 c31"
             disabled={true}
             onClick={[Function]}
           >
             &lt;
           </button>
           <button
-            className="c5 c31"
+            className="c5 c32"
             onClick={[Function]}
           >
             1
           </button>
           <button
-            className="c5 c30"
+            className="c5 c31"
             disabled={true}
             onClick={[Function]}
           >
             &gt;
           </button>
           <button
-            className="c5 c30"
+            className="c5 c31"
             disabled={false}
             onClick={[Function]}
           >
@@ -1207,7 +1351,7 @@ exports[`Applications list Snapshot 1`] = `
         </span>
       </div>
       <div
-        className="c32"
+        className="c33"
       >
         <section
           style={
@@ -1220,20 +1364,20 @@ exports[`Applications list Snapshot 1`] = `
         >
           <span>
             <p
-              className="c33"
+              className="c34"
               size="large"
             >
               Enviar relatório
             </p>
             <p
-              className="c34"
+              className="c35"
               size="small"
             >
               O arquivo deve estar no formato CSV e ter no máximo 5mb.
             </p>
           </span>
           <button
-            className="c35"
+            className="c36"
             onClick={[Function]}
           >
             <svg
@@ -1257,14 +1401,14 @@ exports[`Applications list Snapshot 1`] = `
           </button>
         </section>
         <form
-          className="c36"
+          className="c37"
           onSubmit={[Function]}
         >
           <fieldset
-            className="c37"
+            className="c38"
           >
             <label
-              className="c38"
+              className="c39"
               htmlFor="file"
             >
               Escolher arquivo
@@ -1279,14 +1423,14 @@ exports[`Applications list Snapshot 1`] = `
               type="file"
             />
             <p
-              className="c34"
+              className="c35"
               size="small"
             >
               Nenhum arquivo selecionado
             </p>
           </fieldset>
           <button
-            className="c39"
+            className="c40"
             disabled={true}
             type="submit"
           >
@@ -1295,10 +1439,10 @@ exports[`Applications list Snapshot 1`] = `
         </form>
       </div>
       <div
-        className="c40"
+        className="c41"
       >
         <span
-          className="c41"
+          className="c42"
         >
           <svg
             fill="currentColor"
@@ -1321,7 +1465,7 @@ exports[`Applications list Snapshot 1`] = `
         </span>
         Bem-vindo ao Portal APIM da V.tal
         <button
-          className="c42 c43"
+          className="c43 c44"
           onClick={[Function]}
         >
           <svg
