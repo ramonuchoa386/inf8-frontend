@@ -98,6 +98,9 @@ const useFetchLogs = (
     searchTerm,
     tenant,
     state.profile,
+    state.organization,
+    state.userName,
+    state.email,
   ]);
 
   return { data, error, loading };
