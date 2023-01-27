@@ -255,28 +255,28 @@ const ReportListPage = () => {
                   id: index + 1,
                   cell: [
                     {
-                      value: item.arquivo_enviado,
+                      value: item.ARQUIVO_ENVIADO,
                     },
                     {
-                      value: item.arquivo_renomeado,
+                      value: item.ARQUIVO_RENOMEADO,
                     },
                     {
-                      value: item.data_envio,
+                      value: item.DATA_ENVIO,
                     },
                     {
-                      value: item.tamanho,
+                      value: item.TAMANHO,
                     },
                     {
-                      value: item.qnt_onts,
+                      value: item.QNT_ONTS,
                     },
                     {
-                      value: item.responsavel_envio,
+                      value: item.RESPONSAVEL_ENVIO,
                     },
                     {
-                      value: item.status_envio,
+                      value: item.STATUS_ENVIO,
                     },
                     {
-                      value: item.companyid,
+                      value: item.COMPANYID,
                     },
                   ],
                 };
@@ -285,25 +285,25 @@ const ReportListPage = () => {
                   id: index + 1,
                   cell: [
                     {
-                      value: item.arquivo_enviado,
+                      value: item.ARQUIVO_ENVIADO,
                     },
                     {
-                      value: item.arquivo_renomeado,
+                      value: item.ARQUIVO_RENOMEADO,
                     },
                     {
-                      value: item.data_envio,
+                      value: item.DATA_ENVIO,
                     },
                     {
-                      value: item.tamanho,
+                      value: item.TAMANHO,
                     },
                     {
-                      value: item.qnt_onts,
+                      value: item.QNT_ONTS,
                     },
                     {
-                      value: item.responsavel_envio,
+                      value: item.RESPONSAVEL_ENVIO,
                     },
                     {
-                      value: item.status_envio,
+                      value: item.STATUS_ENVIO,
                     },
                   ],
                 };

@@ -10,14 +10,14 @@ export interface IApiResponse {
 }
 
 interface IResponseItem {
-  arquivo_enviado: string;
-  arquivo_renomeado: string;
-  data_envio: string;
-  tamanho: number;
-  qnt_onts: number;
-  responsavel_envio: string;
-  status_envio: string;
-  companyid?: string;
+  ARQUIVO_ENVIADO: string;
+  ARQUIVO_RENOMEADO: string;
+  DATA_ENVIO: string;
+  QNT_ONTS: number;
+  RESPONSAVEL_ENVIO: string;
+  STATUS_ENVIO: string;
+  TAMANHO: number;
+  COMPANYID: string;
 }
 
 interface IResponseData {
