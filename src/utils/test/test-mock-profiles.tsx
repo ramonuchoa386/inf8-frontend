@@ -44,13 +44,13 @@ const TestAuthComponent: React.FunctionComponent<
   PropsWithChildren & { usermock: any }
 > = (props) => {
   const { usermock, children } = props;
-  const { singIn } = React.useContext(AuthContext);
+  const { signIn } = React.useContext(AuthContext);
   const [run, setRun] = React.useState(false);
 
   React.useEffect(() => {
-    if (!run) singIn();
+    if (!run) signIn();
     setRun(true);
-  }, [usermock, singIn, setRun, run]);
+  }, [usermock, signIn, setRun, run]);
 
   return <div {...props}>{children}</div>;
 };

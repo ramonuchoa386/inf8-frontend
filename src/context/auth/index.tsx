@@ -3,18 +3,19 @@ import React, { createContext, useState } from 'react';
 import { Profiles } from '../../utils/enums';
 import { mock } from './auth.mock';
 
-type UserInfo = {
+interface IUserInfo {
   logged: boolean;
   profile: Profiles;
   userName: string;
-};
+  organization: string;
+  email: string;
+}
 
-type PropsAuthContext = {
-  state: UserInfo;
-  setState: React.Dispatch<React.SetStateAction<UserInfo>>;
-  singIn: () => void;
-  singOut: () => void;
-};
+interface IAuthContextProvider {
+  state: IUserInfo;
+  signIn: () => void;
+  signOut: () => void;
+}
 
 const DEFALUT_VALUE = {
   state: {
@@ -23,49 +24,57 @@ const DEFALUT_VALUE = {
       (sessionStorage.getItem('@vtal/inf8/userProfile') as Profiles) ||
       Profiles['NONE'],
     userName: sessionStorage.getItem('@vtal/inf8/userName') || '',
+    organization: sessionStorage.getItem('@vtal/inf8/userOrg') || '',
+    email: sessionStorage.getItem('@vtal/inf8/userEmail') || '',
   },
-  setState: () => {},
-  singIn: () => {},
-  singOut: () => {},
+  signIn: () => {},
+  signOut: () => {},
 };
-const AuthContext = createContext<PropsAuthContext>(DEFALUT_VALUE);
+const AuthContext = createContext<IAuthContextProvider>(DEFALUT_VALUE);
 
 const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [state, setState] = useState(DEFALUT_VALUE.state);
 
-  const singIn = () => {
+  const signIn = () => {
     sessionStorage.setItem('@vtal/inf8/logged', 'true');
     sessionStorage.setItem('@vtal/inf8/userProfile', mock.profile);
     sessionStorage.setItem('@vtal/inf8/userName', mock.userName);
+    sessionStorage.setItem('@vtal/inf8/userOrg', mock.organization);
+    sessionStorage.setItem('@vtal/inf8/userEmail', mock.email);
 
-    setState({
-      ...state,
+    setState(() => ({
       logged: true,
       profile: Profiles[mock.profile],
       userName: mock.userName,
-    });
+      organization: mock.organization,
+      email: mock.email,
+    }));
   };
 
-  const singOut = () => {
+  const signOut = () => {
     sessionStorage.removeItem('@vtal/inf8/logged');
+    sessionStorage.removeItem('@vtal/inf8/userProfile');
+    sessionStorage.removeItem('@vtal/inf8/userName');
+    sessionStorage.removeItem('@vtal/inf8/userOrg');
+    sessionStorage.removeItem('@vtal/inf8/userEmail');
 
-    setState({
-      ...state,
+    setState(() => ({
       logged: false,
       profile: Profiles['NONE'],
       userName: '',
-    });
+      organization: '',
+      email: '',
+    }));
   };
 
   return (
     <AuthContext.Provider
       value={{
         state,
-        setState,
-        singIn,
-        singOut,
+        signIn,
+        signOut,
       }}
     >
       {children}

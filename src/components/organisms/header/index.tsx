@@ -11,7 +11,7 @@ import * as S from './styles';
 
 const Header: React.FunctionComponent = (props) => {
   const headerRef = useRef<HTMLDivElement>(null);
-  const { state, singOut } = useContext(AuthContext);
+  const { state, signOut } = useContext(AuthContext);
   const [toggleBox, setToggleBox] = useState(false);
   const [headerOffset, setHeaderOffset] = useState<string>('');
 
@@ -48,7 +48,7 @@ const Header: React.FunctionComponent = (props) => {
         </S.BoxRow>
 
         <S.BoxRow style={{ justifyContent: 'space-between' }}>
-          <S.LogOutBtn buttonTheme='Coral' onClick={singOut} borderLess>
+          <S.LogOutBtn buttonTheme='Coral' onClick={signOut} borderLess>
             Sair
           </S.LogOutBtn>
         </S.BoxRow>
