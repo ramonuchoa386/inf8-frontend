@@ -66,7 +66,15 @@ const useFetchLogs = (
       query.append('companyid', tenant);
     }
 
-    fetch(API_BASEURL + LOGS_ENDPOINT + `?${query.toString()}`)
+    const headers = new Headers();
+    headers.append('pcw', state.profile);
+    headers.append('companyId', state.organization);
+    headers.append('name', state.userName);
+    headers.append('email', state.email);
+
+    fetch(API_BASEURL + LOGS_ENDPOINT + `?${query.toString()}`, {
+      headers,
+    })
       .then((res) => {
         return res.json();
       })

@@ -36,6 +36,7 @@ import { QueryFileStatus, fileStatus, Profiles } from '../../../utils/enums';
 const FormModal: React.FunctionComponent = () => {
   const { API_BASEURL, FILEUPLOAD_ENDPOINT } = config;
   const { modalState, toggleModalState } = useContext(ModalContext);
+  const { state } = useContext(AuthContext);
   const { showToaster } = useContext(ToasterContext);
   const [file, setFile] = useState<File | null>();
 
@@ -80,8 +81,11 @@ const FormModal: React.FunctionComponent = () => {
     }
 
     const headers = new Headers();
-    headers.append('organization', 'SAMPLEISP');
     headers.append('file-name', file.name);
+    headers.append('pcw', state.profile);
+    headers.append('companyId', state.organization);
+    headers.append('name', state.userName);
+    headers.append('email', state.email);
 
     const data = new FormData();
     data.append('file', file, file.name);
