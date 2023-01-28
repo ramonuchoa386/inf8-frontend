@@ -68,8 +68,10 @@ const useFetchLogs = (
           setData(() => data);
         }
       })
-      .catch((error: string) => {
-        setError(error);
+      .catch((error) => {
+        if (error) {
+          setError(() => 'Erro de conexão com o servidor.');
+        }
       })
       .finally(() => setLoading(() => false));
   }, [
