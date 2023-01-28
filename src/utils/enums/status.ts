@@ -27,9 +27,9 @@ export enum EndpointApplicationRefer {
 }
 
 export enum QueryFileStatus {
-  ENVIADO = 'enviado',
-  ERRO = 'erro',
-  INVALIDO = 'invalido',
+  ENVIADO = 'Enviado',
+  ERRO = 'Erro no envio',
+  INVALIDO = 'Arquivo invalido',
 }
 
 export enum TextFileStatus {
