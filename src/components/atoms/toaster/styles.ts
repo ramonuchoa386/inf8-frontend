@@ -4,6 +4,7 @@ import { Button } from '../';
 
 export const Toaster = styled.div<IToasterContext>`
   position: absolute;
+  z-index: 100;
   top: 10vh;
   right: ${(props) => (props.toast ? '0' : '-100%')};
   border-radius: 4px 0px 0px 4px;
