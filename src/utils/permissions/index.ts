@@ -12,9 +12,14 @@ enum CanViewLogs {
   CP_ADMIN,
 }
 
+enum CanViewFullList {
+  OP_VTAL,
+}
+
 export enum Permissions {
   VIEW = 'VIEW',
   UPLOAD = 'UPLOAD',
+  FULL_VIEW = 'FULL_VIEW',
 }
 
 function validateUserPermissions(
@@ -24,6 +29,9 @@ function validateUserPermissions(
   let permitted = false;
 
   switch (permission) {
+    case Permissions.FULL_VIEW:
+      permitted = profile in CanViewFullList;
+      break;
     case Permissions.VIEW:
       permitted = profile in CanViewLogs;
       break;
