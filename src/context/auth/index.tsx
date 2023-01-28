@@ -1,19 +1,18 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React, { createContext, useState } from 'react';
 import { Profiles } from '../../utils/enums';
-import { mock } from './auth.mock';
 
-interface IUserInfo {
+export interface IUserInfo {
   logged: boolean;
   profile: Profiles;
   userName: string;
-  organization: string;
+  organization?: string;
   email: string;
 }
 
 interface IAuthContextProvider {
   state: IUserInfo;
-  signIn: () => void;
+  signIn: (args: Omit<IUserInfo, 'logged'>) => void;
   signOut: () => void;
 }
 
@@ -24,7 +23,7 @@ const DEFALUT_VALUE = {
       (sessionStorage.getItem('@vtal/inf8/userProfile') as Profiles) ||
       Profiles['NONE'],
     userName: sessionStorage.getItem('@vtal/inf8/userName') || '',
-    organization: sessionStorage.getItem('@vtal/inf8/userOrg') || '',
+    organization: sessionStorage.getItem('@vtal/inf8/userOrg') || undefined,
     email: sessionStorage.getItem('@vtal/inf8/userEmail') || '',
   },
   signIn: () => {},
@@ -35,21 +34,33 @@ const AuthContext = createContext<IAuthContextProvider>(DEFALUT_VALUE);
 const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [state, setState] = useState(DEFALUT_VALUE.state);
+  const [state, setState] = useState<IUserInfo>(DEFALUT_VALUE.state);
 
-  const signIn = () => {
+  const signIn = (args: Omit<IUserInfo, 'logged'>) => {
+    const { email, organization, profile, userName } = args;
+
     sessionStorage.setItem('@vtal/inf8/logged', 'true');
-    sessionStorage.setItem('@vtal/inf8/userProfile', mock.profile);
-    sessionStorage.setItem('@vtal/inf8/userName', mock.userName);
-    sessionStorage.setItem('@vtal/inf8/userOrg', mock.organization);
-    sessionStorage.setItem('@vtal/inf8/userEmail', mock.email);
+    sessionStorage.setItem('@vtal/inf8/userProfile', profile);
+    sessionStorage.setItem('@vtal/inf8/userName', userName);
+    sessionStorage.setItem('@vtal/inf8/userEmail', email);
+
+    const userState: Omit<IUserInfo, 'logged'> = {
+      profile: Profiles[profile],
+      userName: userName,
+      email: email,
+    };
+
+    if (profile !== Profiles.OP_VTAL && organization !== undefined) {
+      sessionStorage.setItem('@vtal/inf8/userOrg', organization);
+
+      Object.assign(userState, {
+        organization: organization,
+      });
+    }
 
     setState(() => ({
       logged: true,
-      profile: Profiles[mock.profile],
-      userName: mock.userName,
-      organization: mock.organization,
-      email: mock.email,
+      ...userState,
     }));
   };
 
@@ -64,7 +75,7 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
       logged: false,
       profile: Profiles['NONE'],
       userName: '',
-      organization: '',
+      organization: undefined,
       email: '',
     }));
   };
