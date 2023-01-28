@@ -264,3 +264,26 @@ export interface IPortalSchemes {
   publicKey: string;
   isOktaProxied: boolean;
 }
+
+// Begin INF8 Interfaces
+
+interface IResponseItem {
+  ARQUIVO_ENVIADO: string;
+  ARQUIVO_RENOMEADO: string;
+  DATA_ENVIO: string;
+  QNT_ONTS: number;
+  RESPONSAVEL_ENVIO: string;
+  STATUS_ENVIO: string;
+  TAMANHO: number;
+  COMPANYID: string;
+}
+export interface IResponseData {
+  statusCode: number; //TODO: should come from an enum like "HTTP_STATUS_CODE"
+  totalElements: number;
+  page: number;
+  totalPages: number;
+  results: IResponseItem[];
+  error: string;
+  message: string | string[];
+}
+// Begin INF8 Interfaces
