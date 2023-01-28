@@ -2,32 +2,12 @@ import React, { useState, useEffect, useContext } from 'react';
 import AuthContext from '../../context/auth';
 import config from '../../utils/config';
 import { Profiles, QueryFileStatus } from '../../utils/enums';
+import { IResponseData } from '../../utils/interfaces';
 
 export interface IApiResponse {
   data?: IResponseData;
   error?: string;
   loading: boolean;
-}
-
-interface IResponseItem {
-  ARQUIVO_ENVIADO: string;
-  ARQUIVO_RENOMEADO: string;
-  DATA_ENVIO: string;
-  QNT_ONTS: number;
-  RESPONSAVEL_ENVIO: string;
-  STATUS_ENVIO: string;
-  TAMANHO: number;
-  COMPANYID: string;
-}
-
-interface IResponseData {
-  statusCode: number; //TODO: should come from an enum like "HTTP_STATUS_CODE"
-  totalElements: number;
-  page: number;
-  totalPages: number;
-  results: IResponseItem[];
-  error: string;
-  message: string[];
 }
 
 const useFetchLogs = (
@@ -68,27 +48,30 @@ const useFetchLogs = (
 
     const headers = new Headers();
     headers.append('pcw', state.profile);
-    headers.append('companyId', state.organization);
     headers.append('name', state.userName);
     headers.append('email', state.email);
+
+    if (state.organization !== undefined) {
+      headers.append('companyid', state.organization);
+    }
 
     fetch(API_BASEURL + LOGS_ENDPOINT + `?${query.toString()}`, {
       headers,
     })
-      .then((res) => {
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data: IResponseData) => {
-        if (data.statusCode === 200) {
-          setData(data);
-          setLoading(false);
+        if (data.statusCode !== 200) {
+          setError(() =>
+            typeof data.message === 'string' ? data.message : data.message[0]
+          );
         } else {
-          setError(data.message[0]);
+          setData(() => data);
         }
       })
       .catch((error: string) => {
         setError(error);
-      });
+      })
+      .finally(() => setLoading(() => false));
   }, [
     pageSize,
     page,
