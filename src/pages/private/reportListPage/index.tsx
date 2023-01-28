@@ -83,9 +83,12 @@ const FormModal: React.FunctionComponent = () => {
     const headers = new Headers();
     headers.append('file-name', file.name);
     headers.append('pcw', state.profile);
-    headers.append('companyId', state.organization);
     headers.append('name', state.userName);
     headers.append('email', state.email);
+
+    if (state.organization !== undefined) {
+      headers.append('companyid', state.organization);
+    }
 
     const data = new FormData();
     data.append('file', file, file.name);
@@ -99,9 +102,10 @@ const FormModal: React.FunctionComponent = () => {
     fetch(API_BASEURL + FILEUPLOAD_ENDPOINT, reqOptions)
       .then((response) => response.json())
       .then((data) => {
-        if (data.statusCode === 500) {
+        if (data.statusCode !== 200) {
           showToaster({
-            message: 'Não foi possível concluir o envio do arquivo.',
+            message:
+              data.message || 'Não foi possível concluir o envio do arquivo.',
             severity: 'negative',
             icon: <BiBlock />,
           });
@@ -234,88 +238,86 @@ const ReportListPage = () => {
 
   useEffect(() => {
     if (!loading) {
-      if (error) {
+      if (error !== undefined) {
         showToaster({
           message: error,
           severity: 'negative',
           icon: <BiBlock />,
         });
-      } else if (data) {
+      } else if (data !== undefined) {
         const { results, totalPages } = data;
 
-        if (results.length > 0) {
-          setTableData((currentData) => ({
-            headers: currentData.headers,
-            rows: Array.from(results, (item, index) => {
-              if (
-                state.profile === Profiles.OP_VTAL ||
-                state.profile === Profiles.VW_VTAL
-              ) {
-                return {
-                  id: index + 1,
-                  cell: [
-                    {
-                      value: item.ARQUIVO_ENVIADO,
-                    },
-                    {
-                      value: item.ARQUIVO_RENOMEADO,
-                    },
-                    {
-                      value: item.DATA_ENVIO,
-                    },
-                    {
-                      value: item.TAMANHO,
-                    },
-                    {
-                      value: item.QNT_ONTS,
-                    },
-                    {
-                      value: item.RESPONSAVEL_ENVIO,
-                    },
-                    {
-                      value: item.STATUS_ENVIO,
-                    },
-                    {
-                      value: item.COMPANYID,
-                    },
-                  ],
-                };
-              } else {
-                return {
-                  id: index + 1,
-                  cell: [
-                    {
-                      value: item.ARQUIVO_ENVIADO,
-                    },
-                    {
-                      value: item.ARQUIVO_RENOMEADO,
-                    },
-                    {
-                      value: item.DATA_ENVIO,
-                    },
-                    {
-                      value: item.TAMANHO,
-                    },
-                    {
-                      value: item.QNT_ONTS,
-                    },
-                    {
-                      value: item.RESPONSAVEL_ENVIO,
-                    },
-                    {
-                      value: item.STATUS_ENVIO,
-                    },
-                  ],
-                };
-              }
-            }),
-          }));
+        setTableData((currentData) => ({
+          headers: currentData.headers,
+          rows: Array.from(results, (item, index) => {
+            if (
+              state.profile === Profiles.OP_VTAL ||
+              state.profile === Profiles.VW_VTAL
+            ) {
+              return {
+                id: index + 1,
+                cell: [
+                  {
+                    value: item.ARQUIVO_ENVIADO,
+                  },
+                  {
+                    value: item.ARQUIVO_RENOMEADO,
+                  },
+                  {
+                    value: item.DATA_ENVIO,
+                  },
+                  {
+                    value: item.TAMANHO,
+                  },
+                  {
+                    value: item.QNT_ONTS,
+                  },
+                  {
+                    value: item.RESPONSAVEL_ENVIO,
+                  },
+                  {
+                    value: item.STATUS_ENVIO,
+                  },
+                  {
+                    value: item.COMPANYID,
+                  },
+                ],
+              };
+            } else {
+              return {
+                id: index + 1,
+                cell: [
+                  {
+                    value: item.ARQUIVO_ENVIADO,
+                  },
+                  {
+                    value: item.ARQUIVO_RENOMEADO,
+                  },
+                  {
+                    value: item.DATA_ENVIO,
+                  },
+                  {
+                    value: item.TAMANHO,
+                  },
+                  {
+                    value: item.QNT_ONTS,
+                  },
+                  {
+                    value: item.RESPONSAVEL_ENVIO,
+                  },
+                  {
+                    value: item.STATUS_ENVIO,
+                  },
+                ],
+              };
+            }
+          }),
+        }));
 
-          setTotalPages(totalPages);
-        }
+        setTotalPages(totalPages);
       }
     }
-  }, [loading, data, error, showToaster, listLength, state.profile]);
+  }, [loading, data, error, listLength, state.profile]);
 
   useEffect(() => {
     setPage(0);
@@ -428,49 +430,51 @@ const ReportListPage = () => {
             </S.Combobox>
           </div>
 
-          <div
-            style={{
-              display:
-                state.profile === Profiles.OP_VTAL ||
-                state.profile === Profiles.VW_VTAL
-                  ? 'flex'
-                  : 'none',
-              flexDirection: 'column',
-              gap: 4,
-            }}
-          >
-            <label
-              htmlFor='tenantSelect'
+          {validateUserPermissions(state.profile, Permissions['FULL_VIEW']) && (
+            <div
               style={{
-                fontSize: '12px',
-                fontWeight: 'bold',
+                display:
+                  state.profile === Profiles.OP_VTAL ||
+                  state.profile === Profiles.VW_VTAL
+                    ? 'flex'
+                    : 'none',
+                flexDirection: 'column',
+                gap: 4,
               }}
             >
-              Tenant
-            </label>
-            <S.Combobox
-              id='tenantSelect'
-              name='tenantSelect'
-              value={tenantFilter}
-              onChange={(e) => {
-                if (e.target.value === '') {
-                  setTenantFilter(undefined);
-                } else {
-                  setTenantFilter(e.target.value);
-                }
-              }}
-              defaultValue=''
-              disabled={tenantData.loading}
-            >
-              <option value=''>Selecione a tenant</option>
-              {tenantData.data !== undefined &&
-                tenantData.data.map((tenant) => (
-                  <option key={tenant.toLowerCase()} value={tenant}>
-                    {tenant}
-                  </option>
-                ))}
-            </S.Combobox>
-          </div>
+              <label
+                htmlFor='tenantSelect'
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 'bold',
+                }}
+              >
+                Tenant
+              </label>
+              <S.Combobox
+                id='tenantSelect'
+                name='tenantSelect'
+                value={tenantFilter}
+                onChange={(e) => {
+                  if (e.target.value === '') {
+                    setTenantFilter(undefined);
+                  } else {
+                    setTenantFilter(e.target.value);
+                  }
+                }}
+                defaultValue=''
+                disabled={tenantData.loading}
+              >
+                <option value=''>Selecione a tenant</option>
+                {tenantData.data !== undefined &&
+                  tenantData.data.map((tenant) => (
+                    <option key={tenant.toLowerCase()} value={tenant}>
+                      {tenant}
+                    </option>
+                  ))}
+              </S.Combobox>
+            </div>
+          )}
         </section>
 
         <Table data={tableData} loadingData={loading} />
