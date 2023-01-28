@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import AuthContext from '../../context/auth';
+import { MOCK_CP_ADMIN } from '../../context/auth/auth.mock';
 
 const mock_OP_VTAL = {
   email: 'mock@email.com',
@@ -48,7 +49,7 @@ const TestAuthComponent: React.FunctionComponent<
   const [run, setRun] = React.useState(false);
 
   React.useEffect(() => {
-    if (!run) signIn();
+    if (!run) signIn(MOCK_CP_ADMIN);
     setRun(true);
   }, [usermock, signIn, setRun, run]);
 
