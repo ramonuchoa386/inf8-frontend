@@ -6,9 +6,30 @@ Object {
   "baseElement": <body>
     <div>
       <h1>
-        React Router - Está Logado? 
-        false
+        Perfil
       </h1>
+      <select>
+        <option
+          value="OP_VTAL"
+        >
+          OP_VTAL
+        </option>
+        <option
+          value="VW_VTAL"
+        >
+          VW_VTAL
+        </option>
+        <option
+          value="CP_MASTER"
+        >
+          CP_MASTER
+        </option>
+        <option
+          value="CP_ADMIN"
+        >
+          CP_ADMIN
+        </option>
+      </select>
       <button>
         Login
       </button>
@@ -16,9 +37,30 @@ Object {
   </body>,
   "container": <div>
     <h1>
-      React Router - Está Logado? 
-      false
+      Perfil
     </h1>
+    <select>
+      <option
+        value="OP_VTAL"
+      >
+        OP_VTAL
+      </option>
+      <option
+        value="VW_VTAL"
+      >
+        VW_VTAL
+      </option>
+      <option
+        value="CP_MASTER"
+      >
+        CP_MASTER
+      </option>
+      <option
+        value="CP_ADMIN"
+      >
+        CP_ADMIN
+      </option>
+    </select>
     <button>
       Login
     </button>

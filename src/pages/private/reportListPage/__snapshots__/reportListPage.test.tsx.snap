@@ -496,6 +496,7 @@ exports[`Applications list Snapshot 1`] = `
 
 .c41 {
   position: absolute;
+  z-index: 100;
   top: 10vh;
   right: -100%;
   border-radius: 4px 0px 0px 4px;
@@ -1164,54 +1165,19 @@ exports[`Applications list Snapshot 1`] = `
               Selecione um status
             </option>
             <option
-              value="enviado"
+              value="Enviado"
             >
               Enviado
             </option>
             <option
-              value="erro"
+              value="Erro no envio"
             >
               Erro no envio
             </option>
             <option
-              value="invalido"
+              value="Arquivo invalido"
             >
               Arquivo inválido
-            </option>
-          </select>
-        </div>
-        <div
-          style={
-            Object {
-              "display": "none",
-              "flexDirection": "column",
-              "gap": 4,
-            }
-          }
-        >
-          <label
-            htmlFor="tenantSelect"
-            style={
-              Object {
-                "fontSize": "12px",
-                "fontWeight": "bold",
-              }
-            }
-          >
-            Tenant
-          </label>
-          <select
-            className="c21"
-            defaultValue=""
-            disabled={false}
-            id="tenantSelect"
-            name="tenantSelect"
-            onChange={[Function]}
-          >
-            <option
-              value=""
-            >
-              Selecione a tenant
             </option>
           </select>
         </div>
