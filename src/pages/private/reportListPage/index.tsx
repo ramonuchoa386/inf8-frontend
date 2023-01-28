@@ -118,11 +118,13 @@ const FormModal: React.FunctionComponent = () => {
         }
       })
       .catch((reason) => {
-        showToaster({
-          message: `Erro: ${reason}.`,
-          severity: 'negative',
-          icon: <BiBlock />,
-        });
+        if (reason) {
+          showToaster({
+            message: `Erro de conexão com o servidor.`,
+            severity: 'negative',
+            icon: <BiBlock />,
+          });
+        }
       })
       .finally(() => toggleModalState());
   };
