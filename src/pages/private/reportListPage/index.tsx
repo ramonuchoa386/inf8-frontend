@@ -81,7 +81,7 @@ const FormModal: React.FunctionComponent = () => {
     }
 
     const headers = new Headers();
-    headers.append('file-name', file.name);
+    headers.append('filename', file.name);
     headers.append('pcw', state.profile);
     headers.append('name', state.userName);
     headers.append('email', state.email);
@@ -102,18 +102,20 @@ const FormModal: React.FunctionComponent = () => {
     fetch(API_BASEURL + FILEUPLOAD_ENDPOINT, reqOptions)
       .then((response) => response.json())
       .then((data) => {
-        if (data.statusCode !== 200) {
+	console.log("send file res: ", data);
+
+        if (data.statusCode < 300) {
+          showToaster({
+            message: 'Arquivo enviado com sucesso.',
+            severity: 'positive',
+            icon: <BiLike />,
+          });
+        } else {
           showToaster({
             message:
               data.message || 'Não foi possível concluir o envio do arquivo.',
             severity: 'negative',
             icon: <BiBlock />,
-          });
-        } else {
-          showToaster({
-            message: 'Arquivo enviado com sucesso.',
-            severity: 'positive',
-            icon: <BiLike />,
           });
         }
       })
