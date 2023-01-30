@@ -7,7 +7,7 @@ const config = {
   API_BASEURL:
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000/api'
-      : 'http://inf8-chinesewall-portaloperacional-hml.apps.ocpcorp.vtal.intra/api',
+      : 'https://inf8-chinesewall-portaloperacional-hml.apps.ocpcorp.vtal.intra/api',
   FILEUPLOAD_ENDPOINT: '/file-upload',
   LOGS_ENDPOINT: '/logs',
   MAX_FILE_SIZE: 5000000,
