@@ -5,7 +5,13 @@ import {
   ITableHeader,
 } from '../../../components/molecules/table/table.interface';
 import { Table, Paginacao } from '../../../components/molecules';
-import { Button, Paragraph, Toaster, Input } from '../../../components/atoms';
+import {
+  Button,
+  Paragraph,
+  Toaster,
+  Input,
+  Spinner,
+} from '../../../components/atoms';
 import { styledButton as DownloadBtn } from '../../../components/atoms/button/style';
 import { styledButton as UploadFile } from '../../../components/atoms/button/style';
 import { styledButton as ToggleFilters } from '../../../components/atoms/button/style';
@@ -32,6 +38,7 @@ import useFetchTenants, {
   IFetchTenantsHook,
 } from '../../../hooks/useFetchTenants';
 import { QueryFileStatus, fileStatus, Profiles } from '../../../utils/enums';
+import ISODateFormat from '../../../utils/helpers/isoDateFormat';
 
 const FormModal: React.FunctionComponent = () => {
   const { API_BASEURL, FILEUPLOAD_ENDPOINT } = config;
@@ -39,6 +46,7 @@ const FormModal: React.FunctionComponent = () => {
   const { state } = useContext(AuthContext);
   const { showToaster } = useContext(ToasterContext);
   const [file, setFile] = useState<File | null>();
+  const [sending, setSending] = useState<boolean>(false);
 
   const handleFileInput = (files: FileList | null) => {
     if (files === null || files.item(0) === null) {
@@ -76,6 +84,7 @@ const FormModal: React.FunctionComponent = () => {
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
+    setSending(() => true);
     if (file === undefined || file === null) {
       return null;
     }
@@ -100,35 +109,28 @@ const FormModal: React.FunctionComponent = () => {
     };
 
     fetch(API_BASEURL + FILEUPLOAD_ENDPOINT, reqOptions)
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => {
-	console.log("send file res: ", data);
-
-        if (data.statusCode < 300) {
-          showToaster({
-            message: 'Arquivo enviado com sucesso.',
-            severity: 'positive',
-            icon: <BiLike />,
-          });
-        } else {
-          showToaster({
-            message:
-              data.message || 'Não foi possível concluir o envio do arquivo.',
-            severity: 'negative',
-            icon: <BiBlock />,
-          });
-        }
+        showToaster({
+          message: data.message,
+          severity: data.statusCode < 300 ? 'positive' : 'negative',
+          icon: data.statusCode < 300 ? <BiLike /> : <BiBlock />,
+        });
       })
       .catch((reason) => {
         if (reason) {
           showToaster({
-            message: `Erro de conexão com o servidor.`,
+            message: 'Erro de conexão com o servidor.',
             severity: 'negative',
             icon: <BiBlock />,
           });
         }
       })
-      .finally(() => toggleModalState());
+      .finally(() => {
+        setSending(() => false);
+        setFile(() => undefined);
+        toggleModalState();
+      });
   };
 
   return (
@@ -184,9 +186,12 @@ const FormModal: React.FunctionComponent = () => {
         <Button
           buttonTheme='positive'
           type='submit'
-          disabled={file === undefined}
+          disabled={file === undefined || sending}
+          style={{
+            width: '100px',
+          }}
         >
-          Enviar
+          {sending ? <Spinner /> : 'Enviar'}
         </Button>
       </S.Form>
     </S.Modal>
@@ -209,10 +214,7 @@ const ReportListPage = () => {
       { id: 7, value: 'Status do envio' },
     ];
 
-    if (
-      state.profile === Profiles.OP_VTAL ||
-      state.profile === Profiles.VW_VTAL
-    ) {
+    if (validateUserPermissions(state.profile, Permissions['FULL_VIEW'])) {
       headers.push({ id: 8, value: 'Tenant' });
     }
 
@@ -254,67 +256,42 @@ const ReportListPage = () => {
         setTableData((currentData) => ({
           headers: currentData.headers,
           rows: Array.from(results, (item, index) => {
+            const cell = [
+              {
+                value: item.ARQUIVO_ENVIADO,
+              },
+              {
+                value: item.ARQUIVO_RENOMEADO,
+              },
+              {
+                value: ISODateFormat(item.DATA_ENVIO),
+              },
+              {
+                value: item.TAMANHO,
+              },
+              {
+                value: item.QNT_ONTS,
+              },
+              {
+                value: item.RESPONSAVEL_ENVIO,
+              },
+              {
+                value: item.STATUS_ENVIO,
+              },
+            ];
+
             if (
-              state.profile === Profiles.OP_VTAL ||
-              state.profile === Profiles.VW_VTAL
+              validateUserPermissions(state.profile, Permissions['FULL_VIEW'])
             ) {
-              return {
-                id: index + 1,
-                cell: [
-                  {
-                    value: item.ARQUIVO_ENVIADO,
-                  },
-                  {
-                    value: item.ARQUIVO_RENOMEADO,
-                  },
-                  {
-                    value: item.DATA_ENVIO,
-                  },
-                  {
-                    value: item.TAMANHO,
-                  },
-                  {
-                    value: item.QNT_ONTS,
-                  },
-                  {
-                    value: item.RESPONSAVEL_ENVIO,
-                  },
-                  {
-                    value: item.STATUS_ENVIO,
-                  },
-                  {
-                    value: item.COMPANYID,
-                  },
-                ],
-              };
-            } else {
-              return {
-                id: index + 1,
-                cell: [
-                  {
-                    value: item.ARQUIVO_ENVIADO,
-                  },
-                  {
-                    value: item.ARQUIVO_RENOMEADO,
-                  },
-                  {
-                    value: item.DATA_ENVIO,
-                  },
-                  {
-                    value: item.TAMANHO,
-                  },
-                  {
-                    value: item.QNT_ONTS,
-                  },
-                  {
-                    value: item.RESPONSAVEL_ENVIO,
-                  },
-                  {
-                    value: item.STATUS_ENVIO,
-                  },
-                ],
-              };
+              cell.push({
+                value: item.COMPANYID,
+              });
             }
+
+            return {
+              id: index + 1,
+              cell: cell,
+            };
           }),
         }));
 
@@ -437,11 +414,7 @@ const ReportListPage = () => {
           {validateUserPermissions(state.profile, Permissions['FULL_VIEW']) && (
             <div
               style={{
-                display:
-                  state.profile === Profiles.OP_VTAL ||
-                  state.profile === Profiles.VW_VTAL
-                    ? 'flex'
-                    : 'none',
+                display: state.profile === Profiles.OP_VTAL ? 'flex' : 'none',
                 flexDirection: 'column',
                 gap: 4,
               }}
