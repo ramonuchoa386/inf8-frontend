@@ -14,6 +14,7 @@ enum CanViewLogs {
 
 enum CanViewFullList {
   OP_VTAL,
+  VW_VTAL,
 }
 
 export enum Permissions {

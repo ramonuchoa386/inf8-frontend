@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import AuthContext from '../../context/auth';
 import config from '../../utils/config';
-import { Profiles, QueryFileStatus } from '../../utils/enums';
+import { QueryFileStatus } from '../../utils/enums';
 import { IResponseData } from '../../utils/interfaces';
+import validateUserPermissions, { Permissions } from '../../utils/permissions';
 
 export interface IApiResponse {
   data?: IResponseData;
@@ -41,7 +42,7 @@ const useFetchLogs = (
 
     if (
       tenant !== undefined &&
-      (state.profile === Profiles.OP_VTAL || state.profile === Profiles.VW_VTAL)
+      validateUserPermissions(state.profile, Permissions['FULL_VIEW'])
     ) {
       query.append('companyid', tenant);
     }

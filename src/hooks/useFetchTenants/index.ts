@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import AuthContext from '../../context/auth';
-import { Profiles } from '../../utils/enums';
 import config from '../../utils/config';
+import validateUserPermissions, { Permissions } from '../../utils/permissions';
 
 interface ITenantIdsListItem {
   COMPANYID: string;
@@ -30,7 +30,7 @@ const useFetchTenants = (): IFetchTenantsHook => {
   useEffect(() => {
     setLoading(true);
 
-    if (state.profile === Profiles.OP_VTAL) {
+    if (validateUserPermissions(state.profile, Permissions['FULL_VIEW'])) {
       const headers = new Headers();
       headers.append('pcw', state.profile);
       headers.append('name', state.userName);

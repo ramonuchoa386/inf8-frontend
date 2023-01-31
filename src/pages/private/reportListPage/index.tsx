@@ -37,7 +37,7 @@ import useFetchLogs, { IApiResponse } from '../../../hooks/useFetchLogs';
 import useFetchTenants, {
   IFetchTenantsHook,
 } from '../../../hooks/useFetchTenants';
-import { QueryFileStatus, fileStatus, Profiles } from '../../../utils/enums';
+import { QueryFileStatus, fileStatus } from '../../../utils/enums';
 import ISODateFormat from '../../../utils/helpers/isoDateFormat';
 
 const FormModal: React.FunctionComponent = () => {
@@ -414,7 +414,7 @@ const ReportListPage = () => {
           {validateUserPermissions(state.profile, Permissions['FULL_VIEW']) && (
             <div
               style={{
-                display: state.profile === Profiles.OP_VTAL ? 'flex' : 'none',
+                display: 'flex',
                 flexDirection: 'column',
                 gap: 4,
               }}
