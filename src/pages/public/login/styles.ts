@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import { Button, Icon, Toaster } from '../../../components/atoms';
-import { ResponsiveImage } from '../../../components/molecules';
 import { LogoNegative } from '../../../assets/logos';
 
 export const PageContainer = styled.section`
@@ -8,14 +7,6 @@ export const PageContainer = styled.section`
   height: 100vh;
   overflow: hidden;
   position: relative;
-`;
-
-export const FullBG = styled(ResponsiveImage)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 `;
 
 export const ContentWrapper = styled.div`

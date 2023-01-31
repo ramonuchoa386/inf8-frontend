@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Tag } from '../../../components/atoms';
 
 export const ListItemLink = styled(Link)`
   color: ${(props) => props.theme.colors.Fuscous};
@@ -11,8 +10,6 @@ export const ListItemLink = styled(Link)`
     font-weight: bold;
   }
 `;
-
-export const ApplicationTag = styled(Tag)``;
 
 export const Modal = styled.div<{ show?: boolean }>((props) => {
   const { show = false } = props;
