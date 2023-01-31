@@ -34,8 +34,7 @@ export const Content = styled.div`
     padding-right: 64px;
   }
 
-  @media (min-width: ${(props) =>
-      props.theme.layout.breakpoints.desktopLarge}) {
+  @media (min-width: ${(props) => props.theme.layout.breakpoints.desktop}) {
     padding-left: 75px;
     padding-right: 75px;
     overflow: scroll;
