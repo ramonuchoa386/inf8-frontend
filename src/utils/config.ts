@@ -5,7 +5,9 @@ const config = {
       ? 'https://apim.dev.ca.com/api/apim'
       : 'https://developers.hml.vtal.intra/api/developers',
   API_BASEURL:
-    'https://inf8-chinesewall-portaloperacional-hml.apps.ocpcorp.vtal.intra/api',
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3000/api'
+      : 'https://inf8-chinesewall-portaloperacional-hml.apps.ocpcorp.vtal.intra/api',
   FILEUPLOAD_ENDPOINT: '/file-upload',
   LOGS_ENDPOINT: '/logs',
   COMPANYIDS_ENDPOINT: '/listcompanyid',
