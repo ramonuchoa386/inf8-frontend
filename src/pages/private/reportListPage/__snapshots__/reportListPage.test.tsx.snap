@@ -846,7 +846,7 @@ exports[`Applications list Snapshot 1`] = `
   }
 }
 
-@media (min-width:1366px) {
+@media (min-width:1024px) {
   .c15 {
     padding-left: 75px;
     padding-right: 75px;

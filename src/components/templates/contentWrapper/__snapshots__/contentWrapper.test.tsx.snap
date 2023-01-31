@@ -273,7 +273,7 @@ exports[`Componente ContentWrapper Snapshot 1`] = `
   }
 }
 
-@media (min-width:1366px) {
+@media (min-width:1024px) {
   .c14 {
     padding-left: 75px;
     padding-right: 75px;
