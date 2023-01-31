@@ -12,7 +12,6 @@ export const MOCK_OP_VTAL: IMock = {
 export const MOCK_VW_VTAL: IMock = {
   profile: Profiles['VW_VTAL'],
   userName: 'Slim Shady',
-  organization: 'vero',
   email: 'eminem@ispdossonhos.com',
 };
 
