@@ -1398,6 +1398,11 @@ exports[`Applications list Snapshot 1`] = `
           <button
             className="c40"
             disabled={true}
+            style={
+              Object {
+                "width": "100px",
+              }
+            }
             type="submit"
           >
             Enviar
