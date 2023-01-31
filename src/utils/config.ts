@@ -5,11 +5,10 @@ const config = {
       ? 'https://apim.dev.ca.com/api/apim'
       : 'https://developers.hml.vtal.intra/api/developers',
   API_BASEURL:
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:3000/api'
-      : 'https://inf8-chinesewall-portaloperacional-hml.apps.ocpcorp.vtal.intra/api',
+    'https://inf8-chinesewall-portaloperacional-hml.apps.ocpcorp.vtal.intra/api',
   FILEUPLOAD_ENDPOINT: '/file-upload',
   LOGS_ENDPOINT: '/logs',
+  COMPANYIDS_ENDPOINT: '/listcompanyid',
   MAX_FILE_SIZE: 5000000,
   // PAPI_BASEURL: process.env.REACT_APP_PAPI_HOST || 'https://apim.dev.ca.com/api/apim',
   PAPI_API_LIST: '/api-management/1.0/apis',
