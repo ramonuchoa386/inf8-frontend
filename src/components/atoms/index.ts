@@ -10,6 +10,7 @@ import Status from './status';
 import Avatar from './avatar';
 import { ToggleComponent } from './toggleComponent';
 import { FieldLabel } from './label';
+import { Spinner } from './spinner';
 
 export {
   Divider,
@@ -24,4 +25,5 @@ export {
   Avatar,
   ToggleComponent,
   FieldLabel,
+  Spinner,
 };
