@@ -1,6 +1,6 @@
 import React from 'react';
-export * from './isoDateFormat';
-export * from './bytesFormat';
+import ISODateFormat from './isoDateFormat';
+import BytesFormat from './bytesFormat';
 
 const GetDateUTCMilisseconds = (mili: number) => {
   const date = new Date(0);
@@ -12,6 +12,8 @@ const GetDateUTCMilisseconds = (mili: number) => {
 
 const helpers = {
   GetDateUTCMilisseconds: GetDateUTCMilisseconds,
+  ISODateFormat,
+  BytesFormat,
 };
 
 export default helpers;
