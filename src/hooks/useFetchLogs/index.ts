@@ -42,14 +42,14 @@ const useFetchLogs = (
 
     if (
       tenant !== undefined &&
-      validateUserPermissions(state.profile, Permissions['FULL_VIEW'])
+      validateUserPermissions(state.pcw, Permissions['FULL_VIEW'])
     ) {
       query.append('companyid', tenant);
     }
 
     const headers = new Headers();
-    headers.append('pcw', state.profile);
-    headers.append('name', state.userName);
+    headers.append('pcw', state.pcw);
+    headers.append('name', state.name);
     headers.append('email', state.email);
 
     if (state.organization !== undefined) {
@@ -83,9 +83,9 @@ const useFetchLogs = (
     fileStatus,
     searchTerm,
     tenant,
-    state.profile,
+    state.pcw,
     state.organization,
-    state.userName,
+    state.name,
     state.email,
   ]);
 

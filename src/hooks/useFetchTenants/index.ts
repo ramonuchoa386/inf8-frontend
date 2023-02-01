@@ -30,10 +30,10 @@ const useFetchTenants = (): IFetchTenantsHook => {
   useEffect(() => {
     setLoading(true);
 
-    if (validateUserPermissions(state.profile, Permissions['FULL_VIEW'])) {
+    if (validateUserPermissions(state.pcw, Permissions['FULL_VIEW'])) {
       const headers = new Headers();
-      headers.append('pcw', state.profile);
-      headers.append('name', state.userName);
+      headers.append('pcw', state.pcw);
+      headers.append('name', state.name);
       headers.append('email', state.email);
 
       fetch(API_BASEURL + LOGS_ENDPOINT + COMPANYIDS_ENDPOINT, {
@@ -66,7 +66,7 @@ const useFetchTenants = (): IFetchTenantsHook => {
         })
         .finally(() => setLoading(() => false));
     }
-  }, [state.profile, state.userName, state.email, API_BASEURL, LOGS_ENDPOINT]);
+  }, [state.pcw, state.name, state.email, API_BASEURL, LOGS_ENDPOINT]);
 
   return { data, error, loading };
 };

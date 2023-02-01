@@ -1,17 +1,18 @@
 import React, { useContext, useState } from 'react';
-import AuthContext, { IUserInfo } from '../../../context/auth';
+import AuthContext, { UserData } from '../../../context/auth';
 import {
   MOCK_OP_VTAL,
   MOCK_VW_VTAL,
   MOCK_CP_MASTER,
   MOCK_CP_ADMIN,
+  // MOCK_KEEP_ALIVE_RESPONSE,
 } from '../../../context/auth/auth.mock';
 import { Profiles } from '../../../utils/enums';
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
   const [mockProfile, setMockProfile] =
-    useState<Omit<IUserInfo, 'logged'>>(MOCK_OP_VTAL);
+    useState<Omit<UserData, 'logged'>>(MOCK_OP_VTAL);
 
   const handleSelectProfile = (profile: Profiles) => {
     switch (profile) {

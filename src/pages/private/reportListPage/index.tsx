@@ -40,7 +40,8 @@ import useFetchTenants, {
   IFetchTenantsHook,
 } from '../../../hooks/useFetchTenants';
 import { QueryFileStatus, fileStatus } from '../../../utils/enums';
-import { ISODateFormat, BytesFormat } from '../../../utils/helpers/';
+import ISODateFormat from '../../../utils/helpers/isoDateFormat';
+import BytesFormat from '../../../utils/helpers/bytesFormat';
 import theme from '../../../styles/theme';
 
 const FormModal: React.FunctionComponent = () => {
@@ -94,8 +95,8 @@ const FormModal: React.FunctionComponent = () => {
 
     const headers = new Headers();
     headers.append('filename', file.name);
-    headers.append('pcw', state.profile);
-    headers.append('name', state.userName);
+    headers.append('pcw', state.pcw);
+    headers.append('name', state.name);
     headers.append('email', state.email);
 
     if (state.organization !== undefined) {
@@ -233,12 +234,12 @@ const ReportListPage = () => {
       { id: 7, value: 'Status do envio' },
     ];
 
-    if (validateUserPermissions(state.profile, Permissions['FULL_VIEW'])) {
+    if (validateUserPermissions(state.pcw, Permissions['FULL_VIEW'])) {
       headers.push({ id: 8, value: 'Tenant' });
     }
 
     return headers;
-  }, [state.profile]);
+  }, [state.pcw]);
 
   const [page, setPage] = useState<number>(0);
   const [totalPages, setTotalPages] = useState<number>(0);
@@ -341,9 +342,7 @@ const ReportListPage = () => {
               });
             }
 
-            if (
-              validateUserPermissions(state.profile, Permissions['FULL_VIEW'])
-            ) {
+            if (validateUserPermissions(state.pcw, Permissions['FULL_VIEW'])) {
               cell.push({
                 value: item.COMPANYID,
               });
@@ -359,7 +358,7 @@ const ReportListPage = () => {
         setTotalPages(totalPages);
       }
     }
-  }, [loading, data, error, listLength, state.profile]);
+  }, [loading, data, error, listLength, state.pcw]);
 
   useEffect(() => {
     setPage(0);
@@ -420,7 +419,7 @@ const ReportListPage = () => {
             >
               Download do modelo <BiDownload />
             </DownloadBtn>
-            {validateUserPermissions(state.profile, Permissions['UPLOAD']) && (
+            {validateUserPermissions(state.pcw, Permissions['UPLOAD']) && (
               <Button buttonTheme='Coral' onClick={() => toggleModalState()}>
                 Enviar relatório <BiUpload />
               </Button>
@@ -472,7 +471,7 @@ const ReportListPage = () => {
             </S.Combobox>
           </div>
 
-          {validateUserPermissions(state.profile, Permissions['FULL_VIEW']) && (
+          {validateUserPermissions(state.pcw, Permissions['FULL_VIEW']) && (
             <div
               style={{
                 display: 'flex',

@@ -14,7 +14,7 @@ const SidebarContent = ({ iconSize = 17 }: { iconSize?: number }) => {
     <S.Main>
       <Menu iconShape='square'>
         <Menu>
-          {validateUserPermissions(state.profile, Permissions['VIEW']) && (
+          {validateUserPermissions(state.pcw, Permissions['VIEW']) && (
             <>
               <MenuItem icon={<BiCloudUpload size={iconSize} />}>
                 Relatório de envio

@@ -42,8 +42,8 @@ const Header: React.FunctionComponent = (props) => {
         <S.BoxRow>
           <S.Avatar />
           <S.BoxColumn>
-            <S.UserName>Olá, {state.userName}</S.UserName>
-            <S.UserProfile weight='bold'>perfil: {state.profile}</S.UserProfile>
+            <S.UserName>Olá, {state.name}</S.UserName>
+            <S.UserProfile weight='bold'>perfil: {state.pcw}</S.UserProfile>
           </S.BoxColumn>
         </S.BoxRow>
 
