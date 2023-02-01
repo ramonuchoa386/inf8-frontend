@@ -1212,7 +1212,7 @@ exports[`Applications list Snapshot 1`] = `
             <th
               className="c25"
             >
-              Tamanho (bytes)
+              Tamanho do arquivo
             </th>
             <th
               className="c25"
