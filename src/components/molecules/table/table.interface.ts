@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-interface ITableCell {
-  value: string | ReactNode;
+export interface ITableCell {
+  value: string | ReactNode | JSX.Element;
 }
 
 export interface ITableHeader {
