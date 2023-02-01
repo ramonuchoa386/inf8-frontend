@@ -1,9 +1,16 @@
-function ISODateFormat(isoDate: string): string {
+/**
+ * ISODateFormat script.
+ * @module ISODateFormat
+ * @param {string} [isoDate] - The data in ISO format.
+ * @return {string} The timestamp in 'DD/MM/AA HH:MM:SS' format.
+ */
+
+export const ISODateFormat = (isoDate: string): string => {
   const rawDate = Date.parse(isoDate);
   const sendDate = new Date(rawDate);
 
   const date =
-    sendDate.getDate() +
+    ('0' + sendDate.getDate()).slice(-2) +
     '/' +
     ('0' + (sendDate.getMonth() + 1)).slice(-2) +
     '/' +
@@ -16,6 +23,6 @@ function ISODateFormat(isoDate: string): string {
     ('0' + sendDate.getSeconds()).slice(-2);
 
   return date + ' ' + hour;
-}
+};
 
 export default ISODateFormat;
