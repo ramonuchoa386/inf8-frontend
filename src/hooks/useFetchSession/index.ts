@@ -9,13 +9,9 @@ const useFetchSession = () => {
     setLoading(true);
 
     fetch(PROXY_URL + KEEP_ALIVE_PROXY_URL, {
-      credentials: 'include',
+      redirect: 'manual',
+      credentials: 'same-origin',
     })
-      .then((res) => {
-        console.log('raw proxy response: ', res);
-
-        return res.json();
-      })
       .then((data) => {
         console.log('proxy response: ', data);
       })
