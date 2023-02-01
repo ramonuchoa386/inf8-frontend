@@ -2,29 +2,29 @@
 import React, { createContext, useEffect, useState } from 'react';
 import useFetchSession from '../../hooks/useFetchSession';
 import { Profiles } from '../../utils/enums';
+import { IKeepAliveResponse } from '../../utils/interfaces';
 
 export interface IUserInfo {
   logged: boolean;
-  profile: Profiles;
-  userName: string;
-  organization?: string;
-  email: string;
 }
 
+export type UserData = IUserInfo &
+  Pick<IKeepAliveResponse, 'pcw' | 'name' | 'organization' | 'email'>;
+
 interface IAuthContextProvider {
-  state: IUserInfo;
-  signIn: (args: Omit<IUserInfo, 'logged'>) => void;
+  state: UserData;
+  signIn: (args: Omit<UserData, 'logged'>) => void;
   signOut: () => void;
 }
 
 const DEFALUT_VALUE = {
   state: {
     logged: sessionStorage.getItem('@vtal/inf8/logged') === 'true',
-    profile:
+    pcw:
       (sessionStorage.getItem('@vtal/inf8/userProfile') as Profiles) ||
       Profiles['NONE'],
-    userName: sessionStorage.getItem('@vtal/inf8/userName') || '',
-    organization: sessionStorage.getItem('@vtal/inf8/userOrg') || undefined,
+    name: sessionStorage.getItem('@vtal/inf8/userName') || '',
+    organization: sessionStorage.getItem('@vtal/inf8/userOrg') || '',
     email: sessionStorage.getItem('@vtal/inf8/userEmail') || '',
   },
   signIn: () => {},
@@ -35,24 +35,25 @@ const AuthContext = createContext<IAuthContextProvider>(DEFALUT_VALUE);
 const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [state, setState] = useState<IUserInfo>(DEFALUT_VALUE.state);
+  const [state, setState] = useState<UserData>(DEFALUT_VALUE.state);
   const fetchSession = useFetchSession();
 
-  const signIn = (args: Omit<IUserInfo, 'logged'>) => {
-    const { email, organization, profile, userName } = args;
+  const signIn = (args: Omit<UserData, 'logged'>) => {
+    const { email, organization, pcw, name } = args;
 
     sessionStorage.setItem('@vtal/inf8/logged', 'true');
-    sessionStorage.setItem('@vtal/inf8/userProfile', profile);
-    sessionStorage.setItem('@vtal/inf8/userName', userName);
+    sessionStorage.setItem('@vtal/inf8/userProfile', pcw);
+    sessionStorage.setItem('@vtal/inf8/userName', name);
     sessionStorage.setItem('@vtal/inf8/userEmail', email);
 
-    const userState: Omit<IUserInfo, 'logged'> = {
-      profile: Profiles[profile],
-      userName: userName,
+    const userState: Omit<UserData, 'logged'> = {
+      pcw: Profiles[pcw],
+      name: name,
       email: email,
+      organization: organization,
     };
 
-    if (profile !== Profiles.OP_VTAL && organization !== undefined) {
+    if (pcw !== Profiles.OP_VTAL && organization !== undefined) {
       sessionStorage.setItem('@vtal/inf8/userOrg', organization);
 
       Object.assign(userState, {
@@ -75,15 +76,15 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
 
     setState(() => ({
       logged: false,
-      profile: Profiles['NONE'],
-      userName: '',
-      organization: undefined,
+      pcw: Profiles['NONE'],
+      name: '',
+      organization: '',
       email: '',
     }));
   };
 
   useEffect(() => {
-    console.log(fetchSession);
+    console.log('fetch sesstion: ', fetchSession);
   }, [fetchSession]);
 
   return (
