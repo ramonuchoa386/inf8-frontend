@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
+import useFetchSession from '../../hooks/useFetchSession';
 import { Profiles } from '../../utils/enums';
 
 export interface IUserInfo {
@@ -35,6 +36,7 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [state, setState] = useState<IUserInfo>(DEFALUT_VALUE.state);
+  const fetchSession = useFetchSession();
 
   const signIn = (args: Omit<IUserInfo, 'logged'>) => {
     const { email, organization, profile, userName } = args;
@@ -79,6 +81,10 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
       email: '',
     }));
   };
+
+  useEffect(() => {
+    console.log(fetchSession);
+  }, [fetchSession]);
 
   return (
     <AuthContext.Provider
