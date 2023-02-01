@@ -1,6 +1,6 @@
 import React from 'react';
-export * from './apiSecretRenew';
 export * from './isoDateFormat';
+export * from './bytesFormat';
 
 const GetDateUTCMilisseconds = (mili: number) => {
   const date = new Date(0);
