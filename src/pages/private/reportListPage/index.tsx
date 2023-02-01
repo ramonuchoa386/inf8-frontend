@@ -3,6 +3,7 @@ import { ContentWrapper } from '../../../components/templates';
 import {
   ITableData,
   ITableHeader,
+  ITableCell,
 } from '../../../components/molecules/table/table.interface';
 import { Table, Paginacao } from '../../../components/molecules';
 import {
@@ -24,6 +25,7 @@ import {
   BiDumbbell,
   BiBell,
   BiFilterAlt,
+  BiMessageRoundedError,
 } from 'react-icons/bi';
 import ModalContext from '../../../context/modal';
 import config from '../../../utils/config';
@@ -38,7 +40,8 @@ import useFetchTenants, {
   IFetchTenantsHook,
 } from '../../../hooks/useFetchTenants';
 import { QueryFileStatus, fileStatus } from '../../../utils/enums';
-import ISODateFormat from '../../../utils/helpers/isoDateFormat';
+import { ISODateFormat, BytesFormat } from '../../../utils/helpers/';
+import theme from '../../../styles/theme';
 
 const FormModal: React.FunctionComponent = () => {
   const { API_BASEURL, FILEUPLOAD_ENDPOINT } = config;
@@ -198,6 +201,22 @@ const FormModal: React.FunctionComponent = () => {
   );
 };
 
+interface IFileErrorFlag {
+  status: string;
+  detail: string;
+}
+
+const FileErrorFlag: React.FunctionComponent<IFileErrorFlag> = (props) => {
+  const { status, detail } = props;
+
+  return (
+    <S.FlagWrapper>
+      {status}
+      <BiMessageRoundedError color={theme.colors.negative} title={detail} />
+    </S.FlagWrapper>
+  );
+};
+
 const ReportListPage = () => {
   const { state } = useContext(AuthContext);
   const { toggleModalState } = useContext(ModalContext);
@@ -208,7 +227,7 @@ const ReportListPage = () => {
       { id: 1, value: 'Arquivo enviado' },
       { id: 2, value: 'Arquivo renomeado' },
       { id: 3, value: 'Data do envio' },
-      { id: 4, value: 'Tamanho (bytes)' },
+      { id: 4, value: 'Tamanho do arquivo' },
       { id: 5, value: 'Qnt de ONTs' },
       { id: 6, value: 'Responsável pelo envio' },
       { id: 7, value: 'Status do envio' },
@@ -256,18 +275,44 @@ const ReportListPage = () => {
         setTableData((currentData) => ({
           headers: currentData.headers,
           rows: Array.from(results, (item, index) => {
-            const cell = [
+            const cell: ITableCell[] = [
               {
-                value: item.ARQUIVO_ENVIADO,
+                value: (
+                  <span
+                    style={{
+                      display: 'block',
+                      width: '100px',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                    }}
+                    title={item.ARQUIVO_ENVIADO}
+                  >
+                    {item.ARQUIVO_ENVIADO}
+                  </span>
+                ),
               },
               {
-                value: item.ARQUIVO_RENOMEADO,
+                value: (
+                  <span
+                    style={{
+                      display: 'block',
+                      width: '100px',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                    }}
+                    title={item.ARQUIVO_RENOMEADO}
+                  >
+                    {item.ARQUIVO_RENOMEADO}
+                  </span>
+                ),
               },
               {
                 value: ISODateFormat(item.DATA_ENVIO),
               },
               {
-                value: item.TAMANHO,
+                value: BytesFormat(item.TAMANHO),
               },
               {
                 value: item.QNT_ONTS,
@@ -275,10 +320,26 @@ const ReportListPage = () => {
               {
                 value: item.RESPONSAVEL_ENVIO,
               },
-              {
-                value: item.STATUS_ENVIO,
-              },
             ];
+
+            if (
+              item.STATUS_ENVIO_DETALHE !== null &&
+              (item.STATUS_ENVIO === QueryFileStatus['ERRO'] ||
+                item.STATUS_ENVIO === QueryFileStatus['INVALIDO'])
+            ) {
+              cell.push({
+                value: (
+                  <FileErrorFlag
+                    status={item.STATUS_ENVIO}
+                    detail={item.STATUS_ENVIO_DETALHE}
+                  />
+                ),
+              });
+            } else {
+              cell.push({
+                value: item.STATUS_ENVIO,
+              });
+            }
 
             if (
               validateUserPermissions(state.profile, Permissions['FULL_VIEW'])

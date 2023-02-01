@@ -60,3 +60,8 @@ export const Combobox = styled.select`
   border: 1px solid ${(props) => props.theme.colors.Cod};
   padding: 8px 12px 8px 4px;
 `;
+
+export const FlagWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+`;
