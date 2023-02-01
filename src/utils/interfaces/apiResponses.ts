@@ -1,6 +1,6 @@
 import { Profiles } from '../enums';
 
-interface IResponseItem {
+export interface IResponseItem {
   ARQUIVO_ENVIADO: string;
   ARQUIVO_RENOMEADO: string;
   DATA_ENVIO: string;
@@ -22,16 +22,29 @@ export interface IResponseData {
   message: string | string[];
 }
 
-export interface IKeepAliveResponse {
-  access_token: string;
-  sub: string;
-  refresh_token: string;
-  expires: number;
-  pcw: Profiles;
-  organization: string;
-  name: string;
+export interface IKeepAliveRefresh {
   claims: any[];
   email: string;
-  client_id: string;
+  name: string;
+  organization: string;
+  pcw: Profiles;
   status: string;
+  sub: string;
 }
+
+export interface IKeepAliveResponse extends IKeepAliveRefresh {
+  access_token?: string;
+  client_id?: string;
+  expires?: number;
+  refresh_token?: string;
+}
+
+// interface IKeepAliveRefresh {
+//   companyId: string;
+//   companyName: string;
+//   email_verified: boolean;
+//   preferred_username: string;
+//   role: string[];
+//   sub: string;
+//   tecnologia: string;
+// }
