@@ -18,6 +18,15 @@ export const ReportTable = styled(Table)``;
 export const PageControl = styled(Paginacao)``;
 export const Toaster = styled(ToasterAtom)``;
 export const PageWrapper = styled(ContentWrapper)``;
+export const ToggleFilters = styled(styledButton)``;
+export const DownloadBtn = styled(styledButton)``;
+export const OpenFormBtn = styled(Button)``;
+export const DownloadIcon = styled(BiDownload)``;
+export const UploadIcon = styled(BiUpload)``;
+export const BlockIcon = styled(BiBlock)``;
+export const FilterAltIcon = styled(BiFilterAlt)``;
+export const PageTitle = styled.h2``;
+export const ComboboxOption = styled.option``;
 
 export const PageContainer = styled.section`
   width: 100vw;
@@ -25,9 +34,6 @@ export const PageContainer = styled.section`
   overflow: hidden;
   position: relative;
 `;
-export const ToggleFilters = styled(styledButton)``;
-export const DownloadBtn = styled(styledButton)``;
-export const OpenFormBtn = styled(Button)``;
 
 export const Combobox = styled.select`
   color: ${(props) => props.theme.colors.Fuscous};
@@ -35,11 +41,6 @@ export const Combobox = styled.select`
   border: 1px solid ${(props) => props.theme.colors.Cod};
   padding: 8px 12px 8px 4px;
 `;
-
-export const DownloadIcon = styled(BiDownload)``;
-export const UploadIcon = styled(BiUpload)``;
-export const BlockIcon = styled(BiBlock)``;
-export const FilterAltIcon = styled(BiFilterAlt)``;
 
 export const FileNameWrapper = styled.span`
   display: block;
@@ -54,6 +55,23 @@ export const TopBar = styled.section`
   justify-content: space-between;
   align-items: center;
   margin: 16px 0px;
+`;
+
+export const FilterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+export const FilterLabel = styled.label`
+  font-size: 12px;
+  font-weight: bold;
+`;
+
+export const TopBarBtnsWrapper = styled.section`
+  display: flex;
+  align-items: center;
+  gap: 12px;
 `;
 
 interface IFilterWrapperProps {

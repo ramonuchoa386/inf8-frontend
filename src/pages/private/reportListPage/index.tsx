@@ -157,7 +157,7 @@ const ReportListPage = () => {
   return (
     <S.PageContainer>
       <S.PageWrapper pageTitle='Relatório de envios'>
-        <h2>Relatório de envios</h2>
+        <S.PageTitle>Relatório de envios</S.PageTitle>
 
         <S.TopBar>
           <S.SearchInput
@@ -174,13 +174,7 @@ const ReportListPage = () => {
             }}
           />
 
-          <section
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 12,
-            }}
-          >
+          <S.TopBarBtnsWrapper>
             <S.ToggleFilters
               onClick={() => setShowFilter((currentState) => !currentState)}
               rounded
@@ -203,25 +197,11 @@ const ReportListPage = () => {
                 Enviar relatório <S.UploadIcon />
               </S.OpenFormBtn>
             )}
-          </section>
+          </S.TopBarBtnsWrapper>
         </S.TopBar>
         <S.FilterWrapper showFilter={showFilter}>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 4,
-            }}
-          >
-            <label
-              htmlFor='fileStatusSelect'
-              style={{
-                fontSize: '12px',
-                fontWeight: 'bold',
-              }}
-            >
-              Status
-            </label>
+          <S.FilterContainer>
+            <S.FilterLabel>Status</S.FilterLabel>
             <S.Combobox
               id='fileStatusSelect'
               name='fileStatusSelect'
@@ -235,32 +215,18 @@ const ReportListPage = () => {
               }}
               defaultValue=''
             >
-              <option value=''>Selecione um status</option>
+              <S.ComboboxOption value=''>Selecione um status</S.ComboboxOption>
               {fileStatus.map((status) => (
-                <option key={status.value} value={status.value}>
+                <S.ComboboxOption key={status.value} value={status.value}>
                   {status.text}
-                </option>
+                </S.ComboboxOption>
               ))}
             </S.Combobox>
-          </div>
+          </S.FilterContainer>
 
           {validateUserPermissions(state.pcw, Permissions['FULL_VIEW']) && (
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 4,
-              }}
-            >
-              <label
-                htmlFor='tenantSelect'
-                style={{
-                  fontSize: '12px',
-                  fontWeight: 'bold',
-                }}
-              >
-                Tenant
-              </label>
+            <S.FilterContainer>
+              <S.FilterLabel>Tenant</S.FilterLabel>
               <S.Combobox
                 id='tenantSelect'
                 name='tenantSelect'
@@ -275,15 +241,15 @@ const ReportListPage = () => {
                 defaultValue=''
                 disabled={tenantData.loading}
               >
-                <option value=''>Selecione a tenant</option>
+                <S.ComboboxOption value=''>Selecione a tenant</S.ComboboxOption>
                 {tenantData.data !== undefined &&
                   tenantData.data.map((tenant) => (
-                    <option key={tenant.toLowerCase()} value={tenant}>
+                    <S.ComboboxOption key={tenant.toLowerCase()} value={tenant}>
                       {tenant}
-                    </option>
+                    </S.ComboboxOption>
                   ))}
               </S.Combobox>
-            </div>
+            </S.FilterContainer>
           )}
         </S.FilterWrapper>
 
@@ -292,8 +258,8 @@ const ReportListPage = () => {
         <S.PageControl
           qtdPag={totalPages}
           actualPage={page}
-          setPage={(p: number) => setPage(p)}
-          setQtdItems={(p: number) => setListLength(() => p)}
+          setPage={(page: number) => setPage(() => page)}
+          setQtdItems={(listLength: number) => setListLength(() => listLength)}
           selectedOptPage={listLength}
         />
 
