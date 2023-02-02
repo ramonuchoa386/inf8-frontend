@@ -1,3 +1,4 @@
 import ContentWrapper from './contentWrapper';
+import SendFileFormModal from './sendFileModalForm';
 
-export { ContentWrapper };
+export { ContentWrapper, SendFileFormModal };
