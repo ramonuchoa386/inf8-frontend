@@ -1,222 +1,30 @@
 import React, { useEffect, useState, useContext, useMemo } from 'react';
-import { ContentWrapper } from '../../../components/templates';
+
+import validateUserPermissions, {
+  Permissions,
+} from '../../../utils/permissions';
+import { QueryFileStatus, fileStatus } from '../../../utils/enums';
+import ISODateFormat from '../../../utils/helpers/isoDateFormat';
+import BytesFormat from '../../../utils/helpers/bytesFormat';
+
+import * as S from './style';
+
 import {
   ITableData,
   ITableHeader,
   ITableCell,
 } from '../../../components/molecules/table/table.interface';
-import { Table, Paginacao } from '../../../components/molecules';
-import {
-  Button,
-  Paragraph,
-  Toaster,
-  Input,
-  Spinner,
-} from '../../../components/atoms';
-import { styledButton as DownloadBtn } from '../../../components/atoms/button/style';
-import { styledButton as UploadFile } from '../../../components/atoms/button/style';
-import { styledButton as ToggleFilters } from '../../../components/atoms/button/style';
-import {
-  BiDownload,
-  BiUpload,
-  BiX,
-  BiBlock,
-  BiLike,
-  BiDumbbell,
-  BiBell,
-  BiFilterAlt,
-  BiMessageRoundedError,
-} from 'react-icons/bi';
+
 import ModalContext from '../../../context/modal';
-import config from '../../../utils/config';
-import * as S from './style';
 import ToasterContext from '../../../context/toaster';
 import AuthContext from '../../../context/auth';
-import validateUserPermissions, {
-  Permissions,
-} from '../../../utils/permissions';
+
 import useFetchLogs, { IApiResponse } from '../../../hooks/useFetchLogs';
 import useFetchTenants, {
   IFetchTenantsHook,
 } from '../../../hooks/useFetchTenants';
-import { QueryFileStatus, fileStatus } from '../../../utils/enums';
-import ISODateFormat from '../../../utils/helpers/isoDateFormat';
-import BytesFormat from '../../../utils/helpers/bytesFormat';
-import theme from '../../../styles/theme';
 
-const FormModal: React.FunctionComponent = () => {
-  const { API_BASEURL, FILEUPLOAD_ENDPOINT } = config;
-  const { modalState, toggleModalState } = useContext(ModalContext);
-  const { state } = useContext(AuthContext);
-  const { showToaster } = useContext(ToasterContext);
-  const [file, setFile] = useState<File | null>();
-  const [sending, setSending] = useState<boolean>(false);
-
-  const handleFileInput = (files: FileList | null) => {
-    if (files === null || files.item(0) === null) {
-      return showToaster({
-        message: 'Escolha um CSV a qualquer momento para enviar.',
-        severity: 'warning',
-        icon: <BiBell />,
-      });
-    }
-
-    const uploadedFile = files.item(0);
-
-    if (uploadedFile === null) {
-      return showToaster({
-        message: 'Escolha um CSV a qualquer momento para enviar.',
-        severity: 'warning',
-        icon: <BiBell />,
-      });
-    } else if (uploadedFile.size > config.MAX_FILE_SIZE) {
-      return showToaster({
-        message: 'Arquivo com tamanho maior que o permitido.',
-        severity: 'negative',
-        icon: <BiDumbbell />,
-      });
-    } else if (uploadedFile.type !== 'text/csv') {
-      return showToaster({
-        message: 'Arquivo com formato inválido.',
-        severity: 'negative',
-        icon: <BiBlock />,
-      });
-    }
-
-    setFile(() => files.item(0));
-  };
-
-  const handleSubmit = async (e: React.SyntheticEvent) => {
-    e.preventDefault();
-    setSending(() => true);
-    if (file === undefined || file === null) {
-      return null;
-    }
-
-    const headers = new Headers();
-    headers.append('filename', file.name);
-    headers.append('pcw', state.pcw);
-    headers.append('name', state.name);
-    headers.append('email', state.email);
-
-    if (state.organization !== undefined) {
-      headers.append('companyid', state.organization);
-    }
-
-    const data = new FormData();
-    data.append('file', file, file.name);
-
-    const reqOptions = {
-      method: 'POST',
-      headers: headers,
-      body: data,
-    };
-
-    fetch(API_BASEURL + FILEUPLOAD_ENDPOINT, reqOptions)
-      .then((res) => res.json())
-      .then((data) => {
-        showToaster({
-          message: data.message,
-          severity: data.statusCode < 300 ? 'positive' : 'negative',
-          icon: data.statusCode < 300 ? <BiLike /> : <BiBlock />,
-        });
-      })
-      .catch((reason) => {
-        if (reason) {
-          showToaster({
-            message: 'Erro de conexão com o servidor.',
-            severity: 'negative',
-            icon: <BiBlock />,
-          });
-        }
-      })
-      .finally(() => {
-        setSending(() => false);
-        setFile(() => undefined);
-        toggleModalState();
-      });
-  };
-
-  return (
-    <S.Modal show={modalState}>
-      <section
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'flex-start',
-        }}
-      >
-        <span>
-          <Paragraph weight='bold' size='large'>
-            Enviar relatório
-          </Paragraph>
-          <Paragraph size='small'>
-            O arquivo deve estar no formato CSV e ter no máximo 5mb.
-          </Paragraph>
-        </span>
-        <Button
-          buttonTheme='negative'
-          borderLess
-          onClick={() => {
-            toggleModalState();
-            setFile(undefined);
-          }}
-        >
-          <BiX size={24} />
-        </Button>
-      </section>
-
-      <S.Form onSubmit={handleSubmit}>
-        <S.FormRow>
-          <UploadFile htmlFor='file' as='label'>
-            Escolher arquivo
-          </UploadFile>
-          <input
-            required
-            type='file'
-            name='file'
-            id='file'
-            accept='.csv'
-            onChange={(e) => handleFileInput(e.target.files)}
-            hidden
-          />
-          <Paragraph size='small'>
-            {file !== null && file !== undefined
-              ? file.name
-              : 'Nenhum arquivo selecionado'}
-          </Paragraph>
-        </S.FormRow>
-
-        <Button
-          buttonTheme='positive'
-          type='submit'
-          disabled={file === undefined || sending}
-          style={{
-            width: '100px',
-          }}
-        >
-          {sending ? <Spinner /> : 'Enviar'}
-        </Button>
-      </S.Form>
-    </S.Modal>
-  );
-};
-
-interface IFileErrorFlag {
-  status: string;
-  detail: string;
-}
-
-const FileErrorFlag: React.FunctionComponent<IFileErrorFlag> = (props) => {
-  const { status, detail } = props;
-
-  return (
-    <S.FlagWrapper>
-      {status}
-      <BiMessageRoundedError color={theme.colors.negative} title={detail} />
-    </S.FlagWrapper>
-  );
-};
+import { FileErrorFlag } from './components';
 
 const ReportListPage = () => {
   const { state } = useContext(AuthContext);
@@ -268,7 +76,7 @@ const ReportListPage = () => {
         showToaster({
           message: error,
           severity: 'negative',
-          icon: <BiBlock />,
+          icon: <S.BlockIcon />,
         });
       } else if (data !== undefined) {
         const { results, totalPages } = data;
@@ -279,34 +87,16 @@ const ReportListPage = () => {
             const cell: ITableCell[] = [
               {
                 value: (
-                  <span
-                    style={{
-                      display: 'block',
-                      width: '100px',
-                      whiteSpace: 'nowrap',
-                      overflow: 'hidden',
-                      textOverflow: 'ellipsis',
-                    }}
-                    title={item.ARQUIVO_ENVIADO}
-                  >
+                  <S.FileNameWrapper title={item.ARQUIVO_ENVIADO}>
                     {item.ARQUIVO_ENVIADO}
-                  </span>
+                  </S.FileNameWrapper>
                 ),
               },
               {
                 value: (
-                  <span
-                    style={{
-                      display: 'block',
-                      width: '100px',
-                      whiteSpace: 'nowrap',
-                      overflow: 'hidden',
-                      textOverflow: 'ellipsis',
-                    }}
-                    title={item.ARQUIVO_RENOMEADO}
-                  >
+                  <S.FileNameWrapper title={item.ARQUIVO_RENOMEADO}>
                     {item.ARQUIVO_RENOMEADO}
-                  </span>
+                  </S.FileNameWrapper>
                 ),
               },
               {
@@ -366,37 +156,23 @@ const ReportListPage = () => {
 
   return (
     <S.PageContainer>
-      <ContentWrapper pageTitle='Relatório de envios'>
+      <S.PageWrapper pageTitle='Relatório de envios'>
         <h2>Relatório de envios</h2>
 
-        <section
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            margin: '16px 0px',
-          }}
-        >
-          <section
-            style={{
-              display: 'flex',
-              gap: 16,
+        <S.TopBar>
+          <S.SearchInput
+            id='search'
+            name='search'
+            iconName='BiSearch'
+            placeholder='Pesquisar'
+            onChange={(e) => {
+              if (e.target.value === '') {
+                setSearchTerm(undefined);
+              } else {
+                setSearchTerm(() => e.target.value);
+              }
             }}
-          >
-            <Input
-              id='search'
-              name='search'
-              iconName='BiSearch'
-              placeholder='Pesquisar'
-              onChange={(e) => {
-                if (e.target.value === '') {
-                  setSearchTerm(undefined);
-                } else {
-                  setSearchTerm(() => e.target.value);
-                }
-              }}
-            />
-          </section>
+          />
 
           <section
             style={{
@@ -405,34 +181,31 @@ const ReportListPage = () => {
               gap: 12,
             }}
           >
-            <ToggleFilters
+            <S.ToggleFilters
               onClick={() => setShowFilter((currentState) => !currentState)}
               rounded
             >
-              <BiFilterAlt />
-            </ToggleFilters>
-            <DownloadBtn
+              <S.FilterAltIcon />
+            </S.ToggleFilters>
+            <S.DownloadBtn
               buttonTheme='Mauve'
               as='a'
               href='/modelo/cp-unix_time_stamp.csv'
               download='modelo_relatorio.csv'
             >
-              Download do modelo <BiDownload />
-            </DownloadBtn>
+              Download do modelo <S.DownloadIcon />
+            </S.DownloadBtn>
             {validateUserPermissions(state.pcw, Permissions['UPLOAD']) && (
-              <Button buttonTheme='Coral' onClick={() => toggleModalState()}>
-                Enviar relatório <BiUpload />
-              </Button>
+              <S.OpenFormBtn
+                buttonTheme='Coral'
+                onClick={() => toggleModalState()}
+              >
+                Enviar relatório <S.UploadIcon />
+              </S.OpenFormBtn>
             )}
           </section>
-        </section>
-        <section
-          style={{
-            display: showFilter ? 'flex' : 'none',
-            gap: 16,
-            marginBottom: '16px',
-          }}
-        >
+        </S.TopBar>
+        <S.FilterWrapper showFilter={showFilter}>
           <div
             style={{
               display: 'flex',
@@ -512,11 +285,11 @@ const ReportListPage = () => {
               </S.Combobox>
             </div>
           )}
-        </section>
+        </S.FilterWrapper>
 
-        <Table data={tableData} loadingData={loading} />
+        <S.ReportTable data={tableData} loadingData={loading} />
 
-        <Paginacao
+        <S.PageControl
           qtdPag={totalPages}
           actualPage={page}
           setPage={(p: number) => setPage(p)}
@@ -524,9 +297,9 @@ const ReportListPage = () => {
           selectedOptPage={listLength}
         />
 
-        <FormModal />
-        <Toaster withIcon withBtn />
-      </ContentWrapper>
+        <S.FileForm />
+        <S.Toaster withIcon withBtn />
+      </S.PageWrapper>
     </S.PageContainer>
   );
 };
