@@ -14,7 +14,7 @@ const Layout = () => (
 const Private = () => {
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
+      <Route path='/inf8/' element={<Layout />}>
         <Route index element={<ReportListPage />} />
       </Route>
     </Routes>

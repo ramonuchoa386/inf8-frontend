@@ -7,8 +7,10 @@ import Login from './../pages/public/login';
 const Public = () => {
   return (
     <Routes>
-      <Route index element={<Login />} />
-      <Route path='*' element={<Navigate to='/' replace />} />
+      <Route path='/inf8/'>
+        <Route index element={<Login />} />
+        <Route path='*' element={<Navigate to='/inf8' replace />} />
+      </Route>
     </Routes>
   );
 };
