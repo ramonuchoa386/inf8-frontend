@@ -4,8 +4,6 @@ COPY ./build/ /usr/share/nginx/html/inf8
 COPY ./devops/default.conf /etc/nginx/conf.d/default.conf
 COPY ./devops/nginx.conf /etc/nginx/nginx.conf
 
-RUN touch /var/run/nginx.pid
-
 RUN chmod -R 755 /usr/share/nginx/html/inf8
 
 RUN chown -R nginx:nginx /usr/share/nginx/html/inf8 \
