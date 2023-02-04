@@ -66,7 +66,14 @@ const useFetchTenants = (): IFetchTenantsHook => {
         })
         .finally(() => setLoading(() => false));
     }
-  }, [state.pcw, state.name, state.email, API_BASEURL, LOGS_ENDPOINT]);
+  }, [
+    state.pcw,
+    state.name,
+    state.email,
+    API_BASEURL,
+    LOGS_ENDPOINT,
+    COMPANYIDS_ENDPOINT,
+  ]);
 
   return { data, error, loading };
 };
