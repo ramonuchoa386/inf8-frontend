@@ -7,6 +7,7 @@ const config = {
   LOGS_ENDPOINT: '/logs',
   COMPANYIDS_ENDPOINT: '/listcompanyid',
   KEEP_ALIVE_PROXY_URL: '/keep-alive',
+  END_SESSION_PROXY_URL: '/end-session',
   MAX_FILE_SIZE: 5000000,
 };
 
