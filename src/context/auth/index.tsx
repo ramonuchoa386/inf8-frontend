@@ -36,7 +36,7 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [state, setState] = useState<UserData>(DEFALUT_VALUE.state);
-  const fetchSession = useFetchSession();
+  const {error, loading, userInfo} = useFetchSession();
 
   const signIn = (args: Omit<UserData, 'logged'>) => {
     const { email, organization, pcw, name } = args;
@@ -84,8 +84,19 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   useEffect(() => {
-    console.log('fetch sesstion: ', fetchSession);
-  }, [fetchSession]);
+    if(!loading) {
+      if(error === undefined && userInfo !== undefined) {
+        const { pcw, organization, name, email } = userInfo;
+        setState(() => ({
+          logged: true,
+          pcw,
+          organization,
+          name,
+          email
+        }));
+      }
+    }
+  }, [loading, userInfo, error]);
 
   return (
     <AuthContext.Provider
