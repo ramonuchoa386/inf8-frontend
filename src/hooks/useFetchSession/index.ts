@@ -4,7 +4,7 @@ import config from '../../utils/config';
 import { IKeepAliveResponse } from '../../utils/interfaces';
 
 const useFetchSession = () => {
-  const { PROXY_URL, KEEP_ALIVE_PROXY_URL } = config;
+  const { KEEP_ALIVE_PROXY_URL } = config;
   const [loading, setLoading] = useState<boolean>(false);
   const [userInfo, setUserInfo] = useState<IKeepAliveResponse>();
   const [error, setError] = useState<string>();
@@ -12,18 +12,19 @@ const useFetchSession = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch(PROXY_URL + KEEP_ALIVE_PROXY_URL, {
+    fetch(KEEP_ALIVE_PROXY_URL, {
       redirect: 'manual',
       credentials: 'same-origin',
     })
-      .then((data) => {
-        if (!data.ok) {
+      .then((res) => {
+        console.log('raw keep alive res: ', res);
+        if (!res.ok) {
           console.log('not ok, redirecting...');
 
-          // window.location.href = data.url;
-          return data;
+          // window.location.href = res.url;
+          return res;
         } else {
-          return data.json();
+          return res.json();
         }
       })
       .then((data: IKeepAliveResponse) => {
@@ -37,7 +38,7 @@ const useFetchSession = () => {
         setError(() => error);
       })
       .finally(() => setLoading(() => false));
-  }, [PROXY_URL, KEEP_ALIVE_PROXY_URL]);
+  }, [KEEP_ALIVE_PROXY_URL]);
 
   return { loading, userInfo, error };
 };
