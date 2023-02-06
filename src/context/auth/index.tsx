@@ -3,6 +3,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import useFetchSession from '../../hooks/useFetchSession';
 import { Profiles } from '../../utils/enums';
 import { IKeepAliveResponse } from '../../utils/interfaces';
+import config from '../../utils/config';
 
 export interface IUserInfo {
   logged: boolean;
@@ -68,6 +69,8 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const signOut = () => {
+    const { END_SESSION_PROXY_URL } = config;
+
     sessionStorage.removeItem('@vtal/inf8/logged');
     sessionStorage.removeItem('@vtal/inf8/userProfile');
     sessionStorage.removeItem('@vtal/inf8/userName');
@@ -81,6 +84,8 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
       organization: '',
       email: '',
     }));
+
+    window.location.href = END_SESSION_PROXY_URL;
   };
 
   useEffect(() => {
