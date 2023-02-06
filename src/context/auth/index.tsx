@@ -86,14 +86,7 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     if (!loading) {
       if (error === undefined && userInfo !== undefined) {
-        const { pcw, organization, name, email } = userInfo;
-        setState(() => ({
-          logged: true,
-          pcw,
-          organization,
-          name,
-          email,
-        }));
+        signIn(userInfo);
       }
     }
   }, [loading, userInfo, error]);
