@@ -19,12 +19,13 @@ import ModalContext from '../../../context/modal';
 import ToasterContext from '../../../context/toaster';
 import AuthContext from '../../../context/auth';
 
-import useFetchLogs, { IApiResponse } from '../../../hooks/useFetchLogs';
+import useFetchLogs from '../../../hooks/useFetchLogs';
 import useFetchTenants, {
   IFetchTenantsHook,
 } from '../../../hooks/useFetchTenants';
 
 import { FileErrorFlag } from './components';
+import { IApiResponse } from '../../../utils/interfaces';
 
 const ReportListPage = () => {
   const { state } = useContext(AuthContext);
