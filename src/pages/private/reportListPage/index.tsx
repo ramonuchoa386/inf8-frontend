@@ -38,8 +38,8 @@ const ReportListPage = () => {
       { id: 3, value: 'Data do envio' },
       { id: 4, value: 'Tamanho do arquivo' },
       { id: 5, value: 'Qnt de ONTs' },
-      { id: 6, value: 'Responsável pelo envio' },
-      { id: 7, value: 'Status do envio' },
+      { id: 6, value: 'Responsável' },
+      { id: 7, value: 'Status' },
     ];
 
     if (validateUserPermissions(state.pcw, Permissions['FULL_VIEW'])) {
@@ -184,7 +184,7 @@ const ReportListPage = () => {
             <S.DownloadBtn
               buttonTheme='Mauve'
               as='a'
-              href='/modelo/cp-unix_time_stamp.csv'
+              href='/inf8/modelo/cp-unix_time_stamp.csv'
               download='modelo_relatorio.csv'
             >
               Download do modelo <S.DownloadIcon />
