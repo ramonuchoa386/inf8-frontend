@@ -39,12 +39,8 @@ export interface IKeepAliveResponse extends IKeepAliveRefresh {
   refresh_token?: string;
 }
 
-// interface IKeepAliveRefresh {
-//   companyId: string;
-//   companyName: string;
-//   email_verified: boolean;
-//   preferred_username: string;
-//   role: string[];
-//   sub: string;
-//   tecnologia: string;
-// }
+export interface IApiResponse {
+  data?: IResponseData;
+  error?: string;
+  loading: boolean;
+}
