@@ -10,7 +10,7 @@ import AuthContext from '../../../context/auth';
 import * as S from './style';
 
 const SendFileFormModal: React.FunctionComponent = (props) => {
-  const { API_BASEURL, FILEUPLOAD_ENDPOINT } = config;
+  const { API_BASEURL, API_CONTEXT, FILEUPLOAD_ENDPOINT } = config;
   const { modalState, toggleModalState } = useContext(ModalContext);
   const { state } = useContext(AuthContext);
   const { showToaster } = useContext(ToasterContext);
@@ -77,7 +77,7 @@ const SendFileFormModal: React.FunctionComponent = (props) => {
       body: data,
     };
 
-    fetch(API_BASEURL + FILEUPLOAD_ENDPOINT, reqOptions)
+    fetch(API_BASEURL + API_CONTEXT + FILEUPLOAD_ENDPOINT, reqOptions)
       .then((res) => res.json())
       .then((data) => {
         showToaster({

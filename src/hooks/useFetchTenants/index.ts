@@ -21,7 +21,8 @@ export interface IFetchTenantsHook {
 }
 
 const useFetchTenants = (): IFetchTenantsHook => {
-  const { API_BASEURL, LOGS_ENDPOINT, COMPANYIDS_ENDPOINT } = config;
+  const { API_BASEURL, API_CONTEXT, LOGS_ENDPOINT, COMPANYIDS_ENDPOINT } =
+    config;
   const { state } = useContext(AuthContext);
   const [data, setData] = useState<string[]>();
   const [error, setError] = useState<string>();
@@ -36,7 +37,7 @@ const useFetchTenants = (): IFetchTenantsHook => {
       headers.append('name', state.name);
       headers.append('email', state.email);
 
-      fetch(API_BASEURL + LOGS_ENDPOINT + COMPANYIDS_ENDPOINT, {
+      fetch(API_BASEURL + API_CONTEXT + LOGS_ENDPOINT + COMPANYIDS_ENDPOINT, {
         headers,
       })
         .then((res) => res.json())
@@ -71,6 +72,7 @@ const useFetchTenants = (): IFetchTenantsHook => {
     state.name,
     state.email,
     API_BASEURL,
+    API_CONTEXT,
     LOGS_ENDPOINT,
     COMPANYIDS_ENDPOINT,
   ]);

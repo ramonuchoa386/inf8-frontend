@@ -2,14 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import AuthContext from '../../context/auth';
 import config from '../../utils/config';
 import { QueryFileStatus } from '../../utils/enums';
-import { IResponseData } from '../../utils/interfaces';
+import { IApiResponse, IResponseData } from '../../utils/interfaces';
 import validateUserPermissions, { Permissions } from '../../utils/permissions';
-
-export interface IApiResponse {
-  data?: IResponseData;
-  error?: string;
-  loading: boolean;
-}
 
 const useFetchLogs = (
   pageSize: number,
@@ -18,7 +12,7 @@ const useFetchLogs = (
   searchTerm?: string,
   tenant?: string
 ): IApiResponse => {
-  const { API_BASEURL, LOGS_ENDPOINT } = config;
+  const { API_BASEURL, API_CONTEXT, LOGS_ENDPOINT } = config;
   const { state } = useContext(AuthContext);
   const [data, setData] = useState<IResponseData>();
   const [error, setError] = useState<string>();
@@ -56,7 +50,7 @@ const useFetchLogs = (
       headers.append('companyid', state.organization);
     }
 
-    fetch(API_BASEURL + LOGS_ENDPOINT + `?${query.toString()}`, {
+    fetch(API_BASEURL + API_CONTEXT + LOGS_ENDPOINT + `?${query.toString()}`, {
       headers,
     })
       .then((res) => res.json())
@@ -79,6 +73,7 @@ const useFetchLogs = (
     pageSize,
     page,
     API_BASEURL,
+    API_CONTEXT,
     LOGS_ENDPOINT,
     fileStatus,
     searchTerm,
