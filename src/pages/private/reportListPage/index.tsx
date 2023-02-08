@@ -1,23 +1,22 @@
-import React, { useEffect, useState, useContext, useMemo } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 
+import { fileStatus, QueryFileStatus } from '../../../utils/enums';
+import BytesFormat from '../../../utils/helpers/bytesFormat';
+import ISODateFormat from '../../../utils/helpers/isoDateFormat';
+import { IApiResponse } from '../../../utils/interfaces';
 import validateUserPermissions, {
   Permissions,
 } from '../../../utils/permissions';
-import { QueryFileStatus, fileStatus } from '../../../utils/enums';
-import ISODateFormat from '../../../utils/helpers/isoDateFormat';
-import BytesFormat from '../../../utils/helpers/bytesFormat';
-
-import * as S from './style';
 
 import {
+  ITableCell,
   ITableData,
   ITableHeader,
-  ITableCell,
 } from '../../../components/molecules/table/table.interface';
 
+import AuthContext from '../../../context/auth';
 import ModalContext from '../../../context/modal';
 import ToasterContext from '../../../context/toaster';
-import AuthContext from '../../../context/auth';
 
 import useFetchLogs from '../../../hooks/useFetchLogs';
 import useFetchTenants, {
@@ -25,7 +24,7 @@ import useFetchTenants, {
 } from '../../../hooks/useFetchTenants';
 
 import { FileErrorFlag } from './components';
-import { IApiResponse } from '../../../utils/interfaces';
+import * as S from './style';
 
 const ReportListPage = () => {
   const { state } = useContext(AuthContext);
