@@ -7,6 +7,7 @@ import React, {
 } from 'react';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import AuthContext from '../../../context/auth';
+import { Profiles } from '../../../utils/enums';
 import * as S from './styles';
 
 const Header: React.FunctionComponent = (props) => {
@@ -29,7 +30,7 @@ const Header: React.FunctionComponent = (props) => {
       <S.AvatarWrapper>
         <S.HeaderIcon iconName='BiUserCircle' />
         <S.AvatarText weight='bold' size='small'>
-          Portal do Administrador
+          Olá, {state.name}
         </S.AvatarText>
         <S.ToggleBtn
           borderLess
@@ -42,8 +43,11 @@ const Header: React.FunctionComponent = (props) => {
         <S.BoxRow>
           <S.Avatar />
           <S.BoxColumn>
-            <S.UserName>Olá, {state.name}</S.UserName>
-            <S.UserProfile weight='bold'>perfil: {state.pcw}</S.UserProfile>
+            <S.UserName>
+              Companhia:{' '}
+              {state.pcw === Profiles.OP_VTAL ? 'V.tal' : state.organization}
+            </S.UserName>
+            <S.UserProfile weight='bold'>Perfil: {state.pcw}</S.UserProfile>
           </S.BoxColumn>
         </S.BoxRow>
 
