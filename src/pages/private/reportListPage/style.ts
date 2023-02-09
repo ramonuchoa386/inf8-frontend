@@ -1,5 +1,12 @@
 import styled, { css } from 'styled-components';
-import { BiDownload, BiUpload, BiBlock, BiFilterAlt } from 'react-icons/bi';
+import {
+  BiDownload,
+  BiUpload,
+  BiBlock,
+  BiFilterAlt,
+  BiCopy,
+  BiLike,
+} from 'react-icons/bi';
 import {
   Button,
   Toaster as ToasterAtom,
@@ -24,7 +31,13 @@ export const OpenFormBtn = styled(Button)``;
 export const DownloadIcon = styled(BiDownload)``;
 export const UploadIcon = styled(BiUpload)``;
 export const BlockIcon = styled(BiBlock)``;
+export const ThumbsUpIcon = styled(BiLike)``;
 export const FilterAltIcon = styled(BiFilterAlt)``;
+export const CopyIcon = styled(BiCopy)`
+  &:hover {
+    cursor: pointer;
+  }
+`;
 export const PageTitle = styled.h2``;
 export const ComboboxOption = styled.option``;
 
@@ -44,10 +57,16 @@ export const Combobox = styled.select`
 
 export const FileNameWrapper = styled.span`
   display: block;
-  width: 100px;
+  width: 150px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+export const FileNameCell = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
 `;
 
 export const TopBar = styled.section`
