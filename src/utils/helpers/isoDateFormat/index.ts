@@ -16,7 +16,7 @@ export const ISODateFormat = (isoDate: string): string => {
     '/' +
     sendDate.getFullYear().toString().slice(-2);
   const hour =
-    sendDate.getHours() +
+    ('0' + sendDate.getHours()).slice(-2) +
     ':' +
     ('0' + sendDate.getMinutes()).slice(-2) +
     ':' +
