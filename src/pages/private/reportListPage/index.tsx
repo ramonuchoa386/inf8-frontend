@@ -33,21 +33,39 @@ const ReportListPage = () => {
 
   const tableHeaders = useMemo<ITableHeader[]>(() => {
     const headers = [
-      { id: 1, value: 'Arquivo enviado' },
-      { id: 2, value: 'Arquivo renomeado' },
-      { id: 3, value: 'Data do envio' },
-      { id: 4, value: 'Tamanho do arquivo' },
-      { id: 5, value: 'Qnt de ONTs' },
+      { id: 1, value: 'Nome' },
+      { id: 2, value: 'Renome' },
+      { id: 3, value: 'Data' },
+      { id: 4, value: 'Tamanho' },
+      { id: 5, value: 'ONTs' },
       { id: 6, value: 'Responsável' },
       { id: 7, value: 'Status' },
     ];
 
     if (validateUserPermissions(state.pcw, Permissions['FULL_VIEW'])) {
-      headers.push({ id: 8, value: 'Tenant' });
+      headers.push({ id: 8, value: 'Companhia' });
     }
 
     return headers;
   }, [state.pcw]);
+
+  const columnSizes = useMemo<string[]>(() => {
+    if (validateUserPermissions(state.pcw, Permissions['FULL_VIEW'])) {
+      return ['15%', '15%', '10%', '10%', '10%', '15%', '15%', '10%'];
+    } else {
+      return ['15%', '15%', '10%', '10%', '10%', '15%', '25%'];
+    }
+  }, [state.pcw]);
+
+  const handleCopyContent = (content: string) => {
+    navigator.clipboard.writeText(content);
+
+    showToaster({
+      message: 'Copiado para a área de transferência.',
+      severity: 'positive',
+      icon: <S.ThumbsUpIcon />,
+    });
+  };
 
   const [page, setPage] = useState<number>(0);
   const [totalPages, setTotalPages] = useState<number>(0);
@@ -87,16 +105,30 @@ const ReportListPage = () => {
             const cell: ITableCell[] = [
               {
                 value: (
-                  <S.FileNameWrapper title={item.ARQUIVO_ENVIADO}>
-                    {item.ARQUIVO_ENVIADO}
-                  </S.FileNameWrapper>
+                  <S.FileNameCell>
+                    <S.FileNameWrapper title={item.ARQUIVO_ENVIADO}>
+                      {item.ARQUIVO_ENVIADO}
+                    </S.FileNameWrapper>
+                    <S.CopyIcon
+                      onClick={() => handleCopyContent(item.ARQUIVO_ENVIADO)}
+                    />
+                  </S.FileNameCell>
                 ),
               },
               {
                 value: (
-                  <S.FileNameWrapper title={item.ARQUIVO_RENOMEADO}>
-                    {item.ARQUIVO_RENOMEADO}
-                  </S.FileNameWrapper>
+                  <S.FileNameCell>
+                    <S.FileNameWrapper title={item.ARQUIVO_RENOMEADO}>
+                      {item.ARQUIVO_RENOMEADO}
+                    </S.FileNameWrapper>
+                    {item.ARQUIVO_RENOMEADO !== null && (
+                      <S.CopyIcon
+                        onClick={() =>
+                          handleCopyContent(item.ARQUIVO_RENOMEADO)
+                        }
+                      />
+                    )}
+                  </S.FileNameCell>
                 ),
               },
               {
@@ -113,11 +145,7 @@ const ReportListPage = () => {
               },
             ];
 
-            if (
-              item.STATUS_ENVIO_DETALHE !== null &&
-              (item.STATUS_ENVIO === QueryFileStatus['ERRO'] ||
-                item.STATUS_ENVIO === QueryFileStatus['INVALIDO'])
-            ) {
+            if (item.STATUS_ENVIO_DETALHE !== null) {
               cell.push({
                 value: (
                   <FileErrorFlag
@@ -190,10 +218,7 @@ const ReportListPage = () => {
               Download do modelo <S.DownloadIcon />
             </S.DownloadBtn>
             {validateUserPermissions(state.pcw, Permissions['UPLOAD']) && (
-              <S.OpenFormBtn
-                buttonTheme='Coral'
-                onClick={() => toggleModalState()}
-              >
+              <S.OpenFormBtn buttonTheme='Coral' onClick={toggleModalState}>
                 Enviar relatório <S.UploadIcon />
               </S.OpenFormBtn>
             )}
@@ -253,7 +278,11 @@ const ReportListPage = () => {
           )}
         </S.FilterWrapper>
 
-        <S.ReportTable data={tableData} loadingData={loading} />
+        <S.ReportTable
+          columnsSizes={columnSizes}
+          data={tableData}
+          loadingData={loading}
+        />
 
         <S.PageControl
           qtdPag={totalPages}
