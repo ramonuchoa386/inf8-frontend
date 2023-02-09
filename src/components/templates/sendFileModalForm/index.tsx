@@ -6,12 +6,14 @@ import config from '../../../utils/config';
 import ModalContext from '../../../context/modal';
 import ToasterContext from '../../../context/toaster';
 import AuthContext from '../../../context/auth';
+import UpdateContext from '../../../context/updateList';
 
 import * as S from './style';
 
 const SendFileFormModal: React.FunctionComponent = (props) => {
   const { API_BASEURL, API_CONTEXT, FILEUPLOAD_ENDPOINT } = config;
   const { modalState, toggleModalState } = useContext(ModalContext);
+  const { update } = useContext(UpdateContext);
   const { state } = useContext(AuthContext);
   const { showToaster } = useContext(ToasterContext);
   const [file, setFile] = useState<File | null>();
@@ -99,6 +101,7 @@ const SendFileFormModal: React.FunctionComponent = (props) => {
         setSending(() => false);
         setFile(() => undefined);
         toggleModalState();
+        update();
       });
   };
 

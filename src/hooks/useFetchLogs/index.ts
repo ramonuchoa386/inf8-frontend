@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import AuthContext from '../../context/auth';
+import UpdateContext from '../../context/updateList';
 import config from '../../utils/config';
 import { QueryFileStatus } from '../../utils/enums';
 import { IApiResponse, IResponseData } from '../../utils/interfaces';
@@ -17,6 +18,7 @@ const useFetchLogs = (
   const [data, setData] = useState<IResponseData>();
   const [error, setError] = useState<string>();
   const [loading, setLoading] = useState<boolean>(false);
+  const { shouldUpdate } = useContext(UpdateContext);
 
   useEffect(() => {
     setLoading(true);
@@ -82,6 +84,7 @@ const useFetchLogs = (
     state.organization,
     state.name,
     state.email,
+    shouldUpdate,
   ]);
 
   return { data, error, loading };
