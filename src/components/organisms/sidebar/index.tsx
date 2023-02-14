@@ -11,7 +11,7 @@ const Sidebar = () => {
     <S.Main data-testid='sidebar-testid'>
       <ProSidebar onToggle={collapse} collapsed={state.collapsed}>
         <S.Header>
-          <S.HeaderLogoLink to='/'>
+          <S.HeaderLogoLink to='/portal'>
             {state.collapsed ? <VtalSmall /> : <Logo />}
           </S.HeaderLogoLink>
         </S.Header>
