@@ -18,7 +18,7 @@ const SidebarContent = ({ iconSize = 17 }: { iconSize?: number }) => {
             <>
               <MenuItem icon={<BiCloudUpload size={iconSize} />}>
                 Relatório de envio
-                <Link to='/' title='Relatório de envio' />
+                <Link to='/inf8' title='Relatório de envio' />
               </MenuItem>
               <S.Division />
             </>
