@@ -336,7 +336,7 @@ exports[`Componente ContentWrapper Snapshot 1`] = `
         className="c3"
         size="small"
       >
-        Portal do Administrador
+        Olá, 
       </p>
       <button
         className="c4 "
@@ -398,12 +398,13 @@ exports[`Componente ContentWrapper Snapshot 1`] = `
           <p
             className="c10"
           >
-            Olá, 
+            Companhia:
+             
           </p>
           <p
             className="c11 c12"
           >
-            perfil: 
+            Perfil: 
             NONE
           </p>
         </div>
