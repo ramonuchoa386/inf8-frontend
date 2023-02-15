@@ -28,7 +28,7 @@ import * as S from './style';
 
 const ReportListPage = () => {
   const { state } = useContext(AuthContext);
-  const { toggleModalState } = useContext(ModalContext);
+  const { modalState, toggleModalState } = useContext(ModalContext);
   const { showToaster } = useContext(ToasterContext);
 
   const tableHeaders = useMemo<ITableHeader[]>(() => {
@@ -292,7 +292,7 @@ const ReportListPage = () => {
           selectedOptPage={listLength}
         />
 
-        <S.FileForm />
+        {modalState && <S.FileForm />}
         <S.Toaster withIcon withBtn />
       </S.PageWrapper>
     </S.PageContainer>
