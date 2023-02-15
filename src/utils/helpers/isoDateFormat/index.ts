@@ -6,7 +6,7 @@
  */
 
 export const ISODateFormat = (isoDate: string): string => {
-  const rawDate = Date.parse(isoDate.replace('Z', '-03:00'));
+  const rawDate = Date.parse(isoDate);
   const sendDate = new Date(rawDate);
 
   const date =
