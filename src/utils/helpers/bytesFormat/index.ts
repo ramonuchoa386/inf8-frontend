@@ -6,6 +6,8 @@
  */
 
 export const BytesFormat = (bytes: number): string => {
+  if (bytes === 0) return '0 Bytes';
+
   const unit = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
   const base = 1024;
 
