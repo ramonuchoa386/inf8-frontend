@@ -193,151 +193,7 @@ exports[`Applications list Snapshot 1`] = `
   background-color: transparent;
 }
 
-.c44 {
-  border: none;
-  cursor: pointer;
-  color: #FF4242;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px;
-  border-radius: calc(100 * 4px);
-  font-size: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c44:hover {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  color: #FFF;
-  background-color: #FF4242;
-}
-
-.c44:hover svg {
-  color: #FFF;
-}
-
-.c44:disabled {
-  cursor: not-allowed;
-  color: #CFCFC4;
-  border-color: #CFCFC4;
-}
-
-.c44:disabled:hover {
-  background-color: transparent;
-}
-
-.c47 {
-  border: 1px solid #191918;
-  cursor: pointer;
-  color: #191918;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: calc(100 * 4px);
-  font-size: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c47:hover {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  color: #FFF;
-  background-color: #191918;
-}
-
-.c47:hover svg {
-  color: #FFF;
-}
-
-.c47:disabled {
-  cursor: not-allowed;
-  color: #CFCFC4;
-  border-color: #CFCFC4;
-}
-
-.c47:disabled:hover {
-  background-color: transparent;
-}
-
-.c49 {
-  border: 1px solid #04CF00;
-  cursor: pointer;
-  color: #04CF00;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: calc(100 * 4px);
-  font-size: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c49:hover {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  color: #FFF;
-  background-color: #04CF00;
-}
-
-.c49:hover svg {
-  color: #FFF;
-}
-
-.c49:disabled {
-  cursor: not-allowed;
-  color: #CFCFC4;
-  border-color: #CFCFC4;
-}
-
-.c49:disabled:hover {
-  background-color: transparent;
-}
-
-.c52 {
+.c43 {
   border: 1px solid #FFF;
   cursor: pointer;
   color: #FFF;
@@ -364,24 +220,24 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c52:hover {
+.c43:hover {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   color: #191918;
   background-color: #FFF;
 }
 
-.c52:hover svg {
+.c43:hover svg {
   color: #191918;
 }
 
-.c52:disabled {
+.c43:disabled {
   cursor: not-allowed;
   color: #CFCFC4;
   border-color: #CFCFC4;
 }
 
-.c52:disabled:hover {
+.c43:disabled:hover {
   background-color: transparent;
 }
 
@@ -394,16 +250,6 @@ exports[`Applications list Snapshot 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-}
-
-.c48 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 
 .c19 {
@@ -488,23 +334,7 @@ exports[`Applications list Snapshot 1`] = `
   color: #464643;
 }
 
-.c42 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Inter;
-  font-weight: 900;
-  color: #464643;
-}
-
-.c43 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  font-family: Inter;
-  font-weight: 400;
-  color: #464643;
-}
-
-.c50 {
+.c41 {
   position: absolute;
   z-index: 100;
   top: 10vh;
@@ -526,11 +356,11 @@ exports[`Applications list Snapshot 1`] = `
   align-items: center;
 }
 
-.c51 {
+.c42 {
   margin-right: 16px;
 }
 
-.c53 {
+.c44 {
   padding: 4px;
   margin-left: 16px;
 }
@@ -783,54 +613,6 @@ exports[`Applications list Snapshot 1`] = `
 
 .c15 {
   padding: 48px 20px 64px;
-}
-
-.c41 {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  background-color: #FFF;
-  z-index: 100;
-  padding: 24px;
-  border-radius: 4px;
-  box-shadow: 0 1px 2px rgb(60 64 67 / 30%),0 1px 3px rgb(60 64 67 / 15%);
-  min-width: 600px;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.c45 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 16px;
-}
-
-.c46 {
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 8px;
 }
 
 .c0 {
@@ -1396,106 +1178,8 @@ exports[`Applications list Snapshot 1`] = `
       <div
         className="c41 "
       >
-        <section
-          style={
-            Object {
-              "alignItems": "flex-start",
-              "display": "flex",
-              "justifyContent": "space-between",
-            }
-          }
-        >
-          <span>
-            <p
-              className="c42"
-              size="large"
-            >
-              Enviar relatório
-            </p>
-            <p
-              className="c43"
-              size="small"
-            >
-              O arquivo deve estar no formato CSV e ter no máximo 5mb.
-            </p>
-          </span>
-          <button
-            className="c44 "
-            onClick={[Function]}
-          >
-            <svg
-              fill="currentColor"
-              height={24}
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width={24}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
-              />
-            </svg>
-          </button>
-        </section>
-        <form
-          className="c45"
-          onSubmit={[Function]}
-        >
-          <fieldset
-            className="c46"
-          >
-            <label
-              className="c47"
-              htmlFor="file"
-            >
-              Escolher arquivo
-            </label>
-            <div
-              className="c48"
-            >
-              <input
-                accept=".csv"
-                className="c18 "
-                hidden={true}
-                id="file"
-                name="file"
-                onChange={[Function]}
-                required={true}
-                type="file"
-              />
-            </div>
-            <p
-              className="c43"
-              size="small"
-            >
-              Nenhum arquivo selecionado
-            </p>
-          </fieldset>
-          <button
-            className="c49 "
-            disabled={true}
-            style={
-              Object {
-                "width": "100px",
-              }
-            }
-            type="submit"
-          >
-            Enviar
-          </button>
-        </form>
-      </div>
-      <div
-        className="c50 "
-      >
         <span
-          className="c51"
+          className="c42"
         >
           <svg
             fill="currentColor"
@@ -1518,7 +1202,7 @@ exports[`Applications list Snapshot 1`] = `
         </span>
         Bem-vindo ao Portal APIM da V.tal
         <button
-          className="c52 c53"
+          className="c43 c44"
           onClick={[Function]}
         >
           <svg
